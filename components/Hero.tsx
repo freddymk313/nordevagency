@@ -57,7 +57,7 @@ const Hero = () => {
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto pt-8 border-t border-gray-200">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto pt-8 border-t border-gray-200">
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-1">50+</div>
               <div className="text-sm text-gray-600">Projets livrés</div>
@@ -74,16 +74,16 @@ const Hero = () => {
               <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-1">5★</div>
               <div className="text-sm text-gray-600">Rating moyen</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
