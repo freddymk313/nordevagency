@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Exemple d'utilisation dans globals.css ou modules CSS */
+h1, h2, h3, h4 {
+  font-family: var(--font-poppins);
+  font-weight: 600; /* SemiBold */
+}
+
+body, p, span, div {
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
+
+/* Pour les boutons ou textes importants */
+.button, .cta {
+  font-family: var(--font-poppins);
+  font-weight: 500; /* Medium */
+}
+
+/* Dans votre globals.css */
+:root {
+  --color-primary: #2a2a2a;
+  --color-primary-dark: #111111;
+  --color-text: #111111;
+  --color-background: #ffffff;
+  --color-background-alt: #fcfcfc;
+  --color-border: #e2e2e2;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
