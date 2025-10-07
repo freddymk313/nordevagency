@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import {ChevronRight} from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,43 +11,67 @@ export default function Header() {
   return (
     <header>
       {/* Navbar Principale */}
-      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
+      <nav className="bg-white sticky top-0 z-50 *backdrop-blur-sm *bg-white/95 py-2 md:py-4 lg:py-6">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo à gauche */}
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center shadow-sm">
+            <Link href="/">
+            <div className="*flex items-center *space-x-3">
+              {/* <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center shadow-sm">
                 <span className="text-white font-bold text-xl">N</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900 hidden sm:block">
+              </div> */}
+              {/* <span className="text-xl font-bold text-gray-900 hidden sm:block">
                 Nordev Agency
-              </span>
+              </span> */}
+
+              <div className="lg:hidden">
+                <Image
+                src={"/logo/logo-1.jpg"}
+                height={53}
+                width={53}
+                alt={'logo image'}
+                // className="w-12 h-12 object-cover"
+                quality={100}
+                />
+              </div>
+
+              <div className="hidden lg:block">
+                <Image
+                src={"/logo/logo-2.jpg"}
+                height={230}
+                width={230}
+                alt={'logo image'}
+                // className="w-12 h-12 object-cover"
+                // quality={100}
+                />
+              </div>
             </div>
+            </Link>
 
             {/* Liens au centre - Desktop */}
             <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
-              <div className="flex space-x-8">
+              <div className="flex space-x-8 text-base">
                 <a
                   href="#services"
-                  className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                  className="text-gray-700 text-sm hover:text-gray-900 transition-colors font-medium"
                 >
                   Services
                 </a>
                 <a
                   href="#projets"
-                  className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                  className="text-gray-700 text-sm hover:text-gray-900 transition-colors font-medium"
                 >
                   Projets
                 </a>
                 <a
                   href="#apropos"
-                  className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                  className="text-gray-700 text-sm hover:text-gray-900 transition-colors font-medium"
                 >
                   À propos
                 </a>
                 <a
                   href="#temoignages"
-                  className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                  className="text-gray-700 text-sm hover:text-gray-900 transition-colors font-medium"
                 >
                   Témoignages
                 </a>
@@ -53,14 +80,15 @@ export default function Header() {
 
             {/* Bouton à droite - Desktop */}
             <div className="hidden lg:block">
-              <button className="bg-gray-800 text-white px-6 py-2.5 rounded-lg hover:bg-gray-900 transition-all duration-300 font-medium shadow-sm hover:shadow-md">
-                Réserver un appel
+              <button className="bg-gray-800 text-white flex items-center text-sm px-5 py-2.5 md:py-3 *lg:py-[14px] rounded-full hover:bg-gray-900 transition-all duration-300 font-medium shadow-sm hover:shadow-md">
+                <span>Réserver un appel</span>
+                <ChevronRight className="text-white h-4.5 w-4.5 ml-0.5" />
               </button>
             </div>
 
             {/* Menu Burger - Mobile */}
             <button
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg *hover:bg-gray-100 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <div className="w-6 h-6 flex flex-col justify-center space-y-1">
@@ -99,28 +127,28 @@ export default function Header() {
           <div className="flex flex-col space-y-6">
             <a
               href="#services"
-              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-100"
+              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </a>
             <a
               href="#projets"
-              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-100"
+              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Projets
             </a>
             <a
               href="#apropos"
-              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-100"
+              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               À propos
             </a>
             <a
               href="#temoignages"
-              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-100"
+              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 *border-b border-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Témoignages
@@ -128,9 +156,9 @@ export default function Header() {
           </div>
 
           {/* Bouton Mobile */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="mt-12 pt-8 *border-t border-gray-200">
             <button
-              className="w-full bg-gray-800 text-white py-4 rounded-lg hover:bg-gray-900 transition-all duration-300 font-semibold text-lg shadow-sm"
+              className="w-full bg-gray-800 text-white py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-lg shadow-sm"
               onClick={() => {
                 setIsMenuOpen(false);
                 // Ajouter ici la logique pour réserver un appel
