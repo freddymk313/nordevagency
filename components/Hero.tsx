@@ -12,12 +12,12 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto text-center animate-fade-in">
           {/* Badge premium */}
-          <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-2 mb-8">
+          {/* <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-2 mb-8">
             <div className="w-2 h-2 bg-gray-800 rounded-full animate-pulse" />
             <span className="text-sm font-medium text-gray-700">
               Agence de développement web sur mesure
             </span>
-          </div>
+          </div> */}
           
           {/* Titre principal */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
@@ -39,8 +39,8 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="bg-gray-800 text-white px-8 py-4 rounded-lg hover:bg-gray-900 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 group">
-              Démarrer mon projet
+            <button className="bg-gray-800 text-sm text-white px-8 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 group">
+              Réserver un appel
               <svg 
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
                 fill="none" 
@@ -51,7 +51,7 @@ const Hero = () => {
               </svg>
             </button>
             
-            <button className="border-2 border-gray-300 text-gray-800 px-8 py-4 rounded-lg hover:border-gray-800 transition-all duration-300 font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1">
+            <button className="border-2 text-sm border-gray-300 text-gray-800 px-8 py-4 rounded-full hover:border-gray-800 transition-all duration-300 font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1">
               Voir nos réalisations
             </button>
           </div>
