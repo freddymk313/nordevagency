@@ -27,8 +27,8 @@ export default function Header() {
               <div className="lg:hidden">
                 <Image
                 src={"/logo/logo-1.jpg"}
-                height={53}
-                width={53}
+                height={50}
+                width={50}
                 alt={'logo image'}
                 // className="w-12 h-12 object-cover"
                 quality={100}
@@ -122,33 +122,33 @@ export default function Header() {
         }`}
         style={{ top: "64px" }} // Hauteur de la navbar
       >
-        <div className="container mx-auto px-6 py-8">
+        <div className="container mx-auto px-4 py-8 pt-12">
           {/* Liens Mobile */}
           <div className="flex flex-col space-y-6">
             <a
               href="#services"
-              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
+              className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </a>
             <a
               href="#projets"
-              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
+              className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Projets
             </a>
             <a
               href="#apropos"
-              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
+              className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               À propos
             </a>
             <a
               href="#temoignages"
-              className="text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 *border-b border-gray-200"
+              className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 *border-b border-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Témoignages
@@ -157,21 +157,33 @@ export default function Header() {
 
           {/* Bouton Mobile */}
           <div className="mt-12 pt-8 *border-t border-gray-200">
-            <button
-              className="w-full bg-gray-800 text-white py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-lg shadow-sm"
+            {/* <button
+              className="w-full bg-[color-primary-dark] text-sm text-white py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-lg shadow-sm"
               onClick={() => {
                 setIsMenuOpen(false);
-                // Ajouter ici la logique pour réserver un appel
+                
               }}
             >
               Réserver un appel
+            </button> */}
+
+            <button className="w-full bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
+             <span>Réserver un appel</span>
+              <svg 
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </button>
           </div>
 
           {/* Informations de contact mobile */}
           <div className="mt-12 text-center">
-            <p className="text-gray-600 mb-2">Disponible du Lundi au Vendredi</p>
-            <p className="text-gray-800 font-medium">9h - 18h</p>
+            <p className="text-gray-600 mb-2 text-base">Disponible du Lundi au Vendredi</p>
+            <p className="text-gray-800 text-base font-medium">9h - 18h</p>
           </div>
         </div>
       </div>
