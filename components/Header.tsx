@@ -27,8 +27,8 @@ export default function Header() {
               <div className="lg:hidden">
                 <Image
                 src={"/logo/logo-1.jpg"}
-                height={50}
-                width={50}
+                height={48}
+                width={48}
                 alt={'logo image'}
                 // className="w-12 h-12 object-cover"
                 quality={100}
