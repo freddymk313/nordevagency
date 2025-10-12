@@ -57,7 +57,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="group bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-8"
+              className="group bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-6"
             >
               {/* Fond décoratif */}
               {/* <div className="absolute top-0 right-0 w-20 h-20 bg-gray-800/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700" /> */}
@@ -74,12 +74,12 @@ const Testimonials = () => {
                 </div>
 
                 {/* Icône de citation */}
-                <div className="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors duration-300">
-                  <Quote className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gray-900 transition-colors duration-300">
+                  <Quote className="w-5 h-5 text-white" />
                 </div>
                 
                 {/* Citation */}
-                <blockquote className="text-gray-700 leading-relaxed text-lg mb-8 italic relative">
+                <blockquote className="text-gray-700 leading-relaxed text-base mb-6 italic relative">
                   "{testimonial.quote}"
                   <div className="absolute -top-2 -left-2 text-6xl text-gray-800/10 font-serif">"</div>
                 </blockquote>
@@ -88,7 +88,7 @@ const Testimonials = () => {
                 <div className="w-12 h-0.5 bg-gray-800/20 mb-6 rounded-full" />
 
                 {/* Type de projet */}
-                <div className="mb-6">
+                <div className="mb-4">
                   <span className="text-sm font-semibold text-gray-800 bg-gray-100 px-3 py-1 rounded-full">
                     {testimonial.project}
                   </span>
@@ -100,12 +100,12 @@ const Testimonials = () => {
                     <img 
                       src={testimonial.avatar} 
                       alt={testimonial.author}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-gray-200 group-hover:border-gray-800 transition-colors duration-300"
+                      className="w-12 h-12 rounded-full object-cover border-2 border-gray-200 group-hover:border-gray-800 transition-colors duration-300"
                     />
                     <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white"></div>
                   </div>
                   <div className="flex-1">
-                    <div className="font-bold text-gray-900 text-lg group-hover:text-gray-800 transition-colors">
+                    <div className="font-bold text-gray-900 text-base group-hover:text-gray-800 transition-colors">
                       {testimonial.author}
                     </div>
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>
