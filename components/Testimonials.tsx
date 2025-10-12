@@ -36,17 +36,17 @@ const Testimonials = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* En-tête */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-6 shadow-sm">
+        <div className="text-center mb-12 md:mb-20">
+          {/* <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-6 shadow-sm">
             <span className="text-sm font-medium text-gray-700">
               Témoignages clients
             </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          </div> */}
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
             Ils nous <span className="text-gray-800">font confiance</span>
           </h2>
-          <div className="w-20 h-1 bg-gray-800 mx-auto mb-6 rounded-full" />
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />
+          <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Découvrez les retours d'expérience de nos clients qui ont transformé 
             leurs <span className="text-gray-800 font-medium">ambitions digitales en succès concrets</span>.
           </p>
@@ -57,14 +57,14 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="group bg-white border-2 border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-8"
+              className="group bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-8"
             >
               {/* Fond décoratif */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gray-800/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700" />
+              {/* <div className="absolute top-0 right-0 w-20 h-20 bg-gray-800/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700" /> */}
               
               <div className="relative z-10">
                 {/* Note en étoiles */}
-                <div className="flex items-center gap-1 mb-6">
+                <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star 
                       key={i}
