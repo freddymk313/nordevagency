@@ -1,6 +1,8 @@
+import TrustedBy from "./TrustedBy";
+
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden *pt-10 md:pt-16">
+    <section id="home" className="*h-[100vh] md: min-h-screen flex items-center justify-center relative overflow-hidden *pt-10 md:pt-16">
       {/* Background elements sophistiqués */}
       <div className="absolute top-1/4 -right-10 w-80 h-80 bg-gray-800/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -left-10 w-96 h-96 bg-gray-800/3 rounded-full blur-3xl" />
@@ -55,6 +57,8 @@ const Hero = () => {
               Voir nos réalisations
             </button>
           </div>
+
+          <TrustedBy />
           
           {/* Stats */}
           {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto pt-8 border-t border-gray-200">

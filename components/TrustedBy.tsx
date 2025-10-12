@@ -41,10 +41,10 @@ const TrustedBy = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 border-y border-gray-200">
-      <div className="container mx-auto px-6">
+    <section className="*py-20 *bg-gray-50 *border-y *border-gray-200">
+      <div className="container mx-auto px-4">
         {/* Titre élégant */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <p className="text-sm font-semibold text-gray-600 mb-3 uppercase tracking-wider">
             Ils nous font confiance
           </p>
@@ -52,7 +52,7 @@ const TrustedBy = () => {
             Partenaires et clients <span className="text-gray-800">d'exception</span>
           </h2>
           <div className="w-16 h-0.5 bg-gray-800 mx-auto mt-4" />
-        </div>
+        </div> */}
         
         {/* Logos avec animation de défilement infinie */}
         <div className="relative">
@@ -104,13 +104,13 @@ const TrustedBy = () => {
         </div>
 
         {/* Citation de confiance */}
-        <div className="text-center mt-12 max-w-2xl mx-auto">
+        {/* <div className="text-center mt-12 max-w-2xl mx-auto">
           <p className="text-gray-600 italic">
             "Collaborer avec les plus grandes entreprises nous pousse à toujours 
             <span className="text-gray-800 font-medium"> innover et exceller</span> dans chaque projet."
           </p>
           <p className="text-sm text-gray-500 mt-2">— Équipe Nordev Agency</p>
-        </div>
+        </div> */}
       </div>
 
       <style jsx>{`
