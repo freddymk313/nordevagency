@@ -120,7 +120,7 @@ const Testimonials = () => {
         </div>
 
         {/* Statistiques de confiance */}
-        <div className="mt-20 max-w-4xl mx-auto">
+        {/* <div className="mt-20 max-w-4xl mx-auto">
           <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
@@ -141,12 +141,11 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* CTA Final */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="bg-gray-800 text-white rounded-2xl p-12 max-w-4xl mx-auto relative overflow-hidden">
-            {/* Fond décoratif */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16" />
             
@@ -163,7 +162,7 @@ const Testimonials = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
