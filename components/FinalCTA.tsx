@@ -39,7 +39,7 @@ const FinalCTA = () => {
           
           {/* Boutons d'action principaux */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="group bg-[#111111] text-white px-6 py-3 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-sm shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 flex items-center gap-3">
+            <button className="group bg-[#111111] text-white px-6 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-sm shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 flex items-center gap-3">
               <Calendar className="w-4 h-4" />
               Réserver un appel
               {/* <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> */}
@@ -53,14 +53,14 @@ const FinalCTA = () => {
               </svg>
             </button>
             
-            <button className="group border-2 border-gray-800 text-gray-800 px-12 py-4 rounded-lg hover:bg-gray-800 hover:text-white transition-all duration-300 font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3">
+            {/* <button className="group border-2 border-gray-800 text-gray-800 px-12 py-4 rounded-lg hover:bg-gray-800 hover:text-white transition-all duration-300 font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3">
               <Phone className="w-5 h-5" />
               Nous appeler
-            </button>
+            </button> */}
           </div>
           
           {/* Informations de contact secondaires */}
-          <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 max-w-md mx-auto shadow-lg">
+          <div className="*bg-white/80 *backdrop-blur-sm *border border-gray-200 *rounded-2xl p-8 max-w-md mx-auto *shadow-lg">
             <div className="space-y-4 text-center">
               <div>
                 <div className="text-sm font-semibold text-gray-600 mb-1">Email</div>
@@ -75,32 +75,32 @@ const FinalCTA = () => {
               <div>
                 <div className="text-sm font-semibold text-gray-600 mb-1">Téléphone</div>
                 <a 
-                  href="tel:+33123456789" 
+                  href="tel:+243991040032" 
                   className="text-gray-800 font-semibold hover:text-gray-600 transition-colors"
                 >
-                  +33 1 23 45 67 89
+                  +243991040032
                 </a>
               </div>
               
-              <div>
+              {/* <div>
                 <div className="text-sm font-semibold text-gray-600 mb-1">Réponse garantie</div>
                 <div className="text-gray-700">Sous 24 heures</div>
-              </div>
+              </div> */}
             </div>
           </div>
           
           {/* Note de confiance */}
-          <div className="mt-12">
+          {/* <div className="mt-12">
             <p className="text-gray-500 text-sm">
               <span className="font-semibold">100% confidentiel</span> • Premier appel sans engagement • Devis personnalisé sous 48h
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
       
       {/* Élément décoratif flottant */}
-      <div className="absolute bottom-8 left-8 w-4 h-4 bg-gray-800/20 rounded-full animate-bounce" />
-      <div className="absolute top-8 right-8 w-3 h-3 bg-gray-800/30 rounded-full animate-bounce delay-75" />
+      {/* <div className="absolute bottom-8 left-8 w-4 h-4 bg-gray-800/20 rounded-full animate-bounce" />
+      <div className="absolute top-8 right-8 w-3 h-3 bg-gray-800/30 rounded-full animate-bounce delay-75" /> */}
     </section>
   );
 };
