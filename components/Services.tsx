@@ -25,11 +25,6 @@ const Services = () => {
       <div className="container mx-auto px-6">
         {/* En-tête */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-6 shadow-sm">
-            <span className="text-sm font-medium text-gray-700">
-              Nos domaines d'expertise
-            </span>
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Services <span className="text-gray-800">Premium</span>
           </h2>
@@ -92,20 +87,6 @@ const Services = () => {
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-gray-800 group-hover:w-full transition-all duration-500" />
             </div>
           ))}
-        </div>
-
-        {/* Note additionnelle */}
-        <div className="text-center mt-16 max-w-2xl mx-auto">
-          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-            <p className="text-gray-600 text-lg">
-              <span className="font-semibold text-gray-800">Projet personnalisé ?</span> Nous adaptons 
-              nos services à vos besoins spécifiques pour une solution parfaitement alignée avec 
-              vos objectifs.
-            </p>
-            <button className="mt-6 border-2 border-gray-800 text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-800 hover:text-white transition-all duration-300 font-semibold">
-              Discutons de votre projet
-            </button>
-          </div>
         </div>
       </div>
     </section>
