@@ -42,7 +42,7 @@ const FinalCTA = () => {
           </p>
           
           {/* Boutons d'action principaux */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button className="group bg-[#111111] text-white px-6 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-sm shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 flex items-center gap-3">
               <Calendar className="w-4 h-4" />
               Réserver un appel
@@ -69,10 +69,10 @@ const FinalCTA = () => {
               <div>
                 <div className="text-sm font-semibold text-gray-600 mb-1">Email</div>
                 <a 
-                  href="mailto:contact@nordevagency.com" 
+                  href="mailto:nordevagency@gmail.com" 
                   className="text-gray-800 font-semibold hover:text-gray-600 transition-colors"
                 >
-                  contact@nordevagency.com
+                  nordevagency@gmail.com
                 </a>
               </div>
               
