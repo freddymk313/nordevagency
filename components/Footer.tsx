@@ -8,6 +8,7 @@ import {
   Instagram,
   Twitter,
   Github,
+  ChevronRight,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -72,7 +73,8 @@ const Footer = () => {
                   href="#services"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Services
+                  <ChevronRight className="w-4 h-4 inline-block mr-1" />
+                  <span>Services</span>
                 </a>
               </li>
               <li>
@@ -80,7 +82,8 @@ const Footer = () => {
                   href="#portfolio"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Réalisations
+                  <ChevronRight className="w-4 h-4 inline-block mr-1" />
+                  <span>Réalisations</span>
                 </a>
               </li>
               <li>
@@ -88,7 +91,8 @@ const Footer = () => {
                   href="#temoignages"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Témoignages
+                  <ChevronRight className="w-4 h-4 inline-block mr-1" />
+                  <span>Témoignages</span>
                 </a>
               </li>
               <li>
@@ -96,7 +100,8 @@ const Footer = () => {
                   href="#contact"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Contact
+                  <ChevronRight className="w-4 h-4 inline-block mr-1" />
+                  <span>Contact</span>
                 </a>
               </li>
             </ul>
