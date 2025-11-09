@@ -1,4 +1,5 @@
 "use client"
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react"
 
 const Portfolio = () => {
@@ -127,10 +128,10 @@ const Portfolio = () => {
 
         {/* Carousel des projets */}
         <div className="max-w-6xl mx-auto">
-          
+
           {/* Carte du projet actuel */}
-          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500">
-            <div className="grid md:grid-cols-2 gap-8 p-8">
+          <div className="overflow-hidden hover:shadow-xl transition-all duration-500">
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Image du projet */}
               <div className="relative group overflow-hidden rounded-xl">
                 <img 
@@ -158,14 +159,15 @@ const Portfolio = () => {
 
                   {/* Technologies */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3 tracking-wide">
                       Technologies utilisées
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {currentProject.technologies.map((tech, index) => (
                         <span 
                           key={index}
-                          className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-medium"
+                          // className="text-xs font-medium text-gray-700 bg-gray-100 px-2 py-1 rounded"
+                          className="text-xs border px-2 py-1 bg-white text-gray-700 rounded-full border-gray-300 hover:border-gray-800 hover:shadow-md"
                         >
                           {tech}
                         </span>
@@ -178,7 +180,7 @@ const Portfolio = () => {
                 <div className="flex gap-4">
                   <a 
                     href={currentProject.link}
-                    className="flex-1 bg-gray-800 text-white text-center py-3 px-6 rounded-lg hover:bg-gray-700 transition-all duration-300 font-semibold"
+                    className="flex-1 bg-gray-800 text-white text-center py-3 px-6 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold"
                   >
                     Voir le projet
                   </a>
@@ -188,15 +190,16 @@ const Portfolio = () => {
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-center items-center gap-6 mt-8">
+          <div className="flex justify-center items-center gap-6 mt-12">
             <button
               onClick={prevProject}
               className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               aria-label="Projet précédent"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {/* <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
+              </svg> */}
+              <ChevronLeft className="w-6 h-6" />
             </button>
 
             <span className="text-sm text-gray-600 font-medium">
@@ -208,9 +211,10 @@ const Portfolio = () => {
               className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               aria-label="Projet suivant"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {/* <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              </svg> */}
+              <ChevronRight className="w-6 h-6" />
             </button>
           </div>
         </div>
