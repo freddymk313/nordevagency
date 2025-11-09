@@ -195,3 +195,153 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+
+
+
+
+"use client"
+import {useState} from "react"
+const Portfolio = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "Plateforme E-commerce Luxe",
+      description: "Marketplace premium avec système de réservation en temps réel et paiements sécurisés.",
+      category: "Développement Web",
+      image: "/api/placeholder/600/400",
+      technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
+      link: "#",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Application Fitness Mobile",
+      description: "App de suivi d'activité sportive avec IA et analytics personnalisés.",
+      category: "Application Mobile",
+      image: "/api/placeholder/600/400",
+      technologies: ["React Native", "Firebase", "Node.js"],
+      link: "#",
+      featured: true
+    },
+    {
+      id: 3,
+      title: "Dashboard Analytics Entreprise",
+      description: "Outil de business intelligence avec visualisation de données en temps réel.",
+      category: "Développement Web",
+      image: "/api/placeholder/600/400",
+      technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
+      link: "#"
+    },
+    {
+      id: 4,
+      title: "Site Corporate FinTech",
+      description: "Refonte complète avec design system et intégration CMS headless.",
+      category: "Design UI/UX",
+      image: "/api/placeholder/600/400",
+      technologies: ["Figma", "Webflow", "GraphQL"],
+      link: "#"
+    },
+    {
+      id: 5,
+      title: "Solution SaaS B2B",
+      description: "Platform de gestion de projet avec collaboration d'équipe avancée.",
+      category: "Développement Web",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "MongoDB", "Socket.io", "AWS"],
+      link: "#"
+    },
+    {
+      id: 6,
+      title: "App de Livraison Instantanée",
+      description: "Application de livraison en moins de 30 minutes avec tracking GPS.",
+      category: "Application Mobile",
+      image: "/api/placeholder/600/400",
+      technologies: ["Flutter", "Google Maps", "Firebase"],
+      link: "#"
+    }
+  ];
+
+  const categories = ["Tous", "Développement Web", "Application Mobile", "Design UI/UX"];
+
+  const [activeCategory, setActiveCategory] = useState("Tous");
+  const [visibleProjects, setVisibleProjects] = useState(6);
+
+  const filteredProjects = activeCategory === "Tous" 
+    ? projects 
+    : projects.filter(project => project.category === activeCategory);
+
+  const displayedProjects = filteredProjects.slice(0, visibleProjects);
+
+  return (
+    <section id="portfolio" className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        {/* En-tête */}
+        <div className="text-center mb-12 md:mb-16">
+          {/* <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-2 mb-6">
+            <span className="text-sm font-medium text-gray-700">
+              Nos réalisations
+            </span>
+          </div> */}
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+            Portfolio <span className="text-gray-800">d'exception</span>
+          </h2>
+          
+          <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />
+
+          <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Découvrez une sélection de nos projets les plus innovants, 
+            où <span className="text-gray-800 font-medium">expertise technique</span> et 
+            <span className="text-gray-800 font-medium"> créativité</span> se rencontrent.
+          </p>
+        </div>
+
+        {/* Filtres par catégorie */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => {
+                setActiveCategory(category);
+                setVisibleProjects(6);
+              }}
+              className={`px-4 py-2 rounded-full border-1 transition-all duration-300 text-sm font-semibold ${
+                activeCategory === category
+                  ? "bg-gray-800 text-white border-gray-800 shadow-lg"
+                  : "bg-white text-gray-700 border-gray-300 hover:border-gray-800 hover:shadow-md"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Grille des projets */}
+        <div className="=grid =md:grid-cols-2 =lg:grid-cols-3 gap-8 mb-12">
+          {displayedProjects.map((project, index) => (
+            <div 
+              key={index}
+              className="group bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-6"
+            >
+
+            </div>
+          ))}
+        </div>
+
+        {/* Bouton Voir Plus */}
+        {visibleProjects < filteredProjects.length && (
+          <div className="text-center">
+            <button
+              onClick={() => setVisibleProjects(prev => prev + 3)}
+              className="border-2 border-gray-800 text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-800 hover:text-white transition-all duration-300 font-semibold"
+            >
+              Voir plus de projets
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio;

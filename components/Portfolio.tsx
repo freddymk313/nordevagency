@@ -1,5 +1,6 @@
 "use client"
-import {useState} from "react"
+import { useState } from "react"
+
 const Portfolio = () => {
   const projects = [
     {
@@ -63,24 +64,37 @@ const Portfolio = () => {
   const categories = ["Tous", "Développement Web", "Application Mobile", "Design UI/UX"];
 
   const [activeCategory, setActiveCategory] = useState("Tous");
-  const [visibleProjects, setVisibleProjects] = useState(6);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
   const filteredProjects = activeCategory === "Tous" 
     ? projects 
     : projects.filter(project => project.category === activeCategory);
 
-  const displayedProjects = filteredProjects.slice(0, visibleProjects);
+  const currentProject = filteredProjects[currentProjectIndex];
+
+  const nextProject = () => {
+    setCurrentProjectIndex((prevIndex) => 
+      prevIndex === filteredProjects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevProject = () => {
+    setCurrentProjectIndex((prevIndex) => 
+      prevIndex === 0 ? filteredProjects.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Réinitialiser l'index quand on change de catégorie
+  const handleCategoryChange = (category) => {
+    setActiveCategory(category);
+    setCurrentProjectIndex(0);
+  };
 
   return (
     <section id="portfolio" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         {/* En-tête */}
         <div className="text-center mb-12 md:mb-16">
-          {/* <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium text-gray-700">
-              Nos réalisations
-            </span>
-          </div> */}
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
             Portfolio <span className="text-gray-800">d'exception</span>
           </h2>
@@ -99,11 +113,8 @@ const Portfolio = () => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => {
-                setActiveCategory(category);
-                setVisibleProjects(6);
-              }}
-              className={`px-4 py-2 rounded-full border-1 transition-all duration-300 text-sm font-semibold ${
+              onClick={() => handleCategoryChange(category)}
+              className={`px-4 py-2 rounded-full border transition-all duration-300 text-sm font-semibold ${
                 activeCategory === category
                   ? "bg-gray-800 text-white border-gray-800 shadow-lg"
                   : "bg-white text-gray-700 border-gray-300 hover:border-gray-800 hover:shadow-md"
@@ -114,81 +125,95 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* Grille des projets */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {displayedProjects.map((project, index) => (
-            <div
-              key={project.id}
-              className="group bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
-            >
+        {/* Carousel des projets */}
+        <div className="max-w-6xl mx-auto">
+          
+          {/* Carte du projet actuel */}
+          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500">
+            <div className="grid md:grid-cols-2 gap-8 p-8">
               {/* Image du projet */}
-              <div className="relative overflow-hidden h-48 bg-gradient-to-br from-gray-100 to-gray-200">
-                <div className="absolute inset-0 bg-gray-800/0 group-hover:bg-gray-800/10 transition-all duration-500" />
-                {project.featured && (
-                  <div className="absolute top-4 left-4 bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
-                    Projet Phare
-                  </div>
-                )}
-                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                  🎨 Image du projet
-                </div>
-                
-                {/* Overlay au hover */}
-                <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/80 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    Voir le projet
-                  </button>
-                </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <img 
+                  src={currentProject.image} 
+                  alt={currentProject.title}
+                  className="w-full h-64 md:h-80 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-xl" />
               </div>
 
               {/* Contenu du projet */}
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-sm font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
-                    {project.category}
+              <div className="flex flex-col justify-between">
+                <div>
+                  <span className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                    {currentProject.category}
                   </span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
-                  {project.title}
-                </h3>
-                
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  {project.description}
-                </p>
+                  
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                    {currentProject.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    {currentProject.description}
+                  </p>
 
-                {/* Technologies utilisées */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="text-xs font-medium text-gray-700 bg-gray-100 px-2 py-1 rounded"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {/* Technologies */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">
+                      Technologies utilisées
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {currentProject.technologies.map((tech, index) => (
+                        <span 
+                          key={index}
+                          className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
-                {/* Lien vers le projet */}
-                <button className="w-full bg-gray-800 text-white py-2.5 rounded-lg hover:bg-gray-900 transition-all duration-300 font-semibold text-sm">
-                  Découvrir le cas client
-                </button>
+                {/* Bouton de démonstration */}
+                <div className="flex gap-4">
+                  <a 
+                    href={currentProject.link}
+                    className="flex-1 bg-gray-800 text-white text-center py-3 px-6 rounded-lg hover:bg-gray-700 transition-all duration-300 font-semibold"
+                  >
+                    Voir le projet
+                  </a>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Bouton Voir Plus */}
-        {visibleProjects < filteredProjects.length && (
-          <div className="text-center">
+          {/* Navigation */}
+          <div className="flex justify-center items-center gap-6 mt-8">
             <button
-              onClick={() => setVisibleProjects(prev => prev + 3)}
-              className="border-2 border-gray-800 text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-800 hover:text-white transition-all duration-300 font-semibold"
+              onClick={prevProject}
+              className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              aria-label="Projet précédent"
             >
-              Voir plus de projets
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <span className="text-sm text-gray-600 font-medium">
+              Projet {currentProjectIndex + 1} sur {filteredProjects.length}
+            </span>
+
+            <button
+              onClick={nextProject}
+              className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              aria-label="Projet suivant"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );
