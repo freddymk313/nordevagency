@@ -42,7 +42,7 @@ const Testimonials = () => {
               Témoignages clients
             </span>
           </div> */}
-          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
             Ils nous <span className="text-gray-800">font confiance</span>
           </h2>
           <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />

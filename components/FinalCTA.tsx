@@ -2,13 +2,13 @@ import { ArrowRight, Calendar, Phone } from "lucide-react";
 
 const FinalCTA = () => {
   return (
-    <section id="contact" className="py-32 bg-white relative overflow-hidden">
+    <section id="contact" className="py-24 bg-white relative overflow-hidden">
       {/* Background elements sophistiqués */}
       {/* <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-10 left-10 w-72 h-72 bg-gray-800/5 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-gray-800/3 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gray-800/2 rounded-full blur-3xl" />
-      </div> */}
+      </div> */} 
       
       {/* Grid pattern subtil */}
       {/* <div className="absolute inset-0 bg-[linear-gradient(rgba(42,42,42,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(42,42,42,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" /> */}
@@ -24,16 +24,20 @@ const FinalCTA = () => {
           </div> */}
           
           {/* Titre principal */}
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 leading-tight">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
             Prêt à donner vie
             <span className="block">
               à votre <span className="text-gray-800">projet ?</span>
             </span>
           </h2>
+          {/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+            Prêt à donner vie <span className="text-gray-800">à votre projet ?</span>
+          </h2> */}
+          <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />
           
           {/* Description */}
           <p className="text-base text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Créons ensemble quelque chose d'<span className="text-gray-800 font-semibold">extraordinaire</span> 
+            Créons ensemble quelque chose d'<span className="text-gray-800 font-semibold">extraordinaire </span> 
             qui propulsera votre entreprise vers de nouveaux sommets.
           </p>
           
