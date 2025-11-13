@@ -9,7 +9,7 @@ const Portfolio = () => {
       title: "Plateforme E-commerce Luxe",
       description: "Marketplace premium avec système de réservation en temps réel et paiements sécurisés.",
       category: "Développement Web",
-      image: "/api/placeholder/600/400",
+      image: "/img/1.webp",
       technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
       link: "#",
       featured: true
@@ -19,7 +19,7 @@ const Portfolio = () => {
       title: "Application Fitness Mobile",
       description: "App de suivi d'activité sportive avec IA et analytics personnalisés.",
       category: "Application Mobile",
-      image: "/api/placeholder/600/400",
+      image: "/img/2.png",
       technologies: ["React Native", "Firebase", "Node.js"],
       link: "#",
       featured: true
@@ -29,7 +29,7 @@ const Portfolio = () => {
       title: "Dashboard Analytics Entreprise",
       description: "Outil de business intelligence avec visualisation de données en temps réel.",
       category: "Développement Web",
-      image: "/api/placeholder/600/400",
+      image: "/img/3.jpg",
       technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
       link: "#"
     },
@@ -38,7 +38,7 @@ const Portfolio = () => {
       title: "Site Corporate FinTech",
       description: "Refonte complète avec design system et intégration CMS headless.",
       category: "Design UI/UX",
-      image: "/api/placeholder/600/400",
+      image: "/img/4.png",
       technologies: ["Figma", "Webflow", "GraphQL"],
       link: "#"
     },
@@ -47,7 +47,7 @@ const Portfolio = () => {
       title: "Solution SaaS B2B",
       description: "Platform de gestion de projet avec collaboration d'équipe avancée.",
       category: "Développement Web",
-      image: "/api/placeholder/600/400",
+      image: "/img/5.jpg",
       technologies: ["React", "MongoDB", "Socket.io", "AWS"],
       link: "#"
     },
@@ -139,7 +139,7 @@ const Portfolio = () => {
                   alt={currentProject.title}
                   className="w-full h-64 md:h-80 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-xl" />
+                {/* <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-xl" /> */}
               </div>
 
               {/* Contenu du projet */}

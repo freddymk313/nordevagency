@@ -15,7 +15,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-[#111111] border-t border-gray-200 pt-16 pb-8 relative overflow-hidden">
       {/* Éléments décoratifs doux */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-gray-800/5 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-40 h-40 bg-gray-800/3 rounded-full blur-3xl" />
