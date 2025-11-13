@@ -24,9 +24,9 @@ const Footer = () => {
         {/* Grille principale */}
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Logo & description */}
-          <div>
+          <div className="*mr-20">
             <Link href="/">
-              <div className="*flex items-center space-x-3">
+              <div className="flex items-center space-x-3">
                 {/* <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center shadow-sm">
                 <span className="text-white font-bold text-xl">N</span>
               </div> */}
@@ -58,7 +58,7 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="text-gray-600 text-sm leading-relaxed mt-6">
+            <p className="text-gray-600 text-base leading-relaxed mt-6">
               Nous donnons vie à vos idées digitales à travers des expériences
               web et mobiles modernes, performantes et sur mesure.
             </p>
