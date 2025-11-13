@@ -115,7 +115,7 @@ const Portfolio = () => {
             <button
               key={category}
               onClick={() => handleCategoryChange(category)}
-              className={`px-4 py-2 rounded-full border transition-all duration-300 text-sm font-semibold ${
+              className={`px-4 py-2 rounded-full border transition-all duration-300 text-sm font-meduim ${
                 activeCategory === category
                   ? "bg-gray-800 text-white border-gray-800 shadow-lg"
                   : "bg-white text-gray-700 border-gray-300 hover:border-gray-800 hover:shadow-md"
@@ -130,7 +130,7 @@ const Portfolio = () => {
         <div className="max-w-6xl mx-auto">
 
           {/* Carte du projet actuel */}
-          <div className="overflow-hidden hover:shadow-xl transition-all duration-500">
+          <div className="overflow-hidden =hover:shadow-xl transition-all duration-500">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Image du projet */}
               <div className="relative group overflow-hidden rounded-xl">
@@ -159,7 +159,7 @@ const Portfolio = () => {
 
                   {/* Technologies */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3 tracking-wide">
+                    <h4 className="text-sm text-gray-900 mb-3 tracking-wide">
                       Technologies utilisées
                     </h4>
                     <div className="flex flex-wrap gap-2">
@@ -167,7 +167,7 @@ const Portfolio = () => {
                         <span 
                           key={index}
                           // className="text-xs font-medium text-gray-700 bg-gray-100 px-2 py-1 rounded"
-                          className="text-xs border px-2 py-1 bg-white text-gray-700 rounded-full border-gray-300 hover:border-gray-800 hover:shadow-md"
+                          className="text-xs border font-medium px-2 py-1 bg-white text-gray-700 rounded-full border-gray-300 hover:border-gray-800 hover:shadow-md"
                         >
                           {tech}
                         </span>
