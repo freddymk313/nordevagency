@@ -5,6 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import {ChevronRight} from "lucide-react";
 
+const links = [
+  {name: "services", href: "#services"},
+  {name: "Projets", href: "#projets"},
+  {name: "À propos", href: "#apropos"},
+  {name: "Témoignages", href: "#temoignages"},
+]
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -51,30 +58,13 @@ export default function Header() {
             {/* Liens au centre - Desktop */}
             <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
               <div className="flex space-x-8 text-base">
-                <a
-                  href="#services"
-                  className="text-gray-700 text-sm hover:text-gray-900 transition-colors font-medium"
-                >
-                  Services
-                </a>
-                <a
-                  href="#projets"
-                  className="text-gray-700 text-sm hover:text-gray-900 transition-colors font-medium"
-                >
-                  Projets
-                </a>
-                <a
-                  href="#apropos"
-                  className="text-gray-700 text-sm hover:text-gray-900 transition-colors font-medium"
-                >
-                  À propos
-                </a>
-                <a
-                  href="#temoignages"
-                  className="text-gray-700 text-sm hover:text-gray-900 transition-colors font-medium"
-                >
-                  Témoignages
-                </a>
+                {links.map((link: any,idx: any) => (
+                  <Link href={link.href}
+                  className="text-gray-700 text-base hover:text-gray-900 transition-colors =font-medium"
+                  >
+                    {link.name}
+                </Link>
+                ))}
               </div>
             </div>
 
@@ -125,34 +115,15 @@ export default function Header() {
         <div className="container mx-auto px-4 py-8 pt-12">
           {/* Liens Mobile */}
           <div className="flex flex-col space-y-6">
-            <a
-              href="#services"
+            {links.map((link: any,idx: any) => (
+                  <Link href={link.href}
               className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
+                  // className="text-gray-700 text-base hover:text-gray-900 transition-colors =font-medium"
               onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </a>
-            <a
-              href="#projets"
-              className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Projets
-            </a>
-            <a
-              href="#apropos"
-              className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              À propos
-            </a>
-            <a
-              href="#temoignages"
-              className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 *border-b border-gray-200"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Témoignages
-            </a>
+                  >
+                    {link.name}
+                </Link>
+                ))}
           </div>
 
           {/* Bouton Mobile */}

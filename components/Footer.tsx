@@ -26,7 +26,7 @@ const Footer = () => {
           {/* Logo & description */}
           <div>
             <Link href="/">
-              <div className="*flex items-center *space-x-3">
+              <div className="*flex items-center space-x-3">
                 {/* <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center shadow-sm">
                 <span className="text-white font-bold text-xl">N</span>
               </div> */}
@@ -40,7 +40,7 @@ const Footer = () => {
                     height={48}
                     width={48}
                     alt={"logo image"}
-                    // className="w-12 h-12 object-cover"
+                    // className="w-12 h-"
                     quality={100}
                   />
                 </div>
@@ -58,7 +58,7 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed mt-6">
               Nous donnons vie à vos idées digitales à travers des expériences
               web et mobiles modernes, performantes et sur mesure.
             </p>
