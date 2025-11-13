@@ -9,172 +9,256 @@ import {
   Twitter,
   Github,
   ChevronRight,
+  ArrowUp,
+  Heart,
+  Shield,
+  Zap,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const Footer = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 500);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="bg-[#111111] border-t border-gray-200 pt-16 pb-8 relative overflow-hidden">
-      {/* Éléments décoratifs doux */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-gray-800/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-gray-800/3 rounded-full blur-3xl" />
+    <footer className="bg-gray-900 relative overflow-hidden">
+      {/* Éléments décoratifs sophistiqués */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/3 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+      
+      {/* Bouton scroll to top */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 w-14 h-14 bg-gray-800 hover:bg-gray-700 text-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 z-50 flex items-center justify-center group border border-white/10"
+          aria-label="Retour en haut"
+        >
+          <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
+        </button>
+      )}
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Grille principale */}
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
-          {/* Logo & description */}
-          <div className="*mr-20">
-            <Link href="/">
-              <div className="flex items-center space-x-3">
-                {/* <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center shadow-sm">
-                <span className="text-white font-bold text-xl">N</span>
-              </div> */}
-                {/* <span className="text-xl font-bold text-gray-900 hidden sm:block">
-                Nordev Agency
-              </span> */}
-
+        {/* Section principale */}
+        <div className="grid lg:grid-cols-4 gap-12 py-20">
+          {/* Colonne Logo & Description */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="inline-block">
+              <div className="relative">
+                {/* Version mobile */}
                 <div className="lg:hidden">
                   <Image
                     src={"/logo/logo-1.jpg"}
-                    height={48}
-                    width={48}
-                    alt={"logo image"}
-                    // className="w-12 h-"
+                    height={60}
+                    width={60}
+                    alt="Nordev Agency - Agence de développement web et mobile"
+                    className="rounded-xl"
                     quality={100}
                   />
                 </div>
 
+                {/* Version desktop */}
                 <div className="hidden lg:block">
                   <Image
                     src={"/logo/logo-2.jpg"}
-                    height={230}
-                    width={230}
-                    alt={"logo image"}
-                    // className="w-12 h-12 object-cover"
-                    // quality={100}
+                    height={200}
+                    width={200}
+                    alt="Nordev Agency - Votre partenaire digital d'excellence"
+                    className="rounded-xl"
+                    quality={100}
                   />
                 </div>
               </div>
             </Link>
 
-            <p className="text-gray-600 text-base leading-relaxed mt-6">
-              Nous donnons vie à vos idées digitales à travers des expériences
-              web et mobiles modernes, performantes et sur mesure.
+            <p className="text-gray-400 text-lg leading-relaxed mt-6 mb-8 font-light max-w-md">
+              Votre partenaire de confiance pour des 
+              <span className="font-medium text-white"> solutions digitales sur mesure</span> 
+              qui transforment votre vision en réalité.
             </p>
+
+            {/* Badges de confiance */}
+            <div className="flex flex-wrap gap-3">
+              <div className="flex items-center gap-2 bg-white/5 rounded-2xl px-4 py-2 border border-white/10">
+                <Shield className="w-4 h-4 text-green-400" />
+                <span className="text-sm text-gray-300 font-medium">Expert Certifié</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/5 rounded-2xl px-4 py-2 border border-white/10">
+                <Zap className="w-4 h-4 text-yellow-400" />
+                <span className="text-sm text-gray-300 font-medium">Support 24/7</span>
+              </div>
+            </div>
           </div>
 
           {/* Liens rapides */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Navigation</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href="#services"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <ChevronRight className="w-4 h-4 inline-block mr-1" />
-                  <span>Services</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#portfolio"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <ChevronRight className="w-4 h-4 inline-block mr-1" />
-                  <span>Réalisations</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#temoignages"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <ChevronRight className="w-4 h-4 inline-block mr-1" />
-                  <span>Témoignages</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <ChevronRight className="w-4 h-4 inline-block mr-1" />
-                  <span>Contact</span>
-                </a>
-              </li>
+            <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
+              Navigation
+              <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
+            </h3>
+            <ul className="space-y-4">
+              {[
+                { name: "Services", href: "#services" },
+                { name: "Réalisations", href: "#portfolio" },
+                { name: "Notre Expertise", href: "#apropos" },
+                { name: "Avis Clients", href: "#temoignages" },
+                { name: "Contact", href: "#contact" }
+              ].map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-2 text-base font-medium"
+                  >
+                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-gray-500" />
+                    <span>{link.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Contact</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-gray-800" />
-                <a
+            <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
+              Contact
+              <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
+            </h3>
+            <ul className="space-y-5">
+              <li>
+                <Link
                   href="mailto:nordevagency@gmail.com"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-4"
                 >
-                  nordevagency@gmail.com
-                </a>
+                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                    <Mail className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Email</div>
+                    <div className="text-gray-300 font-medium group-hover:text-white">nordevagency@gmail.com</div>
+                  </div>
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-gray-800" />
-                <a
+              <li>
+                <Link
                   href="tel:+243991040032"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-4"
                 >
-                  +243 991 040 032
-                </a>
+                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                    <Phone className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Téléphone</div>
+                    <div className="text-gray-300 font-medium group-hover:text-white">+243 991 040 032</div>
+                  </div>
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-gray-800" />
-                <span className="text-gray-600">Kinshasa, RDC</span>
+              <li>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-gray-400" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Localisation</div>
+                    <div className="text-gray-300 font-medium">Kinshasa, RDC</div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
 
-          {/* Réseaux sociaux */}
+          {/* Newsletter & Réseaux sociaux */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Suivez-nous</h3>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="p-2 rounded-full bg-gray-100 hover:bg-gray-800 hover:text-white transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 rounded-full bg-gray-100 hover:bg-gray-800 hover:text-white transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 rounded-full bg-gray-100 hover:bg-gray-800 hover:text-white transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 rounded-full bg-gray-100 hover:bg-gray-800 hover:text-white transition-colors"
-              >
-                <Github className="w-5 h-5" />
-              </a>
+            <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
+              Restons Connectés
+              <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
+            </h3>
+            
+            {/* Newsletter */}
+            <div className="mb-8">
+              <p className="text-gray-400 text-sm mb-4">
+                Recevez nos conseils experts et actualités digitales.
+              </p>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Votre email"
+                  className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white/30 transition-colors"
+                />
+                <button className="bg-white text-gray-900 px-6 py-3 rounded-2xl hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  <Mail className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Réseaux sociaux */}
+            <div>
+              <p className="text-gray-400 text-sm mb-4">Suivez notre aventure</p>
+              <div className="flex gap-3">
+                {[
+                  { icon: Linkedin, href: "#", label: "LinkedIn" },
+                  { icon: Instagram, href: "#", label: "Instagram" },
+                  { icon: Twitter, href: "#", label: "Twitter" },
+                  { icon: Github, href: "#", label: "GitHub" }
+                ].map((social, index) => (
+                  <Link
+                    key={index}
+                    href={social.href}
+                    className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-white/10 transition-all duration-300 group border border-white/10 hover:border-white/30"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Ligne de séparation */}
-        <div className="border-t border-gray-200 pt-6 text-center">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()}{" "}
-            <span className="font-semibold text-gray-800">Nordev Agency</span>.
-            Tous droits réservés.
-          </p>
+        {/* Section inférieure */}
+        <div className="border-t border-white/10 pt-8 pb-6">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+            {/* Copyright */}
+            <div className="text-center lg:text-left">
+              <p className="text-gray-500 text-sm">
+                © {new Date().getFullYear()}{" "}
+                <span className="font-semibold text-white">Nordev Agency</span>. 
+                Tous droits réservés.
+              </p>
+            </div>
+
+            {/* Liens légaux */}
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
+              <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors">
+                Politique de confidentialité
+              </Link>
+              <Link href="/terms" className="text-gray-500 hover:text-white transition-colors">
+                Conditions d'utilisation
+              </Link>
+              <Link href="/cookies" className="text-gray-500 hover:text-white transition-colors">
+                Préférences cookies
+              </Link>
+            </div>
+
+            {/* Made with love */}
+            <div className="flex items-center gap-2 text-gray-500 text-sm">
+              <span>Créé avec</span>
+              <Heart className="w-4 h-4 text-red-400 fill-current" />
+              <span>par Nordev Agency</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
