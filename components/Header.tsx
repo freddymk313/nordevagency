@@ -23,13 +23,6 @@ export default function Header() {
             {/* Logo à gauche */}
             <Link href="/">
               <div className="*flex items-center *space-x-3">
-                {/* <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center shadow-sm">
-                <span className="text-white font-bold text-xl">N</span>
-              </div> */}
-                {/* <span className="text-xl font-bold text-gray-900 hidden sm:block">
-                Nordev Agency
-              </span> */}
-
                 <div className="lg:hidden">
                   <Image
                     src={"/logo/logo-1.jpg"}
@@ -143,16 +136,7 @@ export default function Header() {
 
           {/* Bouton Mobile */}
           <div className="mt-12 pt-8 *border-t border-gray-200">
-            {/* <button
-              className="w-full bg-[color-primary-dark] text-sm text-white py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-lg shadow-sm"
-              onClick={() => {
-                setIsMenuOpen(false);
-                
-              }}
-            >
-              Réserver un appel
-            </button> */}
-
+          
             <button className="w-full bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
               <span>Réserver un appel</span>
               <svg
