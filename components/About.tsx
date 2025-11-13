@@ -2,30 +2,15 @@ import { Check } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="apropos" className="py-24 bg-white">
+    <section id="apropos" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* En-tête avec badge */}
           <div className="text-center mb-12 md:mb-20">
-            {/* <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-medium text-gray-700">
-                Notre histoire
-              </span>
-            </div> */}
-            {/* <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Notre <span className="text-gray-800">histoire</span>
-            </h2> */}
-            
-            {/* <div className="w-20 h-1 bg-gray-800 mx-auto mb-8 rounded-full" /> */}
-
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
             À propos <span className="text-gray-800"> de Nordev</span>
           </h2>
           <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />
-          {/* <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Découvrez les retours d'expérience de nos clients qui ont transformé 
-            leurs <span className="text-gray-800 font-medium">ambitions digitales en succès concrets</span>.
-          </p> */}
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
