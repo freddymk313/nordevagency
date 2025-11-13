@@ -86,7 +86,7 @@ const Portfolio = () => {
   };
 
   // Réinitialiser l'index quand on change de catégorie
-  const handleCategoryChange = (category) => {
+  const handleCategoryChange = (category: any) => {
     setActiveCategory(category);
     setCurrentProjectIndex(0);
   };
