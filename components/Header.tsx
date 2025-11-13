@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {ChevronRight} from "lucide-react";
 
 const links = [
   {name: "Services", href: "#services"},
@@ -18,7 +17,7 @@ export default function Header() {
   return (
     <header>
       {/* Navbar Principale */}
-      <nav className="bg-white sticky top-0 z-50 *backdrop-blur-sm *bg-white/95 py-2 md:py-6 lg:py-8">
+      <nav className="bg-white sticky top-0 z-50 *backdrop-blur-sm *bg-white/95 py-4 md:py-6 lg:py-8">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo à gauche */}
@@ -70,7 +69,7 @@ export default function Header() {
 
             {/* Bouton à droite - Desktop */}
             <div className="hidden lg:block">
-              <button className="bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold *text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 group">
+              <button className="bg-[#111111] text-sm text-white px-6 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold *text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 group">
               Réserver un appel
               <svg 
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
@@ -145,7 +144,7 @@ export default function Header() {
               Réserver un appel
             </button> */}
 
-            <button className="w-full bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
+            <button className="w-full bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
              <span>Réserver un appel</span>
               <svg 
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
