@@ -6,7 +6,7 @@ import Image from "next/image";
 import {ChevronRight} from "lucide-react";
 
 const links = [
-  {name: "services", href: "#services"},
+  {name: "Services", href: "#services"},
   {name: "Projets", href: "#projets"},
   {name: "À propos", href: "#apropos"},
   {name: "Témoignages", href: "#temoignages"},
@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header>
       {/* Navbar Principale */}
-      <nav className="bg-white sticky top-0 z-50 *backdrop-blur-sm *bg-white/95 py-2 md:py-4 lg:py-6">
+      <nav className="bg-white sticky top-0 z-50 *backdrop-blur-sm *bg-white/95 py-2 md:py-6 lg:py-8">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo à gauche */}
@@ -59,7 +59,7 @@ export default function Header() {
             <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
               <div className="flex space-x-8 text-base">
                 {links.map((link: any,idx: any) => (
-                  <Link href={link.href}
+                  <Link key={idx} href={link.href}
                   className="text-gray-700 text-base hover:text-gray-900 transition-colors =font-medium"
                   >
                     {link.name}
@@ -70,10 +70,17 @@ export default function Header() {
 
             {/* Bouton à droite - Desktop */}
             <div className="hidden lg:block">
-              <button className="bg-gray-800 text-white flex items-center text-sm px-5 py-2.5 md:py-3 *lg:py-[14px] rounded-full hover:bg-gray-900 transition-all duration-300 font-medium shadow-sm hover:shadow-md">
-                <span>Réserver un appel</span>
-                <ChevronRight className="text-white h-4.5 w-4.5 ml-0.5" />
-              </button>
+              <button className="bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold *text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 group">
+              Réserver un appel
+              <svg 
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </button>
             </div>
 
             {/* Menu Burger - Mobile */}
@@ -116,7 +123,7 @@ export default function Header() {
           {/* Liens Mobile */}
           <div className="flex flex-col space-y-6">
             {links.map((link: any,idx: any) => (
-                  <Link href={link.href}
+                  <Link key={idx} href={link.href}
               className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
                   // className="text-gray-700 text-base hover:text-gray-900 transition-colors =font-medium"
               onClick={() => setIsMenuOpen(false)}
