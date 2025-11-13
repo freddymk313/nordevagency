@@ -63,7 +63,7 @@ export default function Header() {
             </div>
 
             {/* Bouton à droite - Desktop */}
-            <div className="hidden lg:block">
+            {/* <div className="hidden lg:block">
               <button className="bg-[#111111] text-sm text-white px-6 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold *text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 group">
                 Réserver un appel
                 <svg
@@ -80,6 +80,27 @@ export default function Header() {
                   />
                 </svg>
               </button>
+            </div> */}
+
+            <div className="hidden lg:block">
+              <Link href="#contact"> {/* Lien vers section contact */}
+                <button className="bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-3 group text-[15px]">
+                  <span>Démarrer mon projet</span> {/* Copy plus engageant */}
+                  <svg
+                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2.5}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </button>
+              </Link>
             </div>
 
             {/* Menu Burger - Mobile */}
