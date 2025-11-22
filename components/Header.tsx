@@ -101,8 +101,8 @@ export default function Header() {
                   </svg>
                 </button> */}
 
-                <button className="w-full bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
-              <span className="text-sm">Réserver un appel</span>
+                <button className="w-full bg-[#111111] text-sm text-white px-6 py-3 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
+              <span className="text-[14px]">Réserver un appel</span>
               <svg
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                 fill="none"
