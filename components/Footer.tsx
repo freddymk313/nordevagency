@@ -35,7 +35,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 relative overflow-hidden">
+    <footer className="bg-[#111111] relative overflow-hidden">
       {/* Éléments décoratifs sophistiqués */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/3 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
@@ -84,14 +84,14 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="text-gray-400 text-lg leading-relaxed mt-6 mb-8 font-light max-w-md">
+            <p className="text-gray-400 text-[15px] leading-relaxed mt-6 mb-8 font-light max-w-md">
               Votre partenaire de confiance pour des 
-              <span className="font-medium text-white"> solutions digitales sur mesure</span> 
+              <span className="font-medium text-white"> solutions digitales sur mesure </span> 
               qui transforment votre vision en réalité.
             </p>
 
             {/* Badges de confiance */}
-            <div className="flex flex-wrap gap-3">
+            {/* <div className="flex flex-wrap gap-3">
               <div className="flex items-center gap-2 bg-white/5 rounded-2xl px-4 py-2 border border-white/10">
                 <Shield className="w-4 h-4 text-green-400" />
                 <span className="text-sm text-gray-300 font-medium">Expert Certifié</span>
@@ -100,14 +100,14 @@ const Footer = () => {
                 <Zap className="w-4 h-4 text-yellow-400" />
                 <span className="text-sm text-gray-300 font-medium">Support 24/7</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Liens rapides */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
               Navigation
-              <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
+              {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
             </h3>
             <ul className="space-y-4">
               {[
@@ -120,7 +120,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-2 text-base font-medium"
+                    className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-2 text-[15px] font-medium"
                   >
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-gray-500" />
                     <span>{link.name}</span>
@@ -134,9 +134,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
               Contact
-              <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
+              {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
             </h3>
-            <ul className="space-y-5">
+            <ul className="space-y-5 text-[15px]">
               <li>
                 <Link
                   href="mailto:nordevagency@gmail.com"
@@ -147,7 +147,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Email</div>
-                    <div className="text-gray-300 font-medium group-hover:text-white">nordevagency@gmail.com</div>
+                    <div className="text-gray-300 font-medium group-hover:text-white text-[14px]">nordevagency@gmail.com</div>
                   </div>
                 </Link>
               </li>
@@ -172,7 +172,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Localisation</div>
-                    <div className="text-gray-300 font-medium">Kinshasa, RDC</div>
+                    <div className="text-gray-300 font-medium">Lubumbashi, RDC</div>
                   </div>
                 </div>
               </li>
@@ -183,7 +183,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
               Restons Connectés
-              <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
+              {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
             </h3>
             
             {/* Newsletter */}
