@@ -13,6 +13,7 @@ import {
   Heart,
   Shield,
   Zap,
+  Send,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -197,8 +198,8 @@ const Footer = () => {
                   placeholder="Votre email"
                   className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white/30 transition-colors"
                 />
-                <button className="bg-white text-gray-900 px-6 py-3 rounded-2xl hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                  <Mail className="w-5 h-5" />
+                <button className="bg-white text-gray-900 px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  <Send className="w-5 h-5" />
                 </button>
               </div>
             </div>
@@ -255,7 +256,7 @@ const Footer = () => {
             {/* Made with love */}
             <div className="flex items-center gap-2 text-gray-500 text-sm">
               <span>Créé avec</span>
-              <Heart className="w-4 h-4 text-red-400 fill-current" />
+              {/* <Heart className="w-4 h-4 text-red-400 fill-current" /> */}
               <span>par Nordev Agency</span>
             </div>
           </div>
