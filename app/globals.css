@@ -3,18 +3,15 @@
 /* Exemple d'utilisation dans globals.css ou modules CSS */
 h1, h2, h3, h4 {
   font-family: var(--font-poppins);
-  font-weight: 600; /* SemiBold */
 }
 
 body, p, span, div {
   font-family: var(--font-inter);
-  font-weight: 400;
 }
 
 /* Pour les boutons ou textes importants */
 .button, .cta {
   font-family: var(--font-poppins);
-  font-weight: 500; /* Medium */
 }
 
 /* Dans votre globals.css */

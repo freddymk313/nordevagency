@@ -49,12 +49,12 @@ export default function Header() {
 
             {/* Liens au centre - Desktop */}
             <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
-              <div className="flex space-x-8 text-base">
+              <div className="flex space-x-8 *text-base">
                 {links.map((link: any, idx: any) => (
                   <Link
                     key={idx}
                     href={link.href}
-                    className="text-gray-700 text-base hover:text-gray-900 transition-colors =font-medium"
+                    className="text-gray-700 text-[14.5px] hover:text-gray-900 transition-colors =font-medium"
                   >
                     {link.name}
                   </Link>
@@ -84,8 +84,8 @@ export default function Header() {
 
             <div className="hidden lg:block">
               <Link href="#contact"> {/* Lien vers section contact */}
-                <button className="bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-3 group text-[15px]">
-                  <span>Démarrer mon projet</span> {/* Copy plus engageant */}
+                {/* <button className="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-3 group text-[15px]">
+                  <span>Démarrer mon projet</span> 
                   <svg
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                     fill="none"
@@ -99,7 +99,25 @@ export default function Header() {
                       d="M13 7l5 5m0 0l-5 5m5-5H6"
                     />
                   </svg>
-                </button>
+                </button> */}
+
+                <button className="w-full bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
+              <span className="text-sm">Réserver un appel</span>
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  
+                />
+              </svg>
+            </button>
               </Link>
             </div>
 
