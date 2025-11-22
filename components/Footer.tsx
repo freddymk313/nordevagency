@@ -9,10 +9,6 @@ import {
   Twitter,
   Github,
   ChevronRight,
-  ArrowUp,
-  Heart,
-  Shield,
-  Zap,
   Send,
 } from "lucide-react";
 import Image from "next/image";
@@ -40,17 +36,6 @@ const Footer = () => {
       {/* Éléments décoratifs sophistiqués */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/3 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
-      
-      {/* Bouton scroll to top */}
-      {/* {showScrollTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-14 h-14 bg-gray-800 hover:bg-gray-700 text-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 z-50 flex items-center justify-center group border border-white/10"
-          aria-label="Retour en haut"
-        >
-          <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
-        </button>
-      )} */}
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section principale */}
@@ -86,22 +71,11 @@ const Footer = () => {
             </Link>
 
             <p className="text-gray-400 text-[15px] leading-relaxed mt-6 mb-8 font-light max-w-md">
-              Votre partenaire de confiance pour des 
-              <span className="font-medium text-white"> solutions digitales sur mesure </span> 
+              Votre partenaire de confiance pour des
+              <span className="font-medium text-white"> solutions digitales sur mesure </span>
               qui transforment votre vision en réalité.
             </p>
 
-            {/* Badges de confiance */}
-            {/* <div className="flex flex-wrap gap-3">
-              <div className="flex items-center gap-2 bg-white/5 rounded-2xl px-4 py-2 border border-white/10">
-                <Shield className="w-4 h-4 text-green-400" />
-                <span className="text-sm text-gray-300 font-medium">Expert Certifié</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/5 rounded-2xl px-4 py-2 border border-white/10">
-                <Zap className="w-4 h-4 text-yellow-400" />
-                <span className="text-sm text-gray-300 font-medium">Support 24/7</span>
-              </div>
-            </div> */}
           </div>
 
           {/* Liens rapides */}
@@ -186,7 +160,7 @@ const Footer = () => {
               Restons Connectés
               {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
             </h3>
-            
+
             {/* Newsletter */}
             <div className="mb-8">
               <p className="text-gray-400 text-sm mb-4">
@@ -235,7 +209,7 @@ const Footer = () => {
             <div className="text-center lg:text-left">
               <p className="text-gray-500 text-sm">
                 © {new Date().getFullYear()}{" "}
-                <span className="font-semibold text-white">Nordev Agency</span>. 
+                <span className="font-semibold text-white">Nordev Agency</span>.
                 Tous droits réservés.
               </p>
             </div>

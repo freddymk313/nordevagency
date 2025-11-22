@@ -40,8 +40,8 @@ export default function Header() {
                     height={230}
                     width={230}
                     alt={"logo image"}
-                    // className="w-12 h-12 object-cover"
-                    // quality={100}
+                  // className="w-12 h-12 object-cover"
+                  // quality={100}
                   />
                 </div>
               </div>
@@ -62,32 +62,13 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Bouton à droite - Desktop */}
-            {/* <div className="hidden lg:block">
-              <button className="bg-[#111111] text-sm text-white px-6 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold *text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 group">
-                Réserver un appel
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </button>
-            </div> */}
-
             <div className="hidden lg:block">
-              <Link href="#contact"> {/* Lien vers section contact */}
-                {/* <button className="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-3 group text-[15px]">
-                  <span>Démarrer mon projet</span> 
+              <Link href="#contact">
+
+                <button className="w-full bg-[#111111] text-sm text-white px-6 py-3 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
+                  <span className="text-[14px]">Réserver un appel</span>
                   <svg
-                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -95,29 +76,12 @@ export default function Header() {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2.5}
+                      strokeWidth={2}
                       d="M13 7l5 5m0 0l-5 5m5-5H6"
+
                     />
                   </svg>
-                </button> */}
-
-                <button className="w-full bg-[#111111] text-sm text-white px-6 py-3 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
-              <span className="text-[14px]">Réserver un appel</span>
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  
-                />
-              </svg>
-            </button>
+                </button>
               </Link>
             </div>
 
@@ -128,19 +92,16 @@ export default function Header() {
             >
               <div className="w-6 h-6 flex flex-col justify-center space-y-1">
                 <span
-                  className={`block h-0.5 w-6 bg-gray-800 transition-all ${
-                    isMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                  }`}
+                  className={`block h-0.5 w-6 bg-gray-800 transition-all ${isMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                    }`}
                 ></span>
                 <span
-                  className={`block h-0.5 w-6 bg-gray-800 transition-all ${
-                    isMenuOpen ? "opacity-0" : "opacity-100"
-                  }`}
+                  className={`block h-0.5 w-6 bg-gray-800 transition-all ${isMenuOpen ? "opacity-0" : "opacity-100"
+                    }`}
                 ></span>
                 <span
-                  className={`block h-0.5 w-6 bg-gray-800 transition-all ${
-                    isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                  }`}
+                  className={`block h-0.5 w-6 bg-gray-800 transition-all ${isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                    }`}
                 ></span>
               </div>
             </button>
@@ -150,11 +111,10 @@ export default function Header() {
 
       {/* Menu Mobile Overlay */}
       <div
-        className={`fixed inset-0 bg-white z-40 lg:hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen
+        className={`fixed inset-0 bg-white z-40 lg:hidden transition-all duration-300 ease-in-out ${isMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
-        }`}
+          }`}
         style={{ top: "64px" }} // Hauteur de la navbar
       >
         <div className="container mx-auto px-4 py-8 pt-12">
@@ -175,7 +135,7 @@ export default function Header() {
 
           {/* Bouton Mobile */}
           <div className="mt-12 pt-8 *border-t border-gray-200">
-          
+
             <button className="w-full bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
               <span>Réserver un appel</span>
               <svg
@@ -189,7 +149,7 @@ export default function Header() {
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  
+
                 />
               </svg>
             </button>
