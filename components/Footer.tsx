@@ -42,7 +42,7 @@ const Footer = () => {
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/3 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
       
       {/* Bouton scroll to top */}
-      {showScrollTop && (
+      {/* {showScrollTop && (
         <button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 w-14 h-14 bg-gray-800 hover:bg-gray-700 text-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 z-50 flex items-center justify-center group border border-white/10"
@@ -50,7 +50,7 @@ const Footer = () => {
         >
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
         </button>
-      )}
+      )} */}
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section principale */}
