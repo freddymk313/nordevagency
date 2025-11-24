@@ -174,7 +174,7 @@ const Portfolio = () => {
 
                   {/* Technologies */}
                   <div className="mb-6">
-                    <h4 className="text-sm text-gray-900 mb-3 tracking-wide">
+                    <h4 className="text-xs uppercase text-gray-900 mb-3 tracking-wide">
                       Technologies utilisées
                     </h4>
                     <div className="flex flex-wrap gap-2">
