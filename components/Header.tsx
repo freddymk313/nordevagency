@@ -54,7 +54,7 @@ export default function Header() {
                   <Link
                     key={idx}
                     href={link.href}
-                    className="text-gray-700 text-[14.5px] hover:text-gray-900 transition-colors =font-medium"
+                    className="text-gray-700 text-base hover:text-gray-900 transition-colors =font-medium"
                   >
                     {link.name}
                   </Link>

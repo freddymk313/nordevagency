@@ -37,11 +37,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* En-tête */}
         <div className="text-center mb-12 md:mb-20">
-          {/* <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-6 shadow-sm">
-            <span className="text-sm font-medium text-gray-700">
-              Témoignages clients
-            </span>
-          </div> */}
+     
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
             Ils nous <span className="text-gray-800">font confiance</span>
           </h2>
