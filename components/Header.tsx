@@ -65,7 +65,7 @@ export default function Header() {
             <div className="hidden lg:block">
               <Link href="#contact">
 
-                <button className="w-full bg-[#111111] text-sm text-white px-6 py-3 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
+                {/* <button className="w-full bg-[#111111] text-sm text-white px-6 py-3 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
                   <span className="text-[14px]">Réserver un appel</span>
                   <svg
                     className="w-5 h-5 group-hover:translate-x-1 transition-transform"
@@ -81,7 +81,19 @@ export default function Header() {
 
                     />
                   </svg>
-                </button>
+                </button> */}
+
+                <button className="bg-[#111111] text-sm text-white px-6 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold *text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 group">
+              Réserver un appel
+              <svg 
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </button>
               </Link>
             </div>
 
