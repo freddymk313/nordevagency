@@ -31,7 +31,7 @@ const About = () => {
             
             <div className="w-24 h-1 bg-gradient-to-r from-gray-800 to-gray-400 mx-auto mb-8 rounded-full" />
             
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
               Nous ne créons pas simplement des sites web. Nous concevons des 
               <span className="font-medium text-gray-800"> expériences digitales sur mesure</span> qui 
               propulsent votre business vers de nouveaux sommets.
@@ -42,14 +42,14 @@ const About = () => {
             {/* Colonne texte - Contenu enrichi */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <p className="text-lg text-gray-600 leading-relaxed font-normal">
+                <p className="text-base text-gray-600 leading-relaxed font-normal">
                   Chez <span className="font-semibold text-gray-800">Nordev Agency</span>, nous incarnons 
                   la fusion parfaite entre l&apos;<span className="text-gray-800 font-semibold">art du design</span>, 
                   la <span className="text-gray-800 font-semibold">maîtrise technologique</span> et 
                   la <span className="text-gray-800 font-semibold">stratégie business</span>.
                 </p>
                 
-                <p className="text-lg text-gray-600 leading-relaxed font-normal">
+                <p className="text-base text-gray-600 leading-relaxed font-normal">
                   Chaque projet est une opportunité de repousser les limites de l&apos;innovation 
                   et de délivrer des solutions qui <span className="font-semibold text-gray-800">dépassent les attentes</span>.
                 </p>
