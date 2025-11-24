@@ -51,7 +51,7 @@ const Footer = () => {
                     height={60}
                     width={60}
                     alt="Nordev Agency - Agence de développement web et mobile"
-                    className="rounded-xl"
+                    // className="rounded-xl"
                     quality={100}
                   />
                 </div>
@@ -63,7 +63,7 @@ const Footer = () => {
                     height={200}
                     width={200}
                     alt="Nordev Agency - Votre partenaire digital d'excellence"
-                    className="rounded-xl"
+                    // className="rounded-xl"
                     quality={100}
                   />
                 </div>
