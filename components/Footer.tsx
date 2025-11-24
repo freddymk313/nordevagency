@@ -47,7 +47,7 @@ const Footer = () => {
                 {/* Version mobile */}
                 <div className="lg:hidden">
                   <Image
-                    src={"/logo/logo-1.jpg"}
+                    src={"/logo/logo-white.jpg"}
                     height={60}
                     width={60}
                     alt="Nordev Agency - Agence de développement web et mobile"
@@ -59,7 +59,7 @@ const Footer = () => {
                 {/* Version desktop */}
                 <div className="hidden lg:block">
                   <Image
-                    src={"/logo/logo-2.jpg"}
+                    src={"/logo/logo-white.jpg"}
                     height={200}
                     width={200}
                     alt="Nordev Agency - Votre partenaire digital d'excellence"
