@@ -170,9 +170,9 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Votre email"
-                  className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white/30 transition-colors"
+                  className="flex-1 bg-white/5 border text-[14px] border-white/10 rounded-2xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-white/30 transition-colors"
                 />
-                <button className="bg-white text-gray-900 px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <button className="bg-white text-gray-900 px-5 py-2.5 rounded-full hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                   <Send className="w-5 h-5" />
                 </button>
               </div>
