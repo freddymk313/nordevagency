@@ -10,7 +10,7 @@ const Portfolio = () => {
       description:
         "Marketplace premium avec système de réservation en temps réel et paiements sécurisés.",
       category: "Développement Web",
-      image: "/img/1.webp",
+      image: "/portfolio/1.webp",
       technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
       link: "#",
       featured: true,
@@ -21,7 +21,7 @@ const Portfolio = () => {
       description:
         "App de suivi d'activité sportive avec IA et analytics personnalisés.",
       category: "Application Mobile",
-      image: "/img/2.png",
+      image: "/portfolio/2.png",
       technologies: ["React Native", "Firebase", "Node.js"],
       link: "#",
       featured: true,
@@ -32,7 +32,7 @@ const Portfolio = () => {
       description:
         "Outil de business intelligence avec visualisation de données en temps réel.",
       category: "Développement Web",
-      image: "/img/3.jpg",
+      image: "/portfolio/3.jpg",
       technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
       link: "#",
     },
@@ -42,7 +42,7 @@ const Portfolio = () => {
       description:
         "Refonte complète avec design system et intégration CMS headless.",
       category: "Design UI/UX",
-      image: "/img/4.png",
+      image: "/portfolio/4.png",
       technologies: ["Figma", "Webflow", "GraphQL"],
       link: "#",
     },
@@ -52,7 +52,7 @@ const Portfolio = () => {
       description:
         "Platform de gestion de projet avec collaboration d'équipe avancée.",
       category: "Développement Web",
-      image: "/img/5.jpg",
+      image: "/portfolio/5.jpg",
       technologies: ["React", "MongoDB", "Socket.io", "AWS"],
       link: "#",
     },

@@ -1,4 +1,5 @@
 import { Check, Award, Users, Target, Zap } from "lucide-react";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -32,7 +33,7 @@ const About = () => {
             {/* Colonne texte - Contenu enrichi */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <p className="text-lg text-gray-600 leading-relaxed font-normal">
+                <p className="text-base text-gray-600 leading-relaxed font-normal">
                   Chez{" "}
                   <span className="font-semibold text-gray-800">
                     Nordev Agency
@@ -52,7 +53,7 @@ const About = () => {
                   .
                 </p>
 
-                <p className="text-lg text-gray-600 leading-relaxed font-normal">
+                <p className="text-base text-gray-600 leading-relaxed font-normal">
                   Chaque projet est une opportunité de repousser les limites de
                   l&apos;innovation et de délivrer des solutions qui{" "}
                   <span className="font-semibold text-gray-800">
@@ -63,9 +64,9 @@ const About = () => {
               </div>
 
               {/* Points forts - Design amélioré */}
-              <div className="space-y-6 pt-6">
+              <div className="space-y-6 pt-4">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                  <Zap className="w-6 h-6 text-gray-800" />
+                  {/* <Zap className="w-6 h-6 text-gray-800" /> */}
                   Notre Différence
                 </h3>
 
@@ -74,7 +75,7 @@ const About = () => {
                     icon: Award,
                     title: "Expertise Technique Avancée",
                     description:
-                      "Maîtrise des technologies modernes (Next.js, React Native, Node.js) pour des performances optimales",
+                      "Maîtrise des technologies modernes actuel pour des performances optimales",
                   },
                   {
                     icon: Users,
@@ -91,7 +92,8 @@ const About = () => {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-5 p-6 rounded-2xl bg-gray-50/50 hover:bg-gray-50 transition-all duration-300 group cursor-default border border-gray-100"
+                    // className="flex items-start gap-5 p-6 rounded-2xl bg-gray-50/50 hover:bg-gray-50 transition-all duration-300 group cursor-default border border-gray-100"
+                    className="group flex items-start gap-5 bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-6"
                   >
                     <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <item.icon className="w-6 h-6 text-white" />
@@ -104,28 +106,11 @@ const About = () => {
                         {item.description}
                       </p>
                     </div>
+
+                    {/* Bordure animée */}
+                    <div className="absolute bottom-0 left-0 w-0 h-1 bg-gray-800 group-hover:w-full transition-all duration-500" />
                   </div>
                 ))}
-              </div>
-
-              {/* CTA intégré */}
-              <div className="pt-8">
-                <button className="bg-gray-900 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-3 group">
-                  <span>Découvrir notre méthodologie</span>
-                  <svg
-                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.5}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </button>
               </div>
             </div>
 
@@ -133,22 +118,24 @@ const About = () => {
             <div className="relative">
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { number: "50+", label: "Projets d'Excellence", icon: Award },
-                  { number: "98%", label: "Satisfaction Client", icon: Users },
+                  { number: "25+", label: "Projets d'Excellence", icon: '/img/1.png' },
+                  { number: "98%", label: "Satisfaction Client", icon: '/img/2.png' },
                   {
                     number: "100%",
                     label: "Livraison Dans les Délais",
-                    icon: Target,
+                    icon: '/img/3.png',
                   },
-                  { number: "24/7", label: "Support Premium", icon: Zap },
+                  { number: "24/7", label: "Support Premium", icon: '/img/4.png' },
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group hover:-translate-y-2 cursor-default"
+                    className="group bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-8"
+                    // className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group hover:-translate-y-2 cursor-default"
                   >
                     <div className="text-center">
                       <div className="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <stat.icon className="w-8 h-8 text-white" />
+                        {/* <stat.icon className="w-8 h-8 text-white" /> */}
+                        <Image href={stat.icon} height={25} width={25} />
                       </div>
                       <div className="text-3xl font-bold text-gray-900 mb-2">
                         {stat.number}
@@ -157,12 +144,15 @@ const About = () => {
                         {stat.label}
                       </div>
                     </div>
+
+                    {/* Bordure animée */}
+                    <div className="absolute bottom-0 left-0 w-0 h-1 bg-gray-800 group-hover:w-full transition-all duration-500" />
                   </div>
                 ))}
               </div>
 
               {/* Citation client */}
-              <div className="mt-8 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white shadow-2xl">
+              <div className="mt-6 bg-gradient-to-br from-[#111111] to-gray-800 rounded-2xl p-6 text-white shadow-2xl">
                 <div className="text-2xl font-light italic mb-4 leading-relaxed">
                   &ldquo;Nordev a transformé notre vision en une plateforme qui
                   dépasse toutes nos attentes. Un partenariat
