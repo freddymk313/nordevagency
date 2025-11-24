@@ -182,7 +182,7 @@ const Portfolio = () => {
                         <span
                           key={index}
                           // className="text-xs font-medium text-gray-700 bg-gray-100 px-2 py-1 rounded"
-                          className="text-xs border font-medium px-2 py-1 bg-white text-gray-700 rounded-full border-gray-300 hover:border-gray-800 hover:shadow-md"
+                          className="text-xs border font-medium px-2 py-1 bg-white text-gray-700 rounded-full border-gray-300"
                         >
                           {tech}
                         </span>
@@ -195,7 +195,7 @@ const Portfolio = () => {
                 <div className="flex gap-4">
                   <a
                     href={currentProject.link}
-                    className="flex-1 bg-gray-800 text-sm text-white text-center py-4 px-8 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group"
+                    className="flex-1 bg-[#111111] text-sm text-white text-center py-4 px-8 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group"
                     // className="flex-1 bg-gray-800 text-white text-center py-3 px-6 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold"
                   >
                     <span>Voir le projet</span>
@@ -209,7 +209,7 @@ const Portfolio = () => {
           <div className="flex justify-center gap-5 items-center mt-12 px-4">
             <button
               // onClick={() => navigateProject('prev')}
-              className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-x-1 group"
+              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-x-1 group"
               aria-label="Projet précédent"
             >
               <ChevronLeft className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -243,7 +243,7 @@ const Portfolio = () => {
 
             <button
               // onClick={() => navigateProject('next')}
-              className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:translate-x-1 group"
+              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:translate-x-1 group"
               aria-label="Projet suivant"
             >
               <ChevronRight className="w-5 h-5 group-hover:scale-110 transition-transform" />
