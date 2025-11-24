@@ -195,7 +195,7 @@ const Portfolio = () => {
                 <div className="flex gap-4">
                   <a
                     href={currentProject.link}
-                    className="flex-1 bg-gray-800 text-white text-center py-3.5 px-8 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group"
+                    className="flex-1 bg-gray-800 text-sm text-white text-center py-4 px-8 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group"
                     // className="flex-1 bg-gray-800 text-white text-center py-3 px-6 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold"
                   >
                     <span>Voir le projet</span>
