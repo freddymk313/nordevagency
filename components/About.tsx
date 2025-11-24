@@ -2,7 +2,7 @@ import { Check, Award, Users, Target, Zap } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="apropos" className="py-28 bg-white relative overflow-hidden">
+    <section id="apropos" className="py-28 bg-gray-50 relative overflow-hidden">
       {/* Éléments d'arrière-plan sophistiqués */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gray-900/3 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gray-900/2 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
