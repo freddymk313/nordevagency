@@ -118,14 +118,14 @@ const About = () => {
             <div className="relative">
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { number: "25+", label: "Projets d'Excellence", icon: '/img/1.png' },
-                  { number: "98%", label: "Satisfaction Client", icon: '/img/2.png' },
+                  { number: "25+", label: "Projets d'Excellence", icon: Award },
+                  { number: "98%", label: "Satisfaction Client", icon: Users },
                   {
                     number: "100%",
                     label: "Livraison Dans les Délais",
-                    icon: '/img/3.png',
+                    icon: Target,
                   },
-                  { number: "24/7", label: "Support Premium", icon: '/img/4.png' },
+                  { number: "24/7", label: "Support Premium", icon: Zap },
                 ].map((stat, index) => (
                   <div
                     key={index}
@@ -134,8 +134,8 @@ const About = () => {
                   >
                     <div className="text-center">
                       <div className="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        {/* <stat.icon className="w-8 h-8 text-white" /> */}
-                        <Image href={stat.icon} height={25} width={25} />
+                        <stat.icon className="w-8 h-8 text-white" />
+                        {/* <Image href={} height={25} width={25} /> */}
                       </div>
                       <div className="text-3xl font-bold text-gray-900 mb-2">
                         {stat.number}
