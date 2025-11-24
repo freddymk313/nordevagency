@@ -45,19 +45,19 @@ const Footer = () => {
             <Link href="/" className="inline-block">
               <div className="relative">
                 {/* Version mobile */}
-                <div className="lg:hidden">
+                {/* <div className="lg:hidden">
                   <Image
                     src={"/logo/logo-white.jpg"}
                     height={60}
                     width={60}
                     alt="Nordev Agency - Agence de développement web et mobile"
-                    // className="rounded-xl"
+                   
                     quality={100}
                   />
-                </div>
+                </div> */}
 
                 {/* Version desktop */}
-                <div className="hidden lg:block">
+                <div className="">
                   <Image
                     src={"/logo/logo-white.jpg"}
                     height={200}
