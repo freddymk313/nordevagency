@@ -207,46 +207,37 @@ const Portfolio = () => {
           </div>
 
           <div className="flex justify-center gap-5 items-center mt-12 px-4">
+            {/* PREV */}
             <button
-              // onClick={() => navigateProject('prev')}
-              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-x-1 group"
+              onClick={prevProject}
               aria-label="Projet précédent"
+              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-x-1 group"
             >
-              <ChevronLeft className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
 
-            {/* Indicateurs de projets */}
-            <div className="flex items-center gap-8">
-              {/* <span className="text-lg text-gray-700 font-semibold">
-                <span className="text-gray-900">{currentProjectIndex + 1}</span>
-                <span className="text-gray-400"> / {filteredProjects.length}</span>
-              </span> */}
-
-              <div className="flex gap-2">
-                {filteredProjects.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      setCurrentProjectIndex(index);
-                      // setIsAnimating(true);
-                      // setTimeout(() => setIsAnimating(false), 500);
-                    }}
-                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                      index === currentProjectIndex
-                        ? "bg-gray-800 w-8"
-                        : "bg-gray-300 hover:bg-gray-400"
-                    }`}
-                  />
-                ))}
-              </div>
+            {/* INDICATEURS */}
+            <div className="flex gap-2">
+              {filteredProjects.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentProjectIndex(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    index === currentProjectIndex
+                      ? "bg-gray-800 w-8"
+                      : "bg-gray-300 hover:bg-gray-400"
+                  }`}
+                />
+              ))}
             </div>
 
+            {/* NEXT */}
             <button
-              // onClick={() => navigateProject('next')}
-              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:translate-x-1 group"
+              onClick={nextProject}
               aria-label="Projet suivant"
+              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:translate-x-1 group"
             >
-              <ChevronRight className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>
