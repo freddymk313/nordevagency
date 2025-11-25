@@ -47,7 +47,7 @@ const Footer = () => {
                 {/* Version desktop */}
                 <div className="">
                   <Image
-                    src={"/logo/logo-white.jpg"}
+                    src={"/logo/logo-white.png"}
                     height={200}
                     width={200}
                     alt="Nordev Agency - Votre partenaire digital d'excellence"
