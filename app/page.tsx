@@ -5,6 +5,7 @@ import Portfolio from "@/components/Portfolio"
 import Testimonials from "@/components/Testimonials"
 import FinalCTA from "@/components/FinalCTA"
 import Footer from "@/components/Footer"
+import { WhatsappBtn } from "@/components/WhatsappBtn"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Testimonials />
       <FinalCTA />
       <Footer />
+      <WhatsappBtn />
     </>
   );
 }

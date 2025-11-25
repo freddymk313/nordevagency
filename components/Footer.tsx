@@ -1,5 +1,6 @@
 "use client";
 
+import { links } from "@/constants";
 import {
   Mail,
   Phone,
@@ -70,16 +71,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
               Navigation
-              {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
             </h3>
             <ul className="space-y-4">
-              {[
-                { name: "Services", href: "#services" },
-                { name: "Réalisations", href: "#portfolio" },
-                { name: "Notre Expertise", href: "#apropos" },
-                { name: "Avis Clients", href: "#temoignages" },
-                { name: "Contact", href: "#contact" }
-              ].map((link, index) => (
+              {links.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
