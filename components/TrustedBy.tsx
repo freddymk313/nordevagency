@@ -4,37 +4,37 @@ const TrustedBy = () => {
   const companies = [
     { 
       name: "Google", 
-      logo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      logo: "/trusted/asunicaco.PNG",
       width: 80,
       height: 27
     },
     { 
       name: "Slack", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg",
+      logo: "/trusted/asunicaco.PNG",
       width: 70,
       height: 28
     },
     { 
       name: "Notion", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+      logo: "/trusted/asunicaco.PNG",
       width: 28,
       height: 28
     },
     { 
       name: "Figma", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+      logo: "/trusted/asunicaco.PNG",
       width: 60,
       height: 24
     },
     { 
       name: "Amazon", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      logo: "/trusted/asunicaco.PNG",
       width: 85,
       height: 26
     },
     { 
       name: "Microsoft", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+      logo: "/trusted/asunicaco.PNG",
       width: 120,
       height: 25
     },
@@ -69,7 +69,7 @@ const TrustedBy = () => {
                   className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100 hover:scale-110"
                 >
                   <img 
-                    src={company.logo} 
+                    src="/portfolio/1.PNG"
                     alt={company.name}
                     className="h-8 md:h-10 w-auto object-contain filter brightness-0"
                     style={{ 

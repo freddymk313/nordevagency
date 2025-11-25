@@ -9,10 +9,7 @@ import {
   Twitter,
   Github,
   ChevronRight,
-  ArrowUp,
-  Heart,
-  Shield,
-  Zap,
+  Send,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,21 +32,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 relative overflow-hidden">
+    <footer className="bg-[#111111] relative overflow-hidden">
       {/* Éléments décoratifs sophistiqués */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/3 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
-      
-      {/* Bouton scroll to top */}
-      {showScrollTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-14 h-14 bg-gray-800 hover:bg-gray-700 text-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 z-50 flex items-center justify-center group border border-white/10"
-          aria-label="Retour en haut"
-        >
-          <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
-        </button>
-      )}
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section principale */}
@@ -59,55 +45,44 @@ const Footer = () => {
             <Link href="/" className="inline-block">
               <div className="relative">
                 {/* Version mobile */}
-                <div className="lg:hidden">
+                {/* <div className="lg:hidden">
                   <Image
-                    src={"/logo/logo-1.jpg"}
+                    src={"/logo/logo-white.jpg"}
                     height={60}
                     width={60}
                     alt="Nordev Agency - Agence de développement web et mobile"
-                    className="rounded-xl"
+                   
                     quality={100}
                   />
-                </div>
+                </div> */}
 
                 {/* Version desktop */}
-                <div className="hidden lg:block">
+                <div className="">
                   <Image
-                    src={"/logo/logo-2.jpg"}
+                    src={"/logo/logo-white.jpg"}
                     height={200}
                     width={200}
                     alt="Nordev Agency - Votre partenaire digital d'excellence"
-                    className="rounded-xl"
+                    // className="rounded-xl"
                     quality={100}
                   />
                 </div>
               </div>
             </Link>
 
-            <p className="text-gray-400 text-lg leading-relaxed mt-6 mb-8 font-light max-w-md">
-              Votre partenaire de confiance pour des 
-              <span className="font-medium text-white"> solutions digitales sur mesure</span> 
+            <p className="text-gray-400 text-[15px] leading-relaxed mt-6 mb-8 font-light max-w-md">
+              Votre partenaire de confiance pour des
+              <span className="font-medium text-white"> solutions digitales sur mesure </span>
               qui transforment votre vision en réalité.
             </p>
 
-            {/* Badges de confiance */}
-            <div className="flex flex-wrap gap-3">
-              <div className="flex items-center gap-2 bg-white/5 rounded-2xl px-4 py-2 border border-white/10">
-                <Shield className="w-4 h-4 text-green-400" />
-                <span className="text-sm text-gray-300 font-medium">Expert Certifié</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/5 rounded-2xl px-4 py-2 border border-white/10">
-                <Zap className="w-4 h-4 text-yellow-400" />
-                <span className="text-sm text-gray-300 font-medium">Support 24/7</span>
-              </div>
-            </div>
           </div>
 
           {/* Liens rapides */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
               Navigation
-              <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
+              {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
             </h3>
             <ul className="space-y-4">
               {[
@@ -120,7 +95,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-2 text-base font-medium"
+                    className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-2 text-[15px] font-medium"
                   >
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-gray-500" />
                     <span>{link.name}</span>
@@ -134,9 +109,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
               Contact
-              <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
+              {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
             </h3>
-            <ul className="space-y-5">
+            <ul className="space-y-5 text-[15px]">
               <li>
                 <Link
                   href="mailto:nordevagency@gmail.com"
@@ -147,7 +122,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Email</div>
-                    <div className="text-gray-300 font-medium group-hover:text-white">nordevagency@gmail.com</div>
+                    <div className="text-gray-300 font-medium group-hover:text-white text-[14px]">nordevagency@gmail.com</div>
                   </div>
                 </Link>
               </li>
@@ -172,7 +147,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Localisation</div>
-                    <div className="text-gray-300 font-medium">Kinshasa, RDC</div>
+                    <div className="text-gray-300 font-medium">Lubumbashi, RDC</div>
                   </div>
                 </div>
               </li>
@@ -183,9 +158,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
               Restons Connectés
-              <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
+              {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
             </h3>
-            
+
             {/* Newsletter */}
             <div className="mb-8">
               <p className="text-gray-400 text-sm mb-4">
@@ -195,10 +170,10 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Votre email"
-                  className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white/30 transition-colors"
+                  className="flex-1 bg-white/5 border text-[14px] border-white/10 rounded-2xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-white/30 transition-colors"
                 />
-                <button className="bg-white text-gray-900 px-6 py-3 rounded-2xl hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                  <Mail className="w-5 h-5" />
+                <button className="bg-white text-gray-900 px-5 py-2.5 rounded-full hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  <Send className="w-5 h-5" />
                 </button>
               </div>
             </div>
@@ -234,7 +209,7 @@ const Footer = () => {
             <div className="text-center lg:text-left">
               <p className="text-gray-500 text-sm">
                 © {new Date().getFullYear()}{" "}
-                <span className="font-semibold text-white">Nordev Agency</span>. 
+                <span className="font-semibold text-white">Nordev Agency</span>.
                 Tous droits réservés.
               </p>
             </div>
@@ -255,7 +230,7 @@ const Footer = () => {
             {/* Made with love */}
             <div className="flex items-center gap-2 text-gray-500 text-sm">
               <span>Créé avec</span>
-              <Heart className="w-4 h-4 text-red-400 fill-current" />
+              {/* <Heart className="w-4 h-4 text-red-400 fill-current" /> */}
               <span>par Nordev Agency</span>
             </div>
           </div>
