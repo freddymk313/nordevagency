@@ -77,6 +77,7 @@ const Portfolio = () => {
 
   const [activeCategory, setActiveCategory] = useState("Tous");
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const filteredProjects =
     activeCategory === "Tous"
@@ -104,13 +105,12 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
+    if (isHovered) return; // ne pas autoplay si survol
     const interval = setInterval(() => {
       nextProject();
-    }, 5000); // 5000ms = 5s
-
-    // Cleanup pour éviter les fuites mémoire
+    }, 5000);
     return () => clearInterval(interval);
-  }, [filteredProjects]);
+  }, [filteredProjects, isHovered]);
 
   return (
     <section id="portfolio" className="py-24 bg-white">
@@ -154,7 +154,11 @@ const Portfolio = () => {
         {/* Carousel des projets */}
         <div className="max-w-6xl mx-auto">
           {/* Carte du projet actuel */}
-          <div className="overflow-hidden =hover:shadow-xl transition-all duration-500">
+          <div
+            className="overflow-hidden =hover:shadow-xl transition-all duration-500"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <div className="grid md:grid-cols-2 gap-8">
               {/* Image du projet */}
               <div className="relative group overflow-hidden rounded-xl">
