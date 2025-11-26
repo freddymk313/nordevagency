@@ -152,7 +152,7 @@ const About = () => {
 
               {/* Citation client */}
               <div className="mt-6 bg-gradient-to-br from-[#111111] to-gray-800 rounded-2xl p-6 text-white shadow-2xl">
-                <div className="text-2xl font-light italic mb-4 leading-relaxed">
+                <div className="text-base font-light italic mb-4 leading-relaxed">
                   &ldquo;Nordev a transformé notre vision en une plateforme qui
                   dépasse toutes nos attentes. Un partenariat
                   exceptionnel.&rdquo;
