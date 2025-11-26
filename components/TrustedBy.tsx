@@ -5,15 +5,15 @@ import Marquee from "react-fast-marquee";
 const TrustedBy = () => {
   const companies = [
     { name: "Google", logo: "/trusted/csbisounours.jpg", width: 80, height: 27 },
-    { name: "Slack", logo: "/trusted/asunicaco.PNG", width: 70, height: 28 },
-    { name: "Notion", logo: "/trusted/funda.png", width: 28, height: 28 },
-    { name: "Figma", logo: "/trusted/metro.png", width: 60, height: 24 },
-    { name: "Amazon", logo: "/trusted/pexels.png", width: 85, height: 26 },
-    { name: "Microsoft", logo: "/trusted/urban.png", width: 120, height: 25 },
+    { name: "Slack", logo: "/trusted/asunicaco.PNG", width: 80, height: 28 },
+    { name: "Notion", logo: "/trusted/funda.png", width: 80, height: 24 },
+    { name: "Figma", logo: "/trusted/metro.png", width: 80, height: 24 },
+    { name: "Amazon", logo: "/trusted/pexels.png", width: 80, height: 26 },
+    { name: "Microsoft", logo: "/trusted/urban.png", width: 120, height: 250 },
   ];
 
   return (
-    <section className="py-10 bg-white overflow-hidden">
+    <section className="pb-10 overflow-hidden">
       <Marquee speed={50} gradient={true} gradientWidth={80}>
         {companies.map((c) => (
           <div key={c.name} className="flex-shrink-0 mx-8">
