@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 const TrustedBy = () => {
   const companies = [
@@ -12,55 +13,20 @@ const TrustedBy = () => {
   ];
 
   return (
-    <section className="py-10 *bg-white overflow-hidden">
-      <div className="relative w-full">
-        {/* Track du scroll */}
-        <div className="flex w-[200%] animate-marquee">
-          
-          {/* Liste 1 */}
-          <div className="flex items-center space-x-16 *w-1/2">
-            {companies.map((c) => (
-              <Image
-                key={`first-${c.name}`}
-                src={c.logo}
-                alt={c.name}
-                width={c.width}
-                height={c.height}
-                className="grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-              />
-            ))}
+    <section className="py-10 bg-white overflow-hidden">
+      <Marquee speed={50} gradient={true} gradientWidth={80}>
+        {companies.map((c) => (
+          <div key={c.name} className="flex-shrink-0 mx-8">
+            <Image
+              src={c.logo}
+              alt={c.name}
+              width={c.width}
+              height={c.height}
+              className="grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+            />
           </div>
-
-          {/* Liste 2 (copie exacte pour boucle infinie) */}
-          <div className="flex items-center space-x-16 w-1/2">
-            {companies.map((c) => (
-              <Image
-                key={`second-${c.name}`}
-                src={c.logo}
-                alt={c.name}
-                width={c.width}
-                height={c.height}
-                className="grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-              />
-            ))}
-          </div>
-
-        </div>
-      </div>
-
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 18s linear infinite;
-        }
-      `}</style>
+        ))}
+      </Marquee>
     </section>
   );
 };
