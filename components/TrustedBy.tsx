@@ -2,39 +2,39 @@
 
 const TrustedBy = () => {
   const companies = [
-    { 
-      name: "Google", 
-      logo: "/trusted/asunicaco.PNG",
+    {
+      name: "Google",
+      logo: "/trusted/csbisounours.jpg",
       width: 80,
       height: 27
     },
-    { 
-      name: "Slack", 
+    {
+      name: "Slack",
       logo: "/trusted/asunicaco.PNG",
       width: 70,
       height: 28
     },
-    { 
-      name: "Notion", 
-      logo: "/trusted/asunicaco.PNG",
+    {
+      name: "Notion",
+      logo: "/trusted/funda.png",
       width: 28,
       height: 28
     },
-    { 
-      name: "Figma", 
-      logo: "/trusted/asunicaco.PNG",
+    {
+      name: "Figma",
+      logo: "/trusted/metro.png",
       width: 60,
       height: 24
     },
-    { 
-      name: "Amazon", 
-      logo: "/trusted/asunicaco.PNG",
+    {
+      name: "Amazon",
+      logo: "/trusted/pexels.png",
       width: 85,
       height: 26
     },
-    { 
-      name: "Microsoft", 
-      logo: "/trusted/asunicaco.PNG",
+    {
+      name: "Microsoft",
+      logo: "/trusted/urban.png",
       width: 120,
       height: 25
     },
@@ -53,26 +53,26 @@ const TrustedBy = () => {
           </h2>
           <div className="w-16 h-0.5 bg-gray-800 mx-auto mt-4" />
         </div> */}
-        
+
         {/* Logos avec animation de défilement infinie */}
         <div className="relative">
           {/* Gradient overlays pour un effet premium */}
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10" />
-          
+
           <div className="flex overflow-hidden space-x-16 py-4">
             {/* Première ligne défilante */}
             <div className="flex space-x-16 animate-scroll">
               {companies.map((company, index) => (
-                <div 
+                <div
                   key={`first-${company.name}`}
                   className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100 hover:scale-110"
                 >
-                  <img 
+                  <img
                     src="/portfolio/1.PNG"
                     alt={company.name}
                     className="h-8 md:h-10 w-auto object-contain filter brightness-0"
-                    style={{ 
+                    style={{
                       width: `${company.width}px`,
                       height: `${company.height}px`
                     }}
@@ -80,23 +80,24 @@ const TrustedBy = () => {
                 </div>
               ))}
             </div>
-            
+
             {/* Duplication pour l'effet de boucle infinie */}
             <div className="flex space-x-16 animate-scroll" aria-hidden="true">
               {companies.map((company, index) => (
-                <div 
+                <div
                   key={`second-${company.name}`}
                   className="flex-shrink-0 grayscale opacity-70"
                 >
-                  <img 
-                    src={company.logo} 
-                    alt=""
-                    className="h-8 md:h-10 w-auto object-contain filter brightness-0"
-                    style={{ 
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                    style={{
                       width: `${company.width}px`,
                       height: `${company.height}px`
                     }}
                   />
+
                 </div>
               ))}
             </div>
