@@ -1,6 +1,6 @@
 "use client";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Portfolio = () => {
   const projects = [
@@ -102,6 +102,15 @@ const Portfolio = () => {
     setActiveCategory(category);
     setCurrentProjectIndex(0);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextProject();
+    }, 5000); // 5000ms = 5s
+
+    // Cleanup pour éviter les fuites mémoire
+    return () => clearInterval(interval);
+  }, [filteredProjects]);
 
   return (
     <section id="portfolio" className="py-24 bg-white">
