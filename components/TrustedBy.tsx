@@ -4,12 +4,13 @@ import Marquee from "react-fast-marquee";
 
 const TrustedBy = () => {
   const companies = [
-    { name: "Google", logo: "/trusted/csbisounours.jpg", width: 60, height: 60 },
-    { name: "Slack", logo: "/trusted/asunicaco.PNG", width: 60, height: 60 },
-    { name: "Notion", logo: "/trusted/funda.png", width: 60, height: 60 },
-    { name: "Figma", logo: "/trusted/metro.png", width: 80, height: 60 },
-    { name: "Amazon", logo: "/trusted/pexels.png", width: 60, height: 60 },
-    { name: "Microsoft", logo: "/trusted/urban.png", width: 120, height: 1500 },
+    { name: "CS Bisounours", logo: "/trusted/csbisounours.jpg", width: 60, height: 60 },
+    { name: "Asunicaco", logo: "/trusted/asunicaco.png", width: 60, height: 60 },
+    { name: "Funda Online", logo: "/trusted/funda.png", width: 60, height: 60 },
+    { name: "Metro Travels", logo: "/trusted/metro.png", width: 80, height: 60 },
+    { name: "Pexelsinovation", logo: "/trusted/pexels.png", width: 60, height: 60 },
+    { name: "Urban Design", logo: "/trusted/urban.png", width: 120, height: 1500 },
+    { name: "Jexweb", logo: "/trusted/jexweb.png", width: 80, height: 80 },
   ];
 
   return (
