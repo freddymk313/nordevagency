@@ -6,22 +6,22 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Plateforme E-commerce Luxe",
+      title: "Funda Online",
       description:
-        "Marketplace premium avec système de réservation en temps réel et paiements sécurisés.",
+        "Plateforme d'apprentissage en ligne avec cours interactifs et suivi des progrès.",
       category: "Développement Web",
-      image: "/portfolio/1.PNG",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
-      link: "#",
+      image: "/portfolio/funda.png",
+      technologies: ["Next.js", "TypeScript", "Sanity", "Tailwind"],
+      link: "funda-online.com",
       featured: true,
     },
     {
       id: 2,
-      title: "Application Fitness Mobile",
+      title: "CS Bisournouse",
       description:
-        "App de suivi d'activité sportive avec IA et analytics personnalisés.",
-      category: "Application Mobile",
-      image: "/portfolio/2.PNG",
+        "Site web de l'ecole de cirque de Bisournouse avec gestion des inscriptions.",
+      category: "Développement Web",
+      image: "/portfolio/csbis.png",
       technologies: ["React Native", "Firebase", "Node.js"],
       link: "#",
       featured: true,
