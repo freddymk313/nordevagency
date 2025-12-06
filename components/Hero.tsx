@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center animate-fade-in"> 
           {/* Titre principal */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 leading-tight">
+          <h1 className="text-[28px] sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 leading-tight">
             Nous donnons vie à vos
             <span className="block mt-4">
               idées{" "}
@@ -26,9 +26,9 @@ const Hero = () => {
           </h1>
           
           {/* Description */}
-          <p className="text-lg md:text-xl lg:text-2xl* text-gray-800 mb-6 md:mb-12 max-w-3xl mx-auto leading-relaxed">
-            Chez <span className="font-semibold text-gray-800">Nordev Agency</span>, nous créons des sites web et applications mobiles 
-            qui transforment votre vision en <span className="text-gray-800 font-medium">solutions concrètes et performantes</span>.
+          <p className="text-[16px] sm:text-lg md:text-xl lg:text-2xl* text-gray-800 mb-6 md:mb-12 max-w-3xl mx-auto leading-relaxed">
+            Chez <span className="">Nordev Agency</span>, nous créons des sites web et applications mobiles 
+            qui transforment votre vision en <span className="">solutions concrètes et performantes</span>.
           </p>
           
           {/* CTA Buttons */}
