@@ -2,7 +2,7 @@ import { ArrowRight, Calendar, Phone } from "lucide-react";
 
 const FinalCTA = () => {
   return (
-    <section id="contact" className="py-24 bg-white relative overflow-hidden">
+    <section id="contact" className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Titre principal */}
@@ -17,12 +17,12 @@ const FinalCTA = () => {
           
           {/* Description */}
           <p className="text-base text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Créons ensemble quelque chose d'<span className="text-gray-800 font-semibold">extraordinaire </span> 
+            Créons ensemble quelque chose d'<span className="">extraordinaire </span> 
             qui propulsera votre entreprise vers de nouveaux sommets.
           </p>
           
           {/* Boutons d'action principaux */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 md:mb-12">
             <button className="group bg-[#111111] text-white px-6 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-sm shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 flex items-center gap-3">
               <Calendar className="w-4 h-4" />
               Réserver un appel
@@ -39,7 +39,7 @@ const FinalCTA = () => {
           </div>
           
           {/* Informations de contact secondaires */}
-          <div className="*bg-white/80 *backdrop-blur-sm *border border-gray-200 *rounded-2xl p-8 max-w-md mx-auto *shadow-lg">
+          <div className="*bg-white/80 *backdrop-blur-sm border-gray-200 *rounded-2xl pt-8 max-w-md mx-auto *shadow-lg">
             <div className="space-y-4 text-center">
               <div>
                 <div className="text-sm font-semibold text-gray-600 mb-1">Email</div>
