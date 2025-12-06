@@ -38,9 +38,9 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/3 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section principale */}
-        <div className="grid lg:grid-cols-4 gap-12 py-20">
+        <div className="grid lg:grid-cols-4 gap-8 md:gap-12 py-14 md:py-20">
           {/* Colonne Logo & Description */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block">
@@ -59,9 +59,9 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="text-gray-400 text-[15px] leading-relaxed mt-6 mb-8 font-light max-w-md">
+            <p className="text-gray-400 text-base leading-relaxed mt-6 mb-8 font-light max-w-md">
               Votre partenaire de confiance pour des
-              <span className="font-medium text-white"> solutions digitales sur mesure </span>
+              <span className=""> solutions digitales sur mesure </span>
               qui transforment votre vision en réalité.
             </p>
 
