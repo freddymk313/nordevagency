@@ -21,7 +21,7 @@ const About = () => {
             <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />
             <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Nous ne créons pas simplement des sites web. Nous concevons des
-              <span className="text-gray-800 font-medium">
+              <span className="">
                 {" "}
                 expériences digitales sur mesure
               </span>{" "}
@@ -32,7 +32,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
             {/* Colonne texte - Contenu enrichi */}
             <div className="space-y-8">
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 <p className="text-base text-gray-600 leading-relaxed font-normal">
                   Chez{" "}
                   <span className="">
@@ -64,8 +64,8 @@ const About = () => {
               </div>
 
               {/* Points forts - Design amélioré */}
-              <div className="space-y-6 pt-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+              <div className="space-y-4 md:space-y-6 pt-1 md:pt-4">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                   Notre Différence
                 </h3>
 
@@ -92,7 +92,7 @@ const About = () => {
                   <div
                     key={index}
                     // className="flex items-start gap-5 p-6 rounded-2xl bg-gray-50/50 hover:bg-gray-50 transition-all duration-300 group cursor-default border border-gray-100"
-                    className="group flex items-start gap-5 bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-6"
+                    className="group flex items-start gap-3 md:gap-5 bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-4 md:p-6"
                   >
                     <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <item.icon className="w-6 h-6 text-white" />
@@ -101,7 +101,7 @@ const About = () => {
                       <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-gray-800 transition-colors">
                         {item.title}
                       </h4>
-                      <p className="text-gray-600 leading-relaxed font-normal">
+                      <p className="text-gray-600 text-[15px] leading-relaxed font-normal">
                         {item.description}
                       </p>
                     </div>
