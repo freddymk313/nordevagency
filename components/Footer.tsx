@@ -191,13 +191,13 @@ const Footer = () => {
             <div className="text-center lg:text-left">
               <p className="text-gray-500 text-sm">
                 © {new Date().getFullYear()}{" "}
-                <span className="font-semibold text-white">Nordev Agency</span>.
+                <span className="font-semibold *text-white">Nordev Agency</span>.
                 Tous droits réservés.
               </p>
             </div>
 
             {/* Liens légaux */}
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-[15px]">
               <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors">
                 Politique de confidentialité
               </Link>
@@ -207,13 +207,6 @@ const Footer = () => {
               <Link href="/cookies" className="text-gray-500 hover:text-white transition-colors">
                 Préférences cookies
               </Link>
-            </div>
-
-            {/* Made with love */}
-            <div className="flex items-center gap-2 text-gray-500 text-sm">
-              <span>Créé avec</span>
-              {/* <Heart className="w-4 h-4 text-red-400 fill-current" /> */}
-              <span>par Nordev Agency</span>
             </div>
           </div>
         </div>
