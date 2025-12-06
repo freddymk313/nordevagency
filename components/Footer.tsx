@@ -144,7 +144,7 @@ const Footer = () => {
             </h3>
 
             {/* Newsletter */}
-            <div className="mb-8">
+            <div className="mb-8 w-full max-w-sm">
               <p className="text-gray-400 text-sm mb-4">
                 Recevez nos conseils experts et actualités digitales.
               </p>
