@@ -115,7 +115,7 @@ const About = () => {
 
             {/* Colonne visuelle - Statistiques impactantes */}
             <div className="relative">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-4 md:gap-6">
                 {[
                   { number: "25+", label: "Projets d'Excellence", icon: Award },
                   { number: "98%", label: "Satisfaction Client", icon: Users },
@@ -128,7 +128,7 @@ const About = () => {
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className="group bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-8"
+                    className="group bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-6 md:p-8"
                     // className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group hover:-translate-y-2 cursor-default"
                   >
                     <div className="text-center">
