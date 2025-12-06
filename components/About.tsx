@@ -3,19 +3,19 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section id="apropos" className="py-24 bg-gray-50 relative overflow-hidden">
+    <section id="apropos" className="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
       {/* Éléments d'arrière-plan sophistiqués */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gray-900/3 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gray-900/2 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-20">
+          <div className="text-center mb-10 md:mb-20">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
               L&apos;Excellence dans
               {/* <span className="text-gray-800">Chaque Ligne de Code</span> */}
               <span className="block">
-                Chaque <span className="text-gray-800">Ligne de Code</span>
+                Chaque <span className="text-gray-800">Projet</span> 
               </span>
             </h2>
             <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />
@@ -29,25 +29,25 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
             {/* Colonne texte - Contenu enrichi */}
             <div className="space-y-8">
               <div className="space-y-6">
                 <p className="text-base text-gray-600 leading-relaxed font-normal">
                   Chez{" "}
-                  <span className="font-semibold text-gray-800">
+                  <span className="">
                     Nordev Agency
                   </span>
                   , nous incarnons la fusion parfaite entre l&apos;
-                  <span className="text-gray-800 font-semibold">
+                  <span className="">
                     art du design
                   </span>
                   , la{" "}
-                  <span className="text-gray-800 font-semibold">
+                  <span className="">
                     maîtrise technologique
                   </span>{" "}
                   et la{" "}
-                  <span className="text-gray-800 font-semibold">
+                  <span className="">
                     stratégie business
                   </span>
                   .
@@ -56,7 +56,7 @@ const About = () => {
                 <p className="text-base text-gray-600 leading-relaxed font-normal">
                   Chaque projet est une opportunité de repousser les limites de
                   l&apos;innovation et de délivrer des solutions qui{" "}
-                  <span className="font-semibold text-gray-800">
+                  <span className="">
                     dépassent les attentes
                   </span>
                   .
