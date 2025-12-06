@@ -123,36 +123,36 @@ const Portfolio = () => {
   }, [filteredProjects, isHovered]);
 
   return (
-    <section id="portfolio" className="py-24 bg-white">
+    <section id="portfolio" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-6">
         {/* En-tête */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
-            Portfolio <span className="text-gray-800">d'exception</span>
+            Portfolio <span className="text-gray-800">d'exception</span> 
           </h2>
 
           <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />
 
           <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Découvrez une sélection de nos projets les plus innovants, où{" "}
-            <span className="text-gray-800 font-medium">
+            <span className="">
               expertise technique
             </span>{" "}
             et
-            <span className="text-gray-800 font-medium"> créativité</span> se
+            <span className=""> créativité</span> se
             rencontrent.
           </p>
         </div>
 
         {/* Filtres par catégorie */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-6 md:mb-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => handleCategoryChange(category)}
               className={`px-4 py-2 rounded-full border transition-all duration-300 text-sm font-meduim ${
                 activeCategory === category
-                  ? "bg-gray-800 text-white border-gray-800 shadow-lg"
+                  ? "bg-[#111111] text-white border-[#111111] shadow-lg"
                   : "bg-white text-gray-700 border-gray-300 hover:border-gray-800 hover:shadow-md"
               }`}
             >
