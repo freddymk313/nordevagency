@@ -169,7 +169,7 @@ const Portfolio = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
               {/* Image du projet */}
               <div className="relative group overflow-hidden rounded-xl">
                 <img
@@ -183,7 +183,7 @@ const Portfolio = () => {
               {/* Contenu du projet */}
               <div className="flex flex-col justify-between">
                 <div>
-                  <span className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                  <span className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium mb-2 md:mb-4">
                     {currentProject.category}
                   </span>
 
