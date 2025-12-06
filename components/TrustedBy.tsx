@@ -74,7 +74,7 @@ const TrustedBy = () => {
       <section className="md:hidden pb-10 overflow-hidden">
         <Marquee speed={50} gradient={true} gradientWidth={80}>
           {companies.map((c) => (
-            <div key={c.name} className="flex-shrink-0 mx-4 md:mx-8">
+            <div key={c.name} className="flex-shrink-0 mx-4 md:mx-8"> 
               <Image
                 src={c.logo}
                 alt={c.name}
