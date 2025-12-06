@@ -54,7 +54,7 @@ const FinalCTA = () => {
               <div>
                 <div className="text-sm font-semibold text-gray-600 mb-1">Téléphone</div>
                 <a 
-                  href="tel:+243991040032" 
+                  href="tel:+243900611443" 
                   className="text-gray-800 font-semibold hover:text-gray-600 transition-colors"
                 >
                   +243900611443
