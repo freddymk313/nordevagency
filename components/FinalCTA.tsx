@@ -22,7 +22,7 @@ const FinalCTA = () => {
           </p>
           
           {/* Boutons d'action principaux */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 md:mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 *md:mb-12">
             <button className="group bg-[#111111] text-white px-6 py-4 rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold text-sm shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 flex items-center gap-3">
               <Calendar className="w-4 h-4" />
               Réserver un appel
@@ -57,7 +57,7 @@ const FinalCTA = () => {
                   href="tel:+243991040032" 
                   className="text-gray-800 font-semibold hover:text-gray-600 transition-colors"
                 >
-                  +243991040032
+                  +243900611443
                 </a>
               </div>
             </div>
