@@ -187,17 +187,17 @@ const Portfolio = () => {
                     {currentProject.category}
                   </span>
 
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-4">
                     {currentProject.title}
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-gray-600 leading-relaxed mb-4 md:mb-6">
                     {currentProject.description}
                   </p>
 
                   {/* Technologies */}
                   <div className="mb-6">
-                    <h4 className="text-xs uppercase text-gray-900 mb-3 tracking-wide">
+                    <h4 className="text-xs uppercase text-gray-900 mb-1.5 md:mb-3 tracking-wide">
                       Technologies utilisées
                     </h4>
                     <div className="flex flex-wrap gap-2">
@@ -218,7 +218,7 @@ const Portfolio = () => {
                 <div className="flex gap-4">
                   <a
                     href={currentProject.link}
-                    className="flex-1 bg-[#111111] text-sm text-white text-center py-4 px-8 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group"
+                    className="flex-1 bg-[#111111] text-sm text-white text-center py-4 px-8 rounded-full hover:bg-[#111111]/90 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group"
                     // className="flex-1 bg-gray-800 text-white text-center py-3 px-6 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold"
                   >
                     <span>Voir le projet</span>
@@ -229,12 +229,12 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="flex justify-center gap-5 items-center mt-12 px-4">
+          <div className="flex justify-center gap-3 md:gap-5 items-center mt-6 md:mt-12 px-4">
             {/* PREV */}
             <button
               onClick={prevProject}
               aria-label="Projet précédent"
-              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-x-1 group"
+              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-[#111111]/90 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-x-1 group"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -258,7 +258,7 @@ const Portfolio = () => {
             <button
               onClick={nextProject}
               aria-label="Projet suivant"
-              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:translate-x-1 group"
+              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-[#111111]/90 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:translate-x-1 group"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
