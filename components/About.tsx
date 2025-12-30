@@ -71,7 +71,7 @@ const About = () => {
 
                 {[
                   {
-                    icon: Award,
+                    icon: "/icon-about/badge.svg",
                     title: "Expertise Technique Avancée",
                     description:
                       "Maîtrise des technologies modernes actuel pour des performances optimales",
