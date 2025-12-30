@@ -1,6 +1,5 @@
 "use client"
 
-// import { motion } from 'framer-motion';
 import { FiCheck, FiZap } from 'react-icons/fi';
 
 const plans = [
@@ -89,12 +88,7 @@ const Pricing = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {plans.map((plan, index) => (
             <div
-            //   key={index}
-            //   initial="hidden"
-            //   whileInView="visible"
-            //   viewport={{ once: true, margin: "-50px" }}
-            //   variants={fadeIn}
-            //   transition={{ duration: 0.5, delay: index * 0.1 }}
+              key={index}
               className="relative"
             >
               {plan.popular && (
