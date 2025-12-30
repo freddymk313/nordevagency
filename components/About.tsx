@@ -94,7 +94,7 @@ const About = () => {
                     // className="flex items-start gap-5 p-6 rounded-2xl bg-gray-50/50 hover:bg-gray-50 transition-all duration-300 group cursor-default border border-gray-100"
                     className="group flex items-start gap-3 md:gap-5 bg-white border border-gray-200 rounded-2xl hover:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden p-4 md:p-6"
                   >
-                    <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <item.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -151,7 +151,7 @@ const About = () => {
               </div>
 
               {/* Citation client */}
-              <div className="mt-6 bg-gradient-to-br from-[#111111] to-gray-800 rounded-2xl p-6 text-white shadow-2xl">
+              <div className="mt-6 bg-linear-to-br from-[#111111] to-gray-800 rounded-2xl p-6 text-white shadow-2xl">
                 <div className="text-base font-light italic mb-4 leading-relaxed">
                   &ldquo;Nordev a transformé notre vision en une plateforme qui
                   dépasse toutes nos attentes. Un partenariat
