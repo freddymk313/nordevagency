@@ -135,8 +135,8 @@ const Pricing = () => {
                   <a href={plan.link}>
                     <button
                       className={`w-full py-2.5 rounded-full font-semibold transition-all ${plan.highlight
-                        ? "bg-[#007bfe] text-white hover:bg-[#0062cb] shadow-md"
-                        : "border-2 border-[#007bfe] text-[#007bfe] hover:bg-[#007bfe] hover:text-white"
+                        ? "bg-[#111111] text-white hover:bg-[#111111] shadow-md"
+                        : "border-2 border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-white"
                         }`}>
                       Choisir ce plan
                     </button>
@@ -149,16 +149,11 @@ const Pricing = () => {
 
         {/* Additional info */}
         <div
-        //   initial="hidden"
-        //   whileInView="visible"
-        //   viewport={{ once: true }}
-        //   variants={fadeIn}
-        //   transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12 text-gray-500 text-sm"
         >
           <p>Besoin d'une solution personnalisée ? <a href="https://wa.me/243991040032"
             target="_blank"
-            rel="noopener noreferrer" className="text-[#007bfe] hover:underline">Contactez-nous</a> pour un devis sur mesure.</p>
+            rel="noopener noreferrer" className="text-[#111111] hover:underline">Contactez-nous</a> pour un devis sur mesure.</p>
         </div>
       </div>
     </section>
