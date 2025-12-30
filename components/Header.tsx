@@ -133,8 +133,8 @@ export default function Header() {
           </div>
 
           {/* Bouton Mobile */}
-          <div className="mt-12 pt-8 *border-t border-gray-200">
-            <button className="w-full bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
+          <div className="mt-4 pt-8 *border-t border-gray-200">
+            {/* <button className="w-full bg-[#111111] text-sm text-white px-8 py-4 rounded-full hover:bg-[#111111]/95 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform *hover:-translate-y-1 flex items-center justify-center gap-3 group">
               <span>Réserver un appel</span>
               <svg
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform"
@@ -149,6 +149,25 @@ export default function Header() {
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
+            </button> */}
+            <button className="bg-[#111111] text-sm text-white pl-6 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-4 group">
+              Réserver un appel
+              {/* Le cercle autour de la flèche */}
+              <span className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-black group-hover:bg-gray-200 transition-colors">
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-0.5 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </span>
             </button>
           </div>
 
