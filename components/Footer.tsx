@@ -11,6 +11,7 @@ import {
   Github,
   ChevronRight,
   Send,
+  ArrowUp,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,7 +24,6 @@ const Footer = () => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 500);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -33,180 +33,119 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#111111] relative overflow-hidden">
-      {/* Éléments décoratifs sophistiqués */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/3 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
-
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Section principale */}
-        <div className="grid lg:grid-cols-4 gap-8 md:gap-12 py-14 md:py-20">
-          {/* Colonne Logo & Description */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block">
-              <div className="relative">
-                {/* Version desktop */}
-                <div className="">
-                  <Image
-                    src={"/logo/logo-white.png"}
-                    height={200}
-                    width={200}
-                    alt="Nordev Agency - Votre partenaire digital d'excellence"
-                    // className="rounded-xl"
-                    quality={100}
-                  />
-                </div>
-              </div>
+    <footer className="bg-[#0A0A0A] relative overflow-hidden border-t border-white/5">
+      {/* Glows décoratifs très subtils */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/[0.02] rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Section Principale Grid */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 py-20">
+          
+          {/* 1. Brand Identity (4 cols) */}
+          <div className="lg:col-span-4 space-y-8">
+            <Link href="/" className="inline-block transition-opacity hover:opacity-80">
+              <Image
+                src="/logo/logo-white.png"
+                height={50}
+                width={160}
+                alt="Nordev Agency"
+                className="h-10 w-auto object-contain"
+                quality={100}
+              />
             </Link>
-
-            <p className="text-gray-400 text-base leading-relaxed mt-6 mb-8 font-light max-w-md">
-              Votre partenaire de confiance pour des
-              <span className=""> solutions digitales sur mesure </span>
-              qui transforment votre vision en réalité.
+            <p className="text-gray-500 text-lg leading-relaxed font-medium max-w-sm">
+              Concevoir le futur digital avec <span className="text-white">audace</span> et <span className="text-white">précision</span>.
             </p>
-
+            {/* Social Icons - Version Minimaliste */}
+            <div className="flex gap-4">
+              {[
+                { icon: Linkedin, href: "#" },
+                { icon: Instagram, href: "#" },
+                { icon: Twitter, href: "#" }
+              ].map((social, i) => (
+                <Link key={i} href={social.href} className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-500 hover:text-white hover:border-white transition-all duration-300">
+                  <social.icon className="w-4 h-4" />
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* Liens rapides */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
-              Navigation
-            </h3>
+          {/* 2. Navigation Rapide (2 cols) */}
+          <div className="lg:col-span-2">
+            <h3 className="text-white font-bold text-sm uppercase tracking-[0.2em] mb-8">Navigation</h3>
             <ul className="space-y-4">
               {links.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-2 text-[15px] font-medium"
+                    className="text-gray-500 hover:text-white transition-colors duration-300 flex items-center gap-2 group text-sm font-semibold"
                   >
-                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-gray-500" />
-                    <span>{link.name}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-white opacity-0 group-hover:opacity-100 transition-all -ml-3" />
+                    {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
-              Contact
-              {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
-            </h3>
-            <ul className="space-y-5 text-[15px]">
-              <li>
-                <Link
-                  href="mailto:nordevagency@gmail.com"
-                  className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-4"
-                >
-                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
-                    <Mail className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-500">Email</div>
-                    <div className="text-gray-300 font-medium group-hover:text-white text-[14px]">nordevagency@gmail.com</div>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="tel:+243991040032"
-                  className="text-gray-400 hover:text-white transition-all duration-300 group flex items-center gap-4"
-                >
-                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
-                    <Phone className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-500">Téléphone</div>
-                    <div className="text-gray-300 font-medium group-hover:text-white">+243 991 040 032</div>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-gray-400" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-500">Localisation</div>
-                    <div className="text-gray-300 font-medium">Lubumbashi, RDC</div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          {/* Newsletter & Réseaux sociaux */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
-              Restons Connectés
-              {/* <div className="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div> */}
-            </h3>
-
-            {/* Newsletter */}
-            <div className="mb-8 w-full max-w-sm">
-              <p className="text-gray-400 text-sm mb-4">
-                Recevez nos conseils experts et actualités digitales.
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Votre email"
-                  className="flex-1 bg-white/5 border text-[14px] border-white/10 rounded-2xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-white/30 transition-colors"
-                />
-                <button className="bg-white text-gray-900 px-5 py-2.5 rounded-full hover:bg-gray-100 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                  <Send className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Réseaux sociaux */}
-            <div>
-              <p className="text-gray-400 text-sm mb-4">Suivez notre aventure</p>
-              <div className="flex gap-3">
-                {[
-                  { icon: Linkedin, href: "#", label: "LinkedIn" },
-                  { icon: Instagram, href: "#", label: "Instagram" },
-                  { icon: Twitter, href: "#", label: "Twitter" },
-                  { icon: Github, href: "#", label: "GitHub" }
-                ].map((social, index) => (
-                  <Link
-                    key={index}
-                    href={social.href}
-                    className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-white/10 transition-all duration-300 group border border-white/10 hover:border-white/30"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-                  </Link>
-                ))}
+          {/* 3. Contact Info (3 cols) */}
+          <div className="lg:col-span-3">
+            <h3 className="text-white font-bold text-sm uppercase tracking-[0.2em] mb-8">Contact</h3>
+            <div className="space-y-6">
+              <Link href="mailto:nordevagency@gmail.com" className="group block">
+                <div className="text-[11px] font-bold text-gray-600 uppercase mb-1">Email</div>
+                <div className="text-gray-300 group-hover:text-white transition-colors font-medium">nordevagency@gmail.com</div>
+              </Link>
+              <Link href="tel:+243991040032" className="group block">
+                <div className="text-[11px] font-bold text-gray-600 uppercase mb-1">Téléphone</div>
+                <div className="text-gray-300 group-hover:text-white transition-colors font-medium">+243 991 040 032</div>
+              </Link>
+              <div className="block">
+                <div className="text-[11px] font-bold text-gray-600 uppercase mb-1">Bureau</div>
+                <div className="text-gray-300 font-medium">Lubumbashi, RDC</div>
               </div>
             </div>
           </div>
+
+          {/* 4. Newsletter (3 cols) */}
+          <div className="lg:col-span-3">
+            <h3 className="text-white font-bold text-sm uppercase tracking-[0.2em] mb-8">Newsletter</h3>
+            <p className="text-gray-500 text-sm mb-6 font-medium">Restez à l'affût des dernières innovations.</p>
+            <div className="relative group">
+              <input
+                type="email"
+                placeholder="Votre email"
+                className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white text-sm focus:outline-none focus:border-white/30 transition-all"
+              />
+              <button className="absolute right-2 top-2 bg-white text-black w-10 h-10 rounded-full flex items-center justify-center hover:scale-105 transition-transform">
+                <Send className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
         </div>
 
-        {/* Section inférieure */}
-        <div className="border-t border-white/10 pt-8 pb-6">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
-            {/* Copyright */}
-            <div className="text-center lg:text-left">
-              <p className="text-gray-500 text-sm">
-                © {new Date().getFullYear()}{" "}
-                <span className="font-semibold *text-white">Nordev Agency</span>.
-                Tous droits réservés.
-              </p>
+        {/* Section Copyright */}
+        <div className="border-t border-white/5 py-10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="text-gray-600 text-xs font-bold tracking-widest uppercase">
+              © {new Date().getFullYear()} NORDEV AGENCY — DÉPASSER LES LIMITES
             </div>
+            
+            {/* Bouton Retour en haut Signature */}
+            <button 
+              onClick={scrollToTop}
+              className={`flex items-center gap-3 text-white text-[11px] font-bold uppercase tracking-widest transition-all duration-500 ${showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
+            >
+              Back to top 
+              <span className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                <ArrowUp className="w-4 h-4" />
+              </span>
+            </button>
 
-            {/* Liens légaux */}
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-[15px]">
-              <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors">
-                Politique de confidentialité
-              </Link>
-              <Link href="/terms" className="text-gray-500 hover:text-white transition-colors">
-                Conditions d'utilisation
-              </Link>
-              <Link href="/cookies" className="text-gray-500 hover:text-white transition-colors">
-                Préférences cookies
-              </Link>
+            <div className="flex gap-8">
+              <Link href="/privacy" className="text-gray-600 hover:text-white text-[11px] font-bold uppercase tracking-widest transition-colors">Privacy</Link>
+              <Link href="/terms" className="text-gray-600 hover:text-white text-[11px] font-bold uppercase tracking-widest transition-colors">Terms</Link>
             </div>
           </div>
         </div>

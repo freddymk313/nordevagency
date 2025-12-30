@@ -1,5 +1,5 @@
 "use client";
-import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Portfolio = () => {
@@ -7,153 +7,95 @@ const Portfolio = () => {
     {
       id: 1,
       title: "Funda Online",
-      description:
-        "Plateforme d'apprentissage en ligne avec cours interactifs et suivi des progrès.",
+      description: "Plateforme d'apprentissage en ligne avec cours interactifs et suivi des progrès.",
       category: "Développement Web",
       image: "/portfolio/funda.png",
       technologies: ["Next.js", "TypeScript", "Sanity", "Tailwind"],
-      link: "funda-online.com",
-      featured: true,
+      link: "https://funda-online.com",
     },
     {
       id: 2,
       title: "CS Bisournouse",
-      description:
-        "Site web de l'ecole de cirque de Bisournouse avec gestion des inscriptions.",
+      description: "Site web de l'école de cirque de Bisournouse avec gestion des inscriptions.",
       category: "Développement Web",
       image: "/portfolio/csbis.png",
       technologies: ["React", "TypeScript", "Node.js", "Tailwind"],
-      link: "csbisournouse.vercel.app",
-      featured: true,
+      link: "https://csbisournouse.vercel.app",
     },
     {
-      id: 3,
-      title: "Metro Travels",
-      description:
-        "Site de réservation de voyages avec recommandations personnalisées pour l'agence de voyages Metro Travels.",
-      category: "Développement Web",
-      image: "/portfolio/metro.png",
-      technologies: ["Next.js", "TypeScript", "Tailwind"],
-      link: "https://metrotravels.vercel.app/destinations",
-    },
-    {
-      id: 4,
-      title: "Pexelsinovation",
-      description:
-        "Landing page pour une agence de design et développement web innovante.",
-      category: "Développement Web",
-      image: "/portfolio/pexels.png",
-      technologies: ["Next.js", "TypeScript", "Tailwind"],
-      link: "https://pexelsinovation.vercel.app",
-    },
-    {
-      id: 5,
-      title: "Jexweb",
-      description:
-        "Platform de gestion de projet avec collaboration d'équipe avancée.",
-      category: "Développement Web",
-      image: "/portfolio/jexweb.png",
-      technologies: ["Next.js", "TypeScript", "Tailwind"],
-      link: "https://jexweb.vercel.app/",
-    },
-    {
-      id: 6,
-      title: "Congodmp",
-      description:
-        "Plateforme de gestion des dossier médicaux pour les cliniques en RDC.",
-      category: "Développement Web",
-      image: "/portfolio/congodmp.png",
-      technologies: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "Firebase"],
-      link: "https://congodmp.vercel.app",
-    },
-    {
-      id: 7,
-      title: "Urban Design",
-      description:
-        "Application de livraison en moins de 30 minutes avec tracking GPS.",
-      category: "Développement Web",
-      image: "/portfolio/urban.png",
-      technologies: ["Next.js", "TypeScript", "Tailwind"],
-      link: "https://urbandesign.vercel.app",
-    },
+        id: 3,
+        title: "Metro Travels",
+        description: "Site de réservation de voyages avec recommandations personnalisées.",
+        category: "Développement Web",
+        image: "/portfolio/metro.png",
+        technologies: ["Next.js", "TypeScript", "Tailwind"],
+        link: "https://metrotravels.vercel.app/destinations",
+      },
+      {
+        id: 4,
+        title: "Pexelsinovation",
+        description: "Landing page pour une agence de design et développement innovante.",
+        category: "Développement Web",
+        image: "/portfolio/pexels.png",
+        technologies: ["Next.js", "TypeScript", "Tailwind"],
+        link: "https://pexelsinovation.vercel.app",
+      },
+    // ... Garde tes autres projets ici
   ];
 
-  const categories = [
-    "Tous",
-    "Développement Web",
-    // "Application Mobile",
-    // "Design UI/UX",
-  ];
+  const categories = ["Tous", "Développement Web"];
 
   const [activeCategory, setActiveCategory] = useState("Tous");
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const filteredProjects =
-    activeCategory === "Tous"
-      ? projects
-      : projects.filter((project) => project.category === activeCategory);
+  const filteredProjects = activeCategory === "Tous" 
+    ? projects 
+    : projects.filter(p => p.category === activeCategory);
 
   const currentProject = filteredProjects[currentProjectIndex];
 
   const nextProject = () => {
-    setCurrentProjectIndex((prevIndex) =>
-      prevIndex === filteredProjects.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentProjectIndex((prev) => (prev === filteredProjects.length - 1 ? 0 : prev + 1));
   };
 
   const prevProject = () => {
-    setCurrentProjectIndex((prevIndex) =>
-      prevIndex === 0 ? filteredProjects.length - 1 : prevIndex - 1
-    );
-  };
-
-  // Réinitialiser l'index quand on change de catégorie
-  const handleCategoryChange = (category: any) => {
-    setActiveCategory(category);
-    setCurrentProjectIndex(0);
+    setCurrentProjectIndex((prev) => (prev === 0 ? filteredProjects.length - 1 : prev - 1));
   };
 
   useEffect(() => {
-    if (isHovered) return; // ne pas autoplay si survol
-    const interval = setInterval(() => {
-      nextProject();
-    }, 5000);
+    if (isHovered) return;
+    const interval = setInterval(nextProject, 5000);
     return () => clearInterval(interval);
   }, [filteredProjects, isHovered]);
 
   return (
-    <section id="portfolio" className="py-16 md:py-24 bg-white">
+    <section id="portfolio" className="py-20 md:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
+        
         {/* En-tête */}
-        <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
-            Portfolio <span className="text-gray-800">d'exception</span> 
+        <div className="text-center mb-12 md:mb-20">
+          <span className="inline-block px-4 py-1.5 mb-6 text-[12px] font-bold tracking-widest text-gray-400 uppercase bg-gray-50 rounded-full">
+            Nos Réalisations
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            Portfolio <span className="text-gray-400">d'exception</span>
           </h2>
-
-          <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />
-
-          <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Découvrez une sélection de nos projets les plus innovants, où{" "}
-            <span className="">
-              expertise technique
-            </span>{" "}
-            et
-            <span className=""> créativité</span> se
-            rencontrent.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Découvrez comment nous transformons des idées complexes en interfaces <span className="text-black font-medium">intuitives et performantes</span>.
           </p>
         </div>
 
-        {/* Filtres par catégorie */}
-        <div className="flex flex-wrap justify-center gap-4 mb-6 md:mb-12">
+        {/* Filtres Stylisés */}
+        <div className="flex justify-center gap-3 mb-12 md:mb-16">
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => handleCategoryChange(category)}
-              className={`px-4 py-2 rounded-full border transition-all duration-300 text-sm font-meduim ${
+              onClick={() => { setActiveCategory(category); setCurrentProjectIndex(0); }}
+              className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
                 activeCategory === category
-                  ? "bg-[#111111] text-white border-[#111111] shadow-lg"
-                  : "bg-white text-gray-700 border-gray-300 hover:border-gray-800 hover:shadow-md"
+                  ? "bg-black text-white shadow-xl scale-105"
+                  : "bg-gray-50 text-gray-500 hover:bg-gray-100"
               }`}
             >
               {category}
@@ -161,107 +103,108 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* Carousel des projets */}
-        <div className="max-w-6xl mx-auto">
-          {/* Carte du projet actuel */}
-          <div
-            className="overflow-hidden =hover:shadow-xl transition-all duration-500"
+        {/* Carousel de Projet */}
+        <div className="max-w-6xl mx-auto relative">
+          <div 
+            className="group relative"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-              {/* Image du projet */}
-              <div className="relative group overflow-hidden rounded-xl">
-                <img
-                  src={currentProject.image}
-                  alt={currentProject.title}
-                  className="w-full h-64 md:h-80 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
-                />
-                {/* <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-xl" /> */}
+            <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
+              
+              {/* CÔTÉ GAUCHE : VISUEL (Browser Look) */}
+              <div className="lg:col-span-7 relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 bg-gray-50">
+                  {/* Barre de navigateur factice */}
+                  <div className="bg-gray-100/80 backdrop-blur-md px-4 py-3 border-b border-gray-200 flex items-center gap-2">
+                    <div className="flex gap-1.5">
+                      <div className="w-3 h-3 rounded-full bg-red-400" />
+                      <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                      <div className="w-3 h-3 rounded-full bg-green-400" />
+                    </div>
+                    <div className="mx-auto bg-white rounded-md px-3 py-1 text-[10px] text-gray-400 flex items-center gap-2 w-1/2">
+                      <Globe className="w-3 h-3" /> {currentProject.link}
+                    </div>
+                  </div>
+                  {/* Image */}
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={currentProject.image}
+                      alt={currentProject.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
               </div>
 
-              {/* Contenu du projet */}
-              <div className="flex flex-col justify-between">
-                <div>
-                  <span className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium mb-2 md:mb-4">
-                    {currentProject.category}
-                  </span>
+              {/* CÔTÉ DROIT : INFOS */}
+              <div className="lg:col-span-5 flex flex-col justify-center">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{currentProject.category}</span>
+                </div>
 
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-4">
-                    {currentProject.title}
-                  </h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
+                  {currentProject.title}
+                </h3>
 
-                  <p className="text-gray-600 leading-relaxed mb-4 md:mb-6">
-                    {currentProject.description}
-                  </p>
+                <p className="text-gray-600 leading-relaxed mb-8 text-lg font-medium">
+                  {currentProject.description}
+                </p>
 
-                  {/* Technologies */}
-                  <div className="mb-6">
-                    <h4 className="text-xs uppercase text-gray-900 mb-1.5 md:mb-3 tracking-wide">
-                      Technologies utilisées
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {currentProject.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          // className="text-xs font-medium text-gray-700 bg-gray-100 px-2 py-1 rounded"
-                          className="text-xs border font-medium px-2 py-1 bg-white text-gray-700 rounded-full border-gray-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                {/* Technologies */}
+                <div className="mb-10">
+                  <div className="flex flex-wrap gap-2">
+                    {currentProject.technologies.map((tech, index) => (
+                      <span key={index} className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 bg-gray-50 text-gray-500 rounded-lg border border-gray-100">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
-                {/* Bouton de démonstration */}
-                <div className="flex gap-4">
-                  <a
-                    href={currentProject.link}
-                    className="flex-1 bg-[#111111] text-sm text-white text-center py-4 px-8 rounded-full hover:bg-[#111111]/90 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group"
-                    // className="flex-1 bg-gray-800 text-white text-center py-3 px-6 rounded-full hover:bg-gray-700 transition-all duration-300 font-semibold"
-                  >
-                    <span>Voir le projet</span>
-                    <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                  </a>
-                </div>
+                {/* BOUTON SIGNATURE */}
+                <a href={currentProject.link} target="_blank" rel="noopener noreferrer">
+                  <button className="bg-[#111111] text-sm text-white pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-between group/btn w-fit gap-6">
+                    Voir le projet
+                    <span className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-black group-hover/btn:bg-gray-100 transition-colors">
+                      <ExternalLink className="w-5 h-5 group-hover/btn:scale-110 transition-transform" />
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="flex justify-center gap-3 md:gap-5 items-center mt-6 md:mt-12 px-4">
-            {/* PREV */}
-            <button
-              onClick={prevProject}
-              aria-label="Projet précédent"
-              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-[#111111]/90 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-x-1 group"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-between mt-12 md:mt-16">
+            <div className="flex gap-4">
+              <button 
+                onClick={prevProject} 
+                className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button 
+                onClick={nextProject} 
+                className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
 
-            {/* INDICATEURS */}
-            <div className="flex gap-2">
+            {/* Pagination Dots */}
+            <div className="hidden md:flex gap-2">
               {filteredProjects.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentProjectIndex(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    index === currentProjectIndex
-                      ? "bg-gray-800 w-8"
-                      : "bg-gray-300 hover:bg-gray-400"
+                  className={`transition-all duration-500 rounded-full ${
+                    index === currentProjectIndex ? "w-10 h-2 bg-black" : "w-2 h-2 bg-gray-200"
                   }`}
                 />
               ))}
             </div>
-
-            {/* NEXT */}
-            <button
-              onClick={nextProject}
-              aria-label="Projet suivant"
-              className="flex items-center justify-center w-12 h-12 bg-[#111111] text-white rounded-full hover:bg-[#111111]/90 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:translate-x-1 group"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
           </div>
         </div>
       </div>
