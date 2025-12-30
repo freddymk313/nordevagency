@@ -1,3 +1,4 @@
+import { Users } from "lucide-react";
 import Image from "next/image";
 
 const About = () => {
@@ -22,8 +23,8 @@ const About = () => {
             <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-6 rounded-full" />
             <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Nous ne créons pas simplement des sites web. Nous concevons des
-              <span> expériences digitales sur mesure</span> qui propulsent votre
-              business vers de nouveaux sommets.
+              <span> expériences digitales sur mesure</span> qui propulsent
+              votre business vers de nouveaux sommets.
             </p>
           </div>
 
@@ -59,7 +60,7 @@ const About = () => {
                       "Maîtrise des technologies modernes actuel pour des performances optimales",
                   },
                   {
-                    icon: "/icon-about/partner.svg",
+                    icon: "/icon-about/customer.svg",
                     title: "Partenaire Stratégique",
                     description:
                       "Nous nous engageons dans votre succès au-delà du simple développement",
@@ -107,12 +108,12 @@ const About = () => {
                   {
                     number: "25+",
                     label: "Projets d'Excellence",
-                    icon: "/icon-about/award.svg",
+                    icon: "/icon-about/badge.svg",
                   },
                   {
                     number: "98%",
                     label: "Satisfaction Client",
-                    icon: "/icon-about/users.svg",
+                    icon: "/icon-about/group.svg",
                   },
                   {
                     number: "100%",
@@ -122,7 +123,7 @@ const About = () => {
                   {
                     number: "24/7",
                     label: "Support Premium",
-                    icon: "/icon-about/zap.svg",
+                    icon: "/icon-about/customer.svg",
                   },
                 ].map((stat, index) => (
                   <div
@@ -160,7 +161,7 @@ const About = () => {
                   dépasse toutes nos attentes.&rdquo;
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  {/* <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                     <Image
                       src="/icon-about/users.svg"
                       alt="Client"
@@ -168,12 +169,14 @@ const About = () => {
                       height={24}
                       className="invert"
                     />
+                  </div> */}
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                    {" "}
+                    <Users className="w-6 h-6 text-white" />{" "}
                   </div>
                   <div>
                     <div className="font-semibold">Pierre Martin</div>
-                    <div className="text-white/70 text-sm">
-                      CEO, TechVision
-                    </div>
+                    <div className="text-white/70 text-sm">CEO, TechVision</div>
                   </div>
                 </div>
               </div>
