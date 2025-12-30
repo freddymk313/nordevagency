@@ -98,23 +98,23 @@ const Pricing = () => {
               className="relative"
             >
               {plan.popular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#007bfe] text-white px-4 py-1 rounded-full text-xs md:text-sm font-medium flex items-center gap-1 z-10">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#111111] text-white px-4 py-1 rounded-full text-xs md:text-sm font-medium flex items-center gap-1 z-10">
                   <FiZap className="text-yellow-300" />
                   Le plus populaire
                 </div>
               )}
 
               <div className={`h-full flex flex-col rounded-2xl overflow-hidden border-2 transition-all duration-300 ${plan.highlight
-                ? "border-[#007bfe] shadow-xl"
+                ? "border-[#111111] shadow-xl"
                 : "border-gray-200 shadow-md hover:shadow-lg"
                 }`}>
-                <div className={`p-8 pb-6 ${plan.highlight ? "bg-[#007bfe] text-white" : "bg-white"
+                <div className={`p-8 pb-6 ${plan.highlight ? "bg-[#111111] text-white" : "bg-white"
                   }`}>
                   <h3 className={`text-2xl font-bold mb-2 ${plan.highlight ? "text-white" : "text-gray-800"
                     }`}>
                     {plan.title}
                   </h3>
-                  <p className={`text-4xl font-extrabold mb-4 ${plan.highlight ? "text-white" : "text-[#007bfe]"
+                  <p className={`text-4xl font-extrabold mb-4 ${plan.highlight ? "text-white" : "text-[#111111]"
                     }`}>
                     {plan.price}
                     <span className="text-lg font-normal">/projet</span>
@@ -125,7 +125,7 @@ const Pricing = () => {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3 text-gray-700">
-                        <FiCheck className={`flex-shrink-0 mt-1 ${plan.highlight ? "text-[#007bfe]" : "text-gray-400"
+                        <FiCheck className={`flex-shrink-0 mt-1 ${plan.highlight ? "text-[#111111]" : "text-gray-400"
                           }`} />
                         <span>{feature}</span>
                       </li>
