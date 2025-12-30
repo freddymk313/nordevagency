@@ -115,11 +115,11 @@ const Pricing = () => {
                   </p>
                 </div>
 
-                <div className="flex-grow bg-white p-8 pt-6">
+                <div className="grow bg-white p-8 pt-6">
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3 text-gray-700">
-                        <FiCheck className={`flex-shrink-0 mt-1 ${plan.highlight ? "text-[#111111]" : "text-gray-400"
+                        <FiCheck className={`shrink-0 mt-1 ${plan.highlight ? "text-[#111111]" : "text-gray-400"
                           }`} />
                         <span>{feature}</span>
                       </li>
