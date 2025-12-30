@@ -6,7 +6,7 @@ import { FiCheck, FiZap } from 'react-icons/fi';
 const plans = [
   {
     title: "Basique",
-    price: "80$",
+    price: "110$",
     features: [
       "Site vitrine 1 à 3 pages",
       "Landing page",
@@ -17,11 +17,11 @@ const plans = [
     ],
     highlight: false,
     popular: false,
-    link: "https://ylttghgd.mychariow.com/prd_nii1sx/checkout"
+    link: "#"
   },
   {
     title: "Standard",
-    price: "180$",
+    price: "210$",
     features: [
       "Site web jusqu'à 6 pages",
       "Design personnalisé",
@@ -32,7 +32,7 @@ const plans = [
     ],
     highlight: true,
     popular: true,
-    link: "https://ylttghgd.mychariow.com/prd_pu2pmc/checkout"
+    link: "#"
   },
   {
     title: "Premium",
@@ -47,7 +47,7 @@ const plans = [
     ],
     highlight: false,
     popular: false,
-    link: "https://ylttghgd.mychariow.com/prd_0qeejq/checkout"
+    link: "#"
   },
 ];
 
