@@ -10,13 +10,13 @@ import { WhatsappBtn } from "@/components/WhatsappBtn"
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <About />
       <Portfolio />
       <Testimonials />
       <FinalCTA />
-      <Footer />
+      {/* <Footer /> */}
       <WhatsappBtn />
     </>
   );
