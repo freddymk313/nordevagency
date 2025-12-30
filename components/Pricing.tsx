@@ -10,7 +10,7 @@ const plans = [
       "Site vitrine 1 à 3 pages",
       "Landing page",
       "Design responsive",
-      "Hébergement offert",
+      "Hébergement offert 1 an",
       "Optimisation SEO",
       "Assistance par email",
     ],
@@ -26,7 +26,7 @@ const plans = [
       "Design personnalisé",
       "Optimisation SEO avancée",
       "Formulaire de contact",
-      "Hébergement offert",
+      "Hébergement offert 1 an",
       "Intégration CMS"
     ],
     highlight: true,
@@ -42,6 +42,7 @@ const plans = [
       "Paiements en ligne sécurisés",
       "Support technique 3 mois",
       "Formation personnalisée",
+      // "Hébergement offert 1 an",
       "Intégration CMS"
     ],
     highlight: false,
