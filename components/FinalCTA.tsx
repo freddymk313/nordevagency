@@ -19,13 +19,13 @@ const FinalCTA = () => {
           </div>
 
           {/* Titre principal */}
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-[1.1] tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-[1.1] tracking-tight">
             Prêt à donner vie <br />
             <span className="text-gray-400">à votre vision ?</span>
           </h2>
           
           {/* Description */}
-          <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg *md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
             Créons ensemble quelque chose d'<span className="text-black font-semibold">extraordinaire</span> qui propulsera votre business vers de nouveaux sommets.
           </p>
           
@@ -33,8 +33,8 @@ const FinalCTA = () => {
           <div className="flex justify-center mb-20">
             <button className="bg-[#111111] text-sm text-white pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-bold shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transform hover:-translate-y-1 flex items-center gap-6 group">
               <div className="flex items-center gap-3">
-                <Calendar className="w-4 h-4 text-gray-500" />
-                <span>Réserver un appel découverte</span>
+                <Calendar className="w-4 h-4 text-white" />
+                <span>Réserver un appel </span>
               </div>
               <span className="bg-white w-12 h-12 rounded-full flex items-center justify-center text-black group-hover:bg-gray-100 transition-colors">
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
@@ -46,9 +46,9 @@ const FinalCTA = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
             <a 
               href="mailto:nordevagency@gmail.com"
-              className="group flex items-center gap-4 p-4 rounded-2xl border border-gray-100 bg-white/50 backdrop-blur-sm hover:border-black transition-all duration-300"
+              className="group flex items-center gap-4 p-4 rounded-2xl border border-gray-100* bg-white/50 backdrop-blur-sm border-black transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-gray-50* flex items-center justify-center bg-black text-white transition-colors">
                 <Mail className="w-5 h-5" />
               </div>
               <div className="text-left">
@@ -59,9 +59,9 @@ const FinalCTA = () => {
 
             <a 
               href="tel:+243900611443"
-              className="group flex items-center gap-4 p-4 rounded-2xl border border-gray-100 bg-white/50 backdrop-blur-sm hover:border-black transition-all duration-300"
+              className="group flex items-center gap-4 p-4 rounded-2xl border border-gray-100* bg-white/50 backdrop-blur-sm border-black transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-gray-50* flex items-center justify-center bg-black text-white transition-colors">
                 <Phone className="w-5 h-5" />
               </div>
               <div className="text-left">

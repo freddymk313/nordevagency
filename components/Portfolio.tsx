@@ -87,7 +87,7 @@ const Portfolio = () => {
         </div>
 
         {/* Filtres Stylisés */}
-        <div className="flex justify-center gap-3 mb-12 md:mb-16">
+        <div className="flex justify-center gap-3 mb-10 *md:mb-16">
           {categories.map((category) => (
             <button
               key={category}
@@ -187,7 +187,7 @@ const Portfolio = () => {
               </button>
               <button 
                 onClick={nextProject} 
-                className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
+                className="w-12 h-12 rounded-full border border-[#111111] flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>

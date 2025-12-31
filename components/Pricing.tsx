@@ -55,7 +55,7 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section className="relative py-20 md:py-32 bg-[#FBFBFB] overflow-hidden" id="prix">
+    <section className="relative py-20 md:py-32 bg-[#FBFBFB] overflow-hidden" id="pricing">
       {/* Background Decoratif */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40 -z-10" />
 

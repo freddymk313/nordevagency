@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section id="apropos" className="py-20 md:py-32 bg-[#FBFBFB] relative overflow-hidden">
+    <section id="about" className="py-20 md:py-32 bg-[#FBFBFB] relative overflow-hidden">
       {/* Background Decoratif Sophistiqué */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gray-200/40 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gray-100/60 rounded-full blur-[100px] translate-x-1/4 translate-y-1/4" />
@@ -16,11 +16,11 @@ const About = () => {
             <span className="inline-block px-4 py-1.5 mb-6 text-[12px] font-bold tracking-[0.2em] text-gray-400 uppercase bg-gray-100 rounded-full">
               Notre ADN
             </span>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-[1.1]">
+            <h2 className="text-3xl md:text-5xl *lg:text-6xl font-bold text-gray-900 mb-8 leading-[1.1]">
               L'Excellence dans <br />
-              <span className="text-gray-400">Chaque Projet Digital</span>
+              <span className="text-gray-400">Chaque Projet</span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium">
+            <p className="text-lg *md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium">
               Chez <span className="text-black">Nordev Agency</span>, nous concevons des expériences sur mesure qui transforment votre vision en un levier de croissance.
             </p>
           </div>

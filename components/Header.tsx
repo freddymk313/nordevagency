@@ -57,9 +57,10 @@ export default function Header() {
             </div>
 
             <div className="hidden lg:block">
-              <Link href="#contact">
-                <button className="bg-[#111111] text-sm text-white pl-6 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-4 group">
-                  Réserver un appel
+              <Link href="#pricing">
+                <button className="bg-[#111111] text-sm text-white pl-7 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-4 group">
+                  {/* Réserver un appel */}
+                  Voir nos tarifs
                   {/* Le cercle autour de la flèche */}
                   <span className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-black group-hover:bg-gray-200 transition-colors">
                     <svg
