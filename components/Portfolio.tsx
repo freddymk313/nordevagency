@@ -16,7 +16,7 @@ const Portfolio = () => {
     {
       id: 2,
       title: "CS Bisournouse",
-      description: "Site web de l'école de cirque de Bisournouse avec gestion des inscriptions.",
+      description: "Site web de l'école de primaire et secondaire de Bisournouse avec gestion des inscriptions.",
       category: "Développement Web",
       image: "/portfolio/csbis.png",
       technologies: ["React", "TypeScript", "Node.js", "Tailwind"],
@@ -31,8 +31,45 @@ const Portfolio = () => {
         technologies: ["Next.js", "TypeScript", "Tailwind"],
         link: "https://metrotravels.vercel.app/destinations",
       },
+      
       {
         id: 4,
+        title: "Asunicaco",
+        description: "Landing page pour une agence de design et développement innovante.",
+        category: "Développement Web",
+        image: "/portfolio/1.png",
+        technologies: ["Codegniter", "Php", "Bootstrap"],
+        link: "https://pexelsinovation.vercel.app",
+      },
+      {
+        id: 5,
+        title: "Jexweb",
+        description: "Landing page pour une agence de design et développement innovante.",
+        category: "Développement Web",
+        image: "/portfolio/jexweb.png",
+        technologies: ["Next.js", "TypeScript", "Tailwind"],
+        link: "https://pexelsinovation.vercel.app",
+      },
+      {
+        id: 6,
+        title: "Congodmp",
+        description: "Plateforme SAAS page pour une agence de sante et développement innovante.",
+        category: "Développement Web",
+        image: "/portfolio/congodmp.png",
+        technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"],
+        link: "https://pexelsinovation.vercel.app",
+      },
+      {
+        id: 7,
+        title: "CCPS",
+        description: "Site web pour une organisation non gouvernemental a but non lucratif",
+        category: "Développement Web",
+        image: "/portfolio/ccps.png",
+        technologies: ["React", "TypeScript", "Tailwind"],
+        link: "https://pexelsinovation.vercel.app",
+      },
+      {
+        id: 8,
         title: "Pexelsinovation",
         description: "Landing page pour une agence de design et développement innovante.",
         category: "Développement Web",
@@ -40,7 +77,6 @@ const Portfolio = () => {
         technologies: ["Next.js", "TypeScript", "Tailwind"],
         link: "https://pexelsinovation.vercel.app",
       },
-    // ... Garde tes autres projets ici
   ];
 
   const categories = ["Tous", "Développement Web"];
