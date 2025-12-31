@@ -80,7 +80,7 @@ const Pricing = () => {
             <div key={index} className="relative group">
               
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-black text-white px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-2 z-20 shadow-xl">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-black text-white px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-2 z-20 shadow-xl">
                   <Zap className="w-3 h-3 text-yellow-400 fill-yellow-400" />
                   RECOMMANDÉ
                 </div>
