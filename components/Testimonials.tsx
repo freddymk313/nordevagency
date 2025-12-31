@@ -100,9 +100,9 @@ const Testimonials = () => {
 
         {/* Petit bandeau "Social Proof" discret en dessous */}
         <div className="mt-20 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-           <span className="font-black text-2xl tracking-tighter">TRUSTED BY 50+ COMPANIES</span>
+           <span className="font-black text-2xl tracking-tighter">TRUSTED BY 20+ COMPANIES</span>
            <div className="h-px w-12 bg-gray-300 hidden md:block" />
-           <span className="font-bold text-lg italic tracking-tight">"The best digital partner in RDC"</span>
+           <span className="font-bold text-lg italic tracking-tight">"The best digital partner in DRC"</span>
         </div>
 
       </div>
