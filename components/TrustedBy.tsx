@@ -60,13 +60,13 @@ const TrustedBy = () => {
       width: 60,
       height: 60,
     },
-    {
-      name: "Urban Design",
-      logo: "/trusted/urban.png",
-      mobile: 60,
-      desktop: 250,
-      width: 120, height: 1500
-    },
+    // {
+    //   name: "Urban Design",
+    //   logo: "/trusted/urban.png",
+    //   mobile: 60,
+    //   desktop: 250,
+    //   width: 120, height: 1500
+    // },
   ];
 
   return (

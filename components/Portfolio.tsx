@@ -181,7 +181,7 @@ const Portfolio = () => {
             <div className="flex gap-4">
               <button 
                 onClick={prevProject} 
-                className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
+                className="w-12 h-12 rounded-full border border-[#111111] flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
