@@ -55,27 +55,27 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section className="relative py-20 md:py-32 bg-[#FBFBFB] overflow-hidden" id="pricing">
+    <section className="relative py-12 md:py-32 bg-[#FBFBFB] overflow-hidden" id="pricing">
       {/* Background Decoratif */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40 -z-10" />
 
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-16 md:mb-24">
-          <span className="inline-block px-4 py-1.5 mb-6 text-[12px] font-bold tracking-widest text-gray-400 uppercase bg-gray-100 rounded-full">
+        <div className="text-center mb-10 md:mb-20">
+          <span className="inline-block px-4 py-1.5 mb-4 md:mb-6 text-[10px] md:text-[12px] font-bold tracking-widest text-gray-400 uppercase bg-gray-100 rounded-full">
             Tarification
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6tracking-tight">
             Des offres <span className="text-gray-400">claires et transparentes</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Choisissez la formule qui correspond à vos besoins. Pas de frais cachés, juste de la performance.
           </p>
         </div>
 
         {/* Pricing plans */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-stretch max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <div key={index} className="relative group">
               
