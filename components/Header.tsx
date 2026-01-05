@@ -147,7 +147,7 @@ export default function Header() {
           </div>
 
           {/* Bouton Mobile */}
-          <div className="mt-4 pt-8 *border-t border-gray-200">
+          <div className="pt-8 *border-t border-gray-200">
             <button className="bg-[#111111] text-sm text-white pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-4 group">
               {/* Réserver un appel */}
               Voir nos tarifs
@@ -171,7 +171,7 @@ export default function Header() {
           </div>
 
           {/* Informations de contact mobile */}
-          <div className="mt-12 text-center">
+          <div className="mt-8 text-center">
             <p className="text-gray-600 mb-2 text-base">
               Disponible du Lundi au Vendredi
             </p>
