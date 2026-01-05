@@ -16,11 +16,11 @@ const About = () => {
             <span className="inline-block px-4 py-1.5 mb-5 text-[10px] md:text-[12px] font-bold tracking-[0.2em] text-gray-400 uppercase bg-gray-100 rounded-full">
               Notre ADN
             </span>
-            <h2 className="text-3xl md:text-6xl font-bold text-gray-900 mb-4 md:mb-8 leading-[1.2] md:leading-[1.1]">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-8 leading-[1.2] md:leading-[1.1]">
               L'Excellence dans <br className="hidden md:block" />
               <span className="text-gray-400">Chaque Projet</span>
             </h2>
-            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium px-2">
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium px-2">
               Chez <span className="text-black">Nordev Agency</span>, nous concevons des expériences sur mesure qui transforment votre vision en un levier de croissance.
             </p>
           </div>
