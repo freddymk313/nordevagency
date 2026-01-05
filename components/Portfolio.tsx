@@ -107,7 +107,7 @@ const Portfolio = () => {
   }, [filteredProjects, isHovered]);
 
   return (
-    <section id="portfolio" className="py-16 md:py-32 bg-white overflow-hidden">
+    <section id="portfolio" className="py-12 md:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-5 md:px-6">
         
         {/* En-tête : Réduction des marges sur mobile */}
@@ -178,7 +178,7 @@ const Portfolio = () => {
               {/* CÔTÉ DROIT : INFOS */}
               <div className="lg:col-span-5 flex flex-col justify-center">
                 <div className="flex items-center gap-2 mb-3 md:mb-4">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  {/* <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" /> */}
                   <span className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">{currentProject.category}</span>
                 </div>
 

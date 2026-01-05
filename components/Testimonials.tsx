@@ -26,7 +26,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="temoignages" className="py-20 md:py-32 bg-[#FBFBFB] relative overflow-hidden">
+    <section id="temoignages" className="py-12 md:py-32 bg-[#FBFBFB] relative overflow-hidden">
       {/* Sphères de décorations diffuses */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gray-200/30 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gray-100/50 rounded-full blur-[80px] -translate-x-1/4 translate-y-1/4" />
@@ -34,20 +34,20 @@ const Testimonials = () => {
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Header de section */}
-        <div className="text-center mb-16 md:mb-24">
-          <span className="inline-block px-4 py-1.5 mb-6 text-[12px] font-bold tracking-[0.2em] text-gray-400 uppercase bg-gray-100 rounded-full">
+        <div className="text-center mb-10 md:mb-20">
+          <span className="inline-block px-4 py-1.5 mb-4 md:mb-6 text-[10px] md:text-[12px] font-bold tracking-[0.2em] text-gray-400 uppercase bg-gray-100 rounded-full">
             Témoignages
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6 tracking-tight">
             Ils nous font <span className="text-gray-400">confiance</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-medium">
             Découvrez comment nous aidons nos clients à <span className="text-black">transformer leurs ambitions</span> en succès mesurables.
           </p>
         </div>
 
         {/* Grille Bento des témoignages */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -55,43 +55,43 @@ const Testimonials = () => {
             >
               <div>
                 {/* Header du témoignage : Projet + Stars */}
-                <div className="flex justify-between items-start mb-8">
+                <div className="flex justify-between items-start mb-6 md:mb-8">
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-black text-black" />
+                      <Star key={i} className="w-3.5 h-3.5 md:w-4 md:h-4 fill-black text-black" />
                     ))}
                   </div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 bg-gray-50 px-3 py-1 rounded-full">
+                  <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400 bg-gray-50 px-3 py-1 rounded-full">
                     {testimonial.project}
                   </span>
                 </div>
 
                 {/* Icône Quote Stylisée */}
                 <div className="mb-6 opacity-10 group-hover:opacity-100 group-hover:text-black transition-all duration-500">
-                   <Quote className="w-8 h-8 rotate-180" />
+                   <Quote className="ww-6 h-6 md:w-8 md:h-8 rotate-180" />
                 </div>
 
                 {/* La Citation */}
-                <p className="text-gray-700 text-lg leading-relaxed mb-10 font-medium">
+                <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-10 font-medium">
                   "{testimonial.quote}"
                 </p>
               </div>
 
               {/* L'Auteur (Footer de la carte) */}
-              <div className="flex items-center gap-4 pt-6 border-t border-gray-50">
+              <div className="flex items-center gap-3 md:gap-4 pt-5 md:pt-6 border-t border-gray-50">
                 <div className="relative">
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.author}
-                    className="w-14 h-14 rounded-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500 border-2 border-white shadow-md"
+                    className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500 border-2 border-white shadow-md"
                   />
-                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-black rounded-full border-2 border-white flex items-center justify-center">
+                  <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 md:w-5 md:h-5 bg-black rounded-full border-2 border-white flex items-center justify-center">
                      <CheckCircle2 className="w-3 h-3 text-white" />
                   </div>
                 </div>
                 <div>
-                  <div className="font-bold text-gray-900 leading-tight">{testimonial.author}</div>
-                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mt-1">{testimonial.role}</div>
+                  <div className="font-bold text-sm md:text-base text-gray-900 leading-tight">{testimonial.author}</div>
+                  <div className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wider mt-1">{testimonial.role}</div>
                 </div>
               </div>
             </div>
@@ -99,10 +99,10 @@ const Testimonials = () => {
         </div>
 
         {/* Petit bandeau "Social Proof" discret en dessous */}
-        <div className="mt-20 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-           <span className="font-black text-2xl tracking-tighter">TRUSTED BY 20+ COMPANIES</span>
+        <div className="mt-16 md:mt-20 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+           <span className="font-black text-xl md:text-2xl tracking-tighter">TRUSTED BY 20+ COMPANIES</span>
            <div className="h-px w-12 bg-gray-300 hidden md:block" />
-           <span className="font-bold text-lg italic tracking-tight">"The best digital partner in DRC"</span>
+           <span className="font-bold text-base md:text-lg italic tracking-tight">"The best digital partner in DRC"</span>
         </div>
 
       </div>
