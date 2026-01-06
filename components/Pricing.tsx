@@ -75,7 +75,7 @@ const Pricing = () => {
         </div>
 
         {/* Pricing plans */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-stretch max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 space-y-6 md:space-y-0 gap-6 md:gap-8 items-stretch max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <div key={index} className="relative group">
               

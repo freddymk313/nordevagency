@@ -50,7 +50,7 @@ const Footer = () => {
                 height={230}
                 width={230}
                 alt="Nordev Agency"
-                className="h-15 md:h-auto w-auto m-0 md:-ml-2 md:-mt-3 object-contain"
+                className="h-17.5 md:h-auto w-auto m-0 md:-ml-2 md:-mt-3 object-contain"
                 quality={100}
               />
             </Link>

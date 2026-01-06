@@ -38,7 +38,7 @@ const Portfolio = () => {
         title: "Asunicaco",
         description: "Landing page pour une agence de design et développement innovante.",
         category: "Développement Web",
-        image: "/portfolio/1.png",
+        image: "/portfolio/1.PNG",
         technologies: ["Codegniter", "Php", "Bootstrap"],
         link: "https://pexelsinovation.vercel.app",
       },
