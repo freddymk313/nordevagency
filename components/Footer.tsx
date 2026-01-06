@@ -50,7 +50,7 @@ const Footer = () => {
                 height={230}
                 width={230}
                 alt="Nordev Agency"
-                className="h-15 md:h-auto w-auto object-contain"
+                className="h-15 md:h-auto w-auto m-0 md:-ml-2 md:-mt-3 object-contain"
                 quality={100}
               />
             </Link>
@@ -103,7 +103,7 @@ const Footer = () => {
                   {item.href ? (
                     <Link href={item.href} className="group flex items-center gap-4">
                       <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300">
-                        <item.icon className="w-4 h-4" />
+                        <item.icon className="w-4 h-4 text-gray-200" />
                       </div>
                       <div>
                         <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{item.label}</div>
@@ -113,7 +113,7 @@ const Footer = () => {
                   ) : (
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400">
-                        <item.icon className="w-4 h-4" />
+                        <item.icon className="w-4 h-4 text-gray-200" />
                       </div>
                       <div>
                         <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{item.label}</div>
@@ -150,7 +150,7 @@ const Footer = () => {
                     <Link
                       key={index}
                       href="#"
-                      className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all duration-500"
+                      className="w-10 h-10 *bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover: bg-white hover: text-black transition-all duration-500"
                     >
                       <Icon className="w-4 h-4" />
                     </Link>
