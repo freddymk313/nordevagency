@@ -40,30 +40,30 @@ const Footer = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section principale */}
-        <div className="grid lg:grid-cols-4 gap-12 py-20 md:py-28">
+        <div className="grid lg:grid-cols-4 gap-12 py-12 md:py-24">
           
           {/* Colonne 1: Branding */}
           <div className="space-y-8">
             <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
               <Image
                 src="/logo/logo-white.png"
-                height={50}
-                width={180}
+                height={230}
+                width={230}
                 alt="Nordev Agency"
-                className="h-10 w-auto object-contain"
+                className="h-15 md:h-auto w-auto object-contain"
                 quality={100}
               />
             </Link>
 
             {/* Status Badge (Cohérence Portfolio) */}
-            <div className="flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+            {/* <div className="flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Disponible pour vos projets</span>
-            </div>
+            </div> */}
 
             <p className="text-gray-400 text-base leading-relaxed font-light">
               Votre partenaire de confiance pour des
-              <span className="text-white font-medium"> solutions digitales sur mesure </span>
+              <span className="*text-white *font-medium"> solutions digitales sur mesure </span>
               qui transforment votre vision en succès concret.
             </p>
           </div>
