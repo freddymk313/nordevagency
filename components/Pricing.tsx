@@ -86,27 +86,27 @@ const Pricing = () => {
                 </div>
               )}
 
-              <div className={`h-full flex flex-col p-8 md:p-10 rounded-[2.5rem] transition-all duration-500 border ${
+              <div className={`h-full flex flex-col p-7 md:p-10 rounded-[2.5rem] transition-all duration-500 border ${
                 plan.highlight 
                 ? "bg-white border-black shadow-[0_20px_50px_rgba(0,0,0,0.1)] scale-105 z-10" 
                 : "bg-white/50 border-gray-100 hover:border-gray-300 backdrop-blur-sm"
               }`}>
                 
                 {/* Header du plan */}
-                <div className="mb-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.title}</h3>
-                  <p className="text-gray-500 text-sm mb-6">{plan.description}</p>
+                <div className="mb-6 md:mb-8">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{plan.title}</h3>
+                  <p className="text-gray-500 text-xs md:text-sm mb-6">{plan.description}</p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-5xl font-black tracking-tighter">{plan.price}</span>
-                    <span className="text-gray-400 font-medium text-sm">/projet</span>
+                    <span className="text-4xl md:text-5xl font-black tracking-tighter">{plan.price}</span>
+                    <span className="text-gray-400 font-medium text-xs md:text-sm">/projet</span>
                   </div>
                 </div>
 
                 {/* Liste des features */}
-                <ul className="space-y-4 mb-10 grow">
+                <ul className="space-y-3 md:space-y-4 mb-8 md:mb-10 grow">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
-                      <CheckCircle2 className={`w-5 h-5 shrink-0 ${plan.highlight ? "text-black" : "text-gray-300"}`} />
+                      <CheckCircle2 className={`w-4 h-4 md:w-5 md:h-5 shrink-0 ${plan.highlight ? "text-black" : "text-gray-300"}`} />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -133,8 +133,8 @@ const Pricing = () => {
         </div>
 
         {/* Footer info */}
-        <div className="text-center mt-16">
-          <p className="text-gray-500 text-sm font-medium">
+        <div className="text-center mt-12 md:mt-16">
+          <p className="text-gray-500 text-xs md:text-sm font-medium">
             Besoin d'une solution personnalisée ?{" "}
             <a href="https://wa.me/243991040032" target="_blank" rel="noopener noreferrer" className="text-black border-b border-black hover:opacity-60 transition-opacity pb-0.5">
               Contactez-nous pour un devis sur mesure
