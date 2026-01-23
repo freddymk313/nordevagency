@@ -243,6 +243,27 @@
       "text": "Need a custom solution?",
       "link": "Contact us"
     }
-  }
+  },
 
+  "footer": {
+    "brandingAlt": "Nordev Agency Logo",
+    "branding": "Your trusted partner for custom digital solutions that turn your vision into tangible success.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "newsletter": "Newsletter",
+    "newsletterPlaceholder": "Your email",
+    "followUs": "Follow us",
+    "backToTop": "Back to top",
+    "copyright": "Designed for excellence.",
+    "legal": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies"
+    },
+    "contactItems": {
+      "email": "Email",
+      "phone": "Phone",
+      "studio": "Studio"
+    }
+  }
 }

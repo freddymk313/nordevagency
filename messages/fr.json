@@ -242,7 +242,27 @@
       "text": "Besoin d'une solution personnalisée ?",
       "link": "Nous contacter"
     }
+  },
+
+  "footer": {
+    "brandingAlt": "Logo Nordev Agency",
+    "branding": "Votre partenaire de confiance pour des solutions digitales sur mesure qui transforment votre vision en succès concret.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "newsletter": "Newsletter",
+    "newsletterPlaceholder": "Votre email",
+    "followUs": "Suivez-nous",
+    "backToTop": "Retour en haut",
+    "copyright": "Designé pour l'excellence.",
+    "legal": {
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "cookies": "Cookies"
+    },
+    "contactItems": {
+      "email": "Email",
+      "phone": "Téléphone",
+      "studio": "Studio"
+    }
   }
-
-
 }
