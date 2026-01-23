@@ -6,5 +6,18 @@
     "description": "At <strong>Nordev Agency</strong>, we design websites and mobile applications that turn your vision into <strong>powerful, real-world solutions</strong>.",
     "ctaPrimary": "Book a call",
     "ctaSecondary": "View our work"
+  },
+
+  "Header": {
+    "nav": {
+      "about": "About",
+      "portfolio": "Portfolio",
+      "testimonials": "Testimonials",
+      "pricing": "Pricing",
+      "contact": "Contact"
+    },
+    "cta": "View pricing",
+    "availability": "Available Monday to Friday",
+    "hours": "9am - 6pm"
   }
 }

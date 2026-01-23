@@ -6,5 +6,18 @@
     "description": "Chez <strong>Nordev Agency</strong>, nous créons des sites web et applications mobiles qui transforment votre vision en <strong>solutions concrètes et performantes</strong>.",
     "ctaPrimary": "Réserver un appel",
     "ctaSecondary": "Voir nos réalisations"
+  },
+
+  "Header": {
+    "nav": {
+      "about": "À propos",
+      "portfolio": "Portfolio",
+      "testimonials": "Témoignages",
+      "pricing": "Tarifs",
+      "contact": "Contact"
+    },
+    "cta": "Voir nos tarifs",
+    "availability": "Disponible du Lundi au Vendredi",
+    "hours": "9h - 18h"
   }
 }
