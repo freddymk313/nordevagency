@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import TrustedBy from "./TrustedBy";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
-  const t = useTranslations('Hero');
+  const t = useTranslations("Hero");
 
   return (
     <section
@@ -22,34 +22,33 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center animate-fade-in">
+          {/* TITLE */}
           <h1 className="text-[28px] sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 leading-tight">
-            Nous donnons vie à vos
+            {t("titleLine1")}
             <span className="block mt-4">
-              idées{" "}
+              {t("titleLine2")}{" "}
               <span className="text-gray-900 relative">
-                digitales
-                {/* Petit soulignement discret pour le style */}
+                {t("titleHighlight")}
                 <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gray-800/10 rounded-full" />
               </span>
             </span>
           </h1>
 
+          {/* DESCRIPTION */}
           <p className="text-[16px] sm:text-lg md:text-xl lg:text-2xl text-gray-800 mb-6 md:mb-12 max-w-3xl mx-auto leading-relaxed">
-            Chez <span className="font-semibold">Nordev Agency</span>, nous
-            créons des sites web et applications mobiles qui transforment votre
-            vision en{" "}
-            <span className="font-semibold text-black">
-              solutions concrètes et performantes
-            </span>
-            .
+            {t.rich("description", {
+              strong: (chunks) => (
+                <span className="font-semibold text-black">{chunks}</span>
+              ),
+            })}
           </p>
 
-          {/* CTA Buttons - Version Embellie */}
+          {/* CTA BUTTONS */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            {/* Bouton Noir avec Cercle */}
-            <Link href={"#contact"}>
+            {/* Primary CTA */}
+            <Link href="#contact">
               <button className="bg-[#111111] text-sm text-white pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-4 group">
-                Réserver un appel
+                {t("ctaPrimary")}
                 <span className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-black group-hover:bg-gray-100 transition-colors">
                   <svg
                     className="w-5 h-5 group-hover:translate-x-0.5 transition-transform"
@@ -68,10 +67,10 @@ const Hero = () => {
               </button>
             </Link>
 
-            {/* Bouton Secondaire Ajusté (Même hauteur) */}
-            <Link href={"#portfolio"}>
+            {/* Secondary CTA */}
+            <Link href="#portfolio">
               <button className="border-2 h-[56px] text-sm border-[#111111] text-gray-800 px-8 rounded-full hover:bg-gray-50 transition-all duration-300 font-semibold hover:shadow-lg transform hover:-translate-y-1">
-                Voir nos réalisations
+                {t("ctaSecondary")}
               </button>
             </Link>
           </div>
