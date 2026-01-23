@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import TrustedBy from "./TrustedBy";
+import {useTranslations} from 'next-intl';
 
 const Hero = () => {
+  const t = useTranslations('Hero');
+
   return (
     <section
       id="home"
