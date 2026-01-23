@@ -186,5 +186,63 @@
       "email": "Email",
       "phone": "Phone"
     }
+  },
+
+  "Pricing": {
+    "header": {
+      "label": "Pricing",
+      "title": {
+        "main": "Clear and",
+        "highlight": "transparent plans"
+      },
+      "description": "Choose the plan that fits your needs. No hidden fees, just performance."
+    },
+
+    "plans": {
+      "Basique": {
+        "title": "Basic",
+        "description": "Perfect for launching your online presence.",
+        "features": [
+          "1-3 pages showcase site",
+          "Landing page",
+          "Responsive design",
+          "1 year hosting included",
+          "SEO optimization",
+          "Email support"
+        ]
+      },
+      "Standard": {
+        "title": "Standard",
+        "description": "The ideal solution to boost your business.",
+        "features": [
+          "Website up to 6 pages",
+          "Custom design",
+          "Advanced SEO optimization",
+          "Contact form",
+          "1 year hosting included",
+          "CMS integration"
+        ]
+      },
+      "Premium": {
+        "title": "Premium",
+        "description": "The pinnacle of digital performance.",
+        "features": [
+          "Full E-commerce site",
+          "Unlimited product management",
+          "Secure payments",
+          "3 months technical support",
+          "Personalized training",
+          "Conversion optimization"
+        ]
+      }
+    },
+    "popular": "RECOMMENDED",
+    "perProject": "project",
+    "button": "Choose this plan",
+    "footer": {
+      "text": "Need a custom solution?",
+      "link": "Contact us"
+    }
   }
+
 }

@@ -186,6 +186,63 @@
       "email": "Email",
       "phone": "Téléphone"
     }
+  },
+
+  "Pricing": {
+    "header": {
+      "label": "Tarification",
+      "title": {
+        "main": "Des offres",
+        "highlight": "claires et transparentes"
+      },
+      "description": "Choisissez la formule qui correspond à vos besoins. Pas de frais cachés, juste de la performance."
+    },
+    "plans": {
+      "Basique": {
+        "title": "Basique",
+        "description": "Parfait pour lancer votre présence en ligne.",
+        "features": [
+          "Site vitrine 1 à 3 pages",
+          "Landing page",
+          "Design responsive",
+          "Hébergement offert 1 an",
+          "Optimisation SEO",
+          "Assistance par email"
+        ]
+      },
+      "Standard": {
+        "title": "Standard",
+        "description": "La solution idéale pour booster votre activité.",
+        "features": [
+          "Site web jusqu'à 6 pages",
+          "Design personnalisé",
+          "Optimisation SEO avancée",
+          "Formulaire de contact",
+          "Hébergement offert 1 an",
+          "Intégration CMS"
+        ]
+      },
+      "Premium": {
+        "title": "Premium",
+        "description": "Le summum de la performance digitale.",
+        "features": [
+          "Site E-commerce complet",
+          "Gestion des produits illimitée",
+          "Paiements sécurisés",
+          "Support technique 3 mois",
+          "Formation personnalisée",
+          "Optimisation conversion"
+        ]
+      }
+    },
+    "popular": "RECOMMANDÉ",
+    "perProject": "projet",
+    "button": "Choisir ce plan",
+    "footer": {
+      "text": "Besoin d'une solution personnalisée ?",
+      "link": "Nous contacter"
+    }
   }
+
 
 }
