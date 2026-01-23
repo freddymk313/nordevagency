@@ -51,5 +51,93 @@
       "author": "Pierre Martin",
       "role": "CEO, TechVision"
     }
+  },
+
+  "Portfolio": {
+    "badge": "Our Work",
+    "title": {
+      "main": "Portfolio",
+      "highlight": "of Excellence"
+    },
+    "description": "See how we turn complex ideas into intuitive and high-performing interfaces.",
+    "button": "View Project",
+    "categories": [
+      "All",
+      "Web Development"
+    ],
+    "projects": [
+      {
+        "id": 1,
+        "title": "Funda Online",
+        "description": "Online learning platform with interactive courses and progress tracking.",
+        "category": "Web Development",
+        "image": "/portfolio/funda.png",
+        "technologies": ["Next.js", "TypeScript", "Sanity", "Tailwind"],
+        "link": "https://funda-online.com"
+      },
+      {
+        "id": 2,
+        "title": "CS Bisournouse",
+        "description": "Website for primary and secondary school of Bisournouse with enrollment management.",
+        "category": "Web Development",
+        "image": "/portfolio/csbis.png",
+        "technologies": ["React", "TypeScript", "Node.js", "Tailwind"],
+        "link": "https://csbisournouse.vercel.app"
+      },
+      {
+        "id": 3,
+        "title": "Metro Travels",
+        "description": "Travel booking site with personalized recommendations.",
+        "category": "Web Development",
+        "image": "/portfolio/metro.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://metrotravels.vercel.app/destinations"
+      },
+      {
+        "id": 4,
+        "title": "Asunicaco",
+        "description": "Landing page for an innovative design and development agency.",
+        "category": "Web Development",
+        "image": "/portfolio/1.PNG",
+        "technologies": ["Codegniter", "Php", "Bootstrap"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 5,
+        "title": "Jexweb",
+        "description": "Landing page for an innovative design and development agency.",
+        "category": "Web Development",
+        "image": "/portfolio/jexweb.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 6,
+        "title": "Congodmp",
+        "description": "SAAS platform for a health and innovative development agency.",
+        "category": "Web Development",
+        "image": "/portfolio/congodmp.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 7,
+        "title": "CCPS",
+        "description": "Website for a non-profit NGO.",
+        "category": "Web Development",
+        "image": "/portfolio/ccps.png",
+        "technologies": ["React", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 8,
+        "title": "Pexelsinovation",
+        "description": "Landing page for an innovative design and development agency.",
+        "category": "Web Development",
+        "image": "/portfolio/pexels.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      }
+    ]
   }
 }
