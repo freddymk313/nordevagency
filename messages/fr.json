@@ -170,6 +170,22 @@
     ],
     "trustedBy": "FIABLES PAR 20+ ENTREPRISES",
     "slogan": "\"Le meilleur partenaire digital en RDC\""
+  },
+
+  "FinalCTA": {
+    "status": "Disponible pour de nouveaux projets",
+    "title": {
+      "main": "Prêt à donner vie",
+      "highlight": "à votre vision ?"
+    },
+    "description": "Créons ensemble quelque chose d'extraordinaire qui propulsera votre business vers de nouveaux sommets.",
+    "button": {
+      "call": "Réserver un appel"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Téléphone"
+    }
   }
 
 }

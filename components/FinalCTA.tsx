@@ -1,9 +1,14 @@
-import { ArrowRight, Calendar, Phone, Mail, MessageCircle } from "lucide-react";
+"use client";
+
+import { ArrowRight, Calendar, Mail, Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const FinalCTA = () => {
+  const t = useTranslations("FinalCTA");
+
   return (
     <section id="contact" className="py-12 md:py-32 bg-white relative overflow-hidden">
-      {/* Background Decoratif : Motif de points et dégradé radial */}
+      {/* Background décoratif */}
       <div className="absolute inset-0 z-0 opacity-[0.4]" 
            style={{ backgroundImage: `radial-gradient(#e5e7eb 1px, transparent 1px)`, backgroundSize: '24px 24px' }}>
       </div>
@@ -14,27 +19,28 @@ const FinalCTA = () => {
           
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-100 mb-6 md:mb-8">
-            {/* <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" /> */}
-            <span className="text-[10px] md:text-[12px] font-bold text-green-700 uppercase tracking-wider">Disponible pour de nouveaux projets</span>
+            <span className="text-[10px] md:text-[12px] font-bold text-green-700 uppercase tracking-wider">
+              {t("status")}
+            </span>
           </div>
 
           {/* Titre principal */}
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-[1.1] tracking-tight">
-            Prêt à donner vie <br />
-            <span className="text-gray-400">à votre vision ?</span>
+            {t("title.main")} <br />
+            <span className="text-gray-400">{t("title.highlight")}</span>
           </h2>
           
           {/* Description */}
           <p className="text-base md:text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Créons ensemble quelque chose d'<span className="text-black font-semibold">extraordinaire</span> qui propulsera votre business vers de nouveaux sommets.
+            {t.rich("description")}
           </p>
           
-          {/* Bouton d'action principal (Ton bouton Signature) */}
+          {/* Bouton principal */}
           <div className="flex justify-center mb-12 md:mb-20">
             <button className="bg-[#111111] text-sm text-white pl-6 md:pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center gap-4 md:gap-6 group">
               <div className="flex items-center gap-2.5">
                 <Calendar className="w-4 h-4 text-white" />
-                <span>Réserver un appel </span>
+                <span>{t("button.call")}</span>
               </div>
               <span className="bg-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-black group-hover:bg-gray-100 transition-colors">
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-0.5 transition-transform" />
@@ -42,35 +48,7 @@ const FinalCTA = () => {
             </button>
           </div>
           
-          {/* Grille de contact secondaire */}
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            <a 
-              href="mailto:nordevagency@gmail.com"
-              className="group flex items-center gap-4 p-4 rounded-2xl border border-gray-100* bg-white/50 backdrop-blur-sm border-black transition-all duration-300"
-            >
-              <div className="w-10 h-10 rounded-xl bg-gray-50* flex items-center justify-center bg-black text-white transition-colors">
-                <Mail className="w-5 h-5" />
-              </div>
-              <div className="text-left">
-                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Email</div>
-                <div className="text-sm font-bold text-gray-900">nordevagency@gmail.com</div>
-              </div>
-            </a>
-
-            <a 
-              href="tel:+243900611443"
-              className="group flex items-center gap-4 p-4 rounded-2xl border border-gray-100* bg-white/50 backdrop-blur-sm border-black transition-all duration-300"
-            >
-              <div className="w-10 h-10 rounded-xl bg-gray-50* flex items-center justify-center bg-black text-white transition-colors">
-                <Phone className="w-5 h-5" />
-              </div>
-              <div className="text-left">
-                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Téléphone</div>
-                <div className="text-sm font-bold text-gray-900">+243 900 611 443</div>
-              </div>
-            </a>
-          </div> */}
-
+          {/* Grille de contact */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-w-2xl mx-auto">
             <a 
               href="mailto:nordevagency@gmail.com"
@@ -80,7 +58,7 @@ const FinalCTA = () => {
                 <Mail className="w-5 h-5" />
               </div>
               <div className="text-left">
-                <div className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Email</div>
+                <div className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">{t("contact.email")}</div>
                 <div className="text-xs md:text-sm font-bold text-gray-900 truncate">nordevagency@gmail.com</div>
               </div>
             </a>
@@ -93,7 +71,7 @@ const FinalCTA = () => {
                 <Phone className="w-5 h-5" />
               </div>
               <div className="text-left">
-                <div className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Téléphone</div>
+                <div className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">{t("contact.phone")}</div>
                 <div className="text-xs md:text-sm font-bold text-gray-900">+243 900 611 443</div>
               </div>
             </a>

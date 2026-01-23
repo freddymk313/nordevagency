@@ -170,6 +170,21 @@
     ],
     "trustedBy": "TRUSTED BY 20+ COMPANIES",
     "slogan": "\"The best digital partner in DRC\""
-  }
+  },
 
+  "FinalCTA": {
+    "status": "Available for new projects",
+    "title": {
+      "main": "Ready to bring",
+      "highlight": "your vision to life?"
+    },
+    "description": "Let's create something extraordinary together that will propel your business to new heights.",
+    "button": {
+      "call": "Book a call"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Phone"
+    }
+  }
 }
