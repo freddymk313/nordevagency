@@ -1,0 +1,269 @@
+{
+  "Hero": {
+    "titleLine1": "私たちはあなたの",
+    "titleLine2": "デジタル",
+    "titleHighlight": "アイデアを形にします",
+    "description": "<strong>Nordev Agency</strong>では、ウェブサイトやモバイルアプリを設計し、あなたのビジョンを <strong>強力で実用的なソリューション</strong>に変えます。",
+    "ctaPrimary": "相談を予約",
+    "ctaSecondary": "作品を見る"
+  },
+
+  "Header": {
+    "nav": {
+      "about": "私たちについて",
+      "portfolio": "ポートフォリオ",
+      "testimonials": "お客様の声",
+      "pricing": "料金",
+      "contact": "お問い合わせ"
+    },
+    "cta": "料金を見る",
+    "availability": "月曜～金曜対応",
+    "hours": "午前9時 - 午後6時"
+  },
+
+  "About": {
+    "badge": "私たちのDNA",
+    "title": {
+      "line1": "すべてのプロジェクトで",
+      "line2": "卓越性を"
+    },
+    "intro": "<strong>Nordev Agency</strong>では、カスタマイズされた体験を設計し、ビジョンを強力な成長エンジンに変えます。",
+    "difference": {
+      "title": "私たちの強み",
+      "description": "デザイン技術、テクノロジーの専門知識、ビジネス戦略を融合させ、常に期待を超えます。",
+      "items": [
+        {
+          "title": "高度な技術力",
+          "desc": "最新技術を駆使し、最適なパフォーマンスを提供します。"
+        },
+        {
+          "title": "戦略的パートナー",
+          "desc": "開発を超えて、あなたの成功にコミットします。"
+        }
+      ]
+    },
+    "stats": {
+      "projects": "完了したプロジェクト",
+      "satisfaction": "顧客満足度"
+    },
+    "testimonial": {
+      "quote": "Nordevは私たちの複雑なビジョンをシンプルで非常に効果的なインターフェースに変えました。",
+      "author": "Pierre Martin",
+      "role": "CEO, TechVision"
+    }
+  },
+
+  "Portfolio": {
+    "badge": "作品集",
+    "title": {
+      "main": "ポートフォリオ",
+      "highlight": "卓越の作品"
+    },
+    "description": "複雑なアイデアを直感的で高性能なインターフェースに変える方法をご覧ください。",
+    "button": "プロジェクトを見る",
+    "categories": [
+      "すべて",
+      "ウェブ開発"
+    ],
+    "projects": [
+      {
+        "id": 1,
+        "title": "Funda オンライン",
+        "description": "インタラクティブなコースと進捗管理機能を備えたオンライン学習プラットフォーム。",
+        "category": "ウェブ開発",
+        "image": "/portfolio/funda.png",
+        "technologies": ["Next.js", "TypeScript", "Sanity", "Tailwind"],
+        "link": "https://funda-online.com"
+      },
+      {
+        "id": 2,
+        "title": "CS Bisournouse",
+        "description": "小中学校向けのウェブサイト。入学管理機能を搭載。",
+        "category": "ウェブ開発",
+        "image": "/portfolio/csbis.png",
+        "technologies": ["React", "TypeScript", "Node.js", "Tailwind"],
+        "link": "https://csbisournouse.vercel.app"
+      },
+      {
+        "id": 3,
+        "title": "Metro Travels",
+        "description": "パーソナライズされたおすすめ付き旅行予約サイト。",
+        "category": "ウェブ開発",
+        "image": "/portfolio/metro.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://metrotravels.vercel.app/destinations"
+      },
+      {
+        "id": 4,
+        "title": "Asunicaco",
+        "description": "革新的なデザイン・開発エージェンシーのランディングページ。",
+        "category": "ウェブ開発",
+        "image": "/portfolio/1.PNG",
+        "technologies": ["Codegniter", "Php", "Bootstrap"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 5,
+        "title": "Jexweb",
+        "description": "革新的なデザイン・開発エージェンシーのランディングページ。",
+        "category": "ウェブ開発",
+        "image": "/portfolio/jexweb.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 6,
+        "title": "Congodmp",
+        "description": "健康と革新的な開発を支援するSaaSプラットフォーム。",
+        "category": "ウェブ開発",
+        "image": "/portfolio/congodmp.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 7,
+        "title": "CCPS",
+        "description": "非営利NGOのウェブサイト。",
+        "category": "ウェブ開発",
+        "image": "/portfolio/ccps.png",
+        "technologies": ["React", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 8,
+        "title": "Pexelsinovation",
+        "description": "革新的なデザイン・開発エージェンシーのランディングページ。",
+        "category": "ウェブ開発",
+        "image": "/portfolio/pexels.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      }
+    ]
+  },
+
+  "Testimonials": {
+    "badge": "お客様の声",
+    "title": {
+      "main": "私たちのクライアント",
+      "highlight": "が信頼しています"
+    },
+    "description": "お客様の目標を測定可能な成果に変えるお手伝いをしています。",
+    "testimonials": [
+      {
+        "quote": "Nordev Agency は私たちのデジタルプレゼンスを完全に刷新しました。細部へのこだわりは素晴らしいです。新しいウェブサイトでコンバージョン率が150%向上しました。",
+        "author": "Sarah Johnson",
+        "role": "CEO, TechStart Inc.",
+        "project": "Eコマースサイト"
+      },
+      {
+        "quote": "Nordev と仕事をすることはゲームチェンジャーでした。期待を超えるモバイルアプリを提供してくれました。サポートも非常に充実していました。",
+        "author": "Michael Chen",
+        "role": "創設者, FitLife App",
+        "project": "モバイルアプリ"
+      },
+      {
+        "quote": "チームの創造性とプロ意識でプロセスは非常にスムーズでした。優れたデジタル製品を作るための理解力があります。",
+        "author": "Emily Rodriguez",
+        "role": "マーケティングディレクター, GreenEco",
+        "project": "SaaSプラットフォーム"
+      }
+    ],
+    "trustedBy": "20社以上に信頼されています",
+    "slogan": "\"コンゴ民主共和国で最高のデジタルパートナー\""
+  },
+
+  "FinalCTA": {
+    "status": "新規プロジェクト対応可能",
+    "title": {
+      "main": "あなたの",
+      "highlight": "ビジョンを現実にしますか？"
+    },
+    "description": "一緒に素晴らしいものを作り、ビジネスを新たな高みへ導きましょう。",
+    "button": {
+      "call": "相談を予約"
+    },
+    "contact": {
+      "email": "メール",
+      "phone": "電話"
+    }
+  },
+
+  "Pricing": {
+    "header": {
+      "label": "料金",
+      "title": {
+        "main": "明確で",
+        "highlight": "透明なプラン"
+      },
+      "description": "ニーズに合ったプランを選択してください。隠れた料金はなく、パフォーマンス重視です。"
+    },
+
+    "plans": {
+      "Basique": {
+        "title": "ベーシック",
+        "description": "オンラインプレゼンスを開始するのに最適。",
+        "features": [
+          "1～3ページの展示サイト",
+          "ランディングページ",
+          "レスポンシブデザイン",
+          "1年間のホスティング込み",
+          "SEO最適化",
+          "メールサポート"
+        ]
+      },
+      "Standard": {
+        "title": "スタンダード",
+        "description": "ビジネスを成長させる理想的なソリューション。",
+        "features": [
+          "最大6ページのウェブサイト",
+          "カスタムデザイン",
+          "高度なSEO最適化",
+          "お問い合わせフォーム",
+          "1年間のホスティング込み",
+          "CMS統合"
+        ]
+      },
+      "Premium": {
+        "title": "プレミアム",
+        "description": "デジタルパフォーマンスの頂点。",
+        "features": [
+          "フルEコマースサイト",
+          "無制限の製品管理",
+          "安全な決済",
+          "3か月間の技術サポート",
+          "個別トレーニング",
+          "コンバージョン最適化"
+        ]
+      }
+    },
+    "popular": "おすすめプラン",
+    "perProject": "プロジェクト",
+    "button": "このプランを選択",
+    "footer": {
+      "text": "カスタムソリューションが必要ですか？",
+      "link": "お問い合わせ"
+    }
+  },
+
+  "footer": {
+    "brandingAlt": "Nordev Agency ロゴ",
+    "branding": "信頼できるカスタムデジタルソリューションパートナーとして、あなたのビジョンを具体的な成果に変えます。",
+    "navigation": "ナビゲーション",
+    "contact": "お問い合わせ",
+    "newsletter": "ニュースレター",
+    "newsletterPlaceholder": "メールアドレス",
+    "followUs": "フォローする",
+    "backToTop": "トップに戻る",
+    "copyright": "卓越性のためにデザイン。",
+    "legal": {
+      "privacy": "プライバシー",
+      "terms": "利用規約",
+      "cookies": "クッキー"
+    },
+    "contactItems": {
+      "email": "メール",
+      "phone": "電話",
+      "studio": "スタジオ"
+    }
+  }
+}
