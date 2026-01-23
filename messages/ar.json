@@ -1,0 +1,269 @@
+{
+  "Hero": {
+    "titleLine1": "نحن نحول",
+    "titleLine2": "أفكارك الرقمية",
+    "titleHighlight": "إلى واقع",
+    "description": "في <strong>وكالة Nordev</strong>، نصمم مواقع وتطبيقات جوال تحول رؤيتك إلى <strong>حلول قوية وواقعية</strong>.",
+    "ctaPrimary": "احجز مكالمة",
+    "ctaSecondary": "عرض أعمالنا"
+  },
+
+  "Header": {
+    "nav": {
+      "about": "من نحن",
+      "portfolio": "أعمالنا",
+      "testimonials": "آراء العملاء",
+      "pricing": "الأسعار",
+      "contact": "تواصل معنا"
+    },
+    "cta": "عرض الأسعار",
+    "availability": "متاح من الإثنين إلى الجمعة",
+    "hours": "9ص - 6م"
+  },
+
+  "About": {
+    "badge": "حمضنا النووي",
+    "title": {
+      "line1": "التميز في",
+      "line2": "كل مشروع"
+    },
+    "intro": "في <strong>وكالة Nordev</strong>، نصمم تجارب مخصصة تحول رؤيتك إلى قوة دافعة للنمو.",
+    "difference": {
+      "title": "ما يميزنا",
+      "description": "نمزج بين براعة التصميم، الخبرة التقنية، واستراتيجية الأعمال لتجاوز توقعات العملاء دائمًا.",
+      "items": [
+        {
+          "title": "خبرة تقنية متقدمة",
+          "desc": "إتقان التقنيات الحديثة لتقديم أداء مثالي."
+        },
+        {
+          "title": "شريك استراتيجي",
+          "desc": "نلتزم بنجاحك أبعد من مجرد التطوير."
+        }
+      ]
+    },
+    "stats": {
+      "projects": "المشاريع المنفذة",
+      "satisfaction": "رضا العملاء"
+    },
+    "testimonial": {
+      "quote": "حوّلت Nordev رؤيتنا المعقدة إلى واجهة بسيطة وفعالة للغاية.",
+      "author": "Pierre Martin",
+      "role": "الرئيس التنفيذي، TechVision"
+    }
+  },
+
+  "Portfolio": {
+    "badge": "أعمالنا",
+    "title": {
+      "main": "أعمالنا",
+      "highlight": "المتميزة"
+    },
+    "description": "شاهد كيف نحول الأفكار المعقدة إلى واجهات سهلة الاستخدام وعالية الأداء.",
+    "button": "عرض المشروع",
+    "categories": [
+      "الكل",
+      "تطوير الويب"
+    ],
+    "projects": [
+      {
+        "id": 1,
+        "title": "Funda أونلاين",
+        "description": "منصة تعليمية عبر الإنترنت مع دورات تفاعلية وتتبع التقدم.",
+        "category": "تطوير الويب",
+        "image": "/portfolio/funda.png",
+        "technologies": ["Next.js", "TypeScript", "Sanity", "Tailwind"],
+        "link": "https://funda-online.com"
+      },
+      {
+        "id": 2,
+        "title": "CS Bisournouse",
+        "description": "موقع مدرسة ابتدائية وثانوية مع إدارة التسجيل.",
+        "category": "تطوير الويب",
+        "image": "/portfolio/csbis.png",
+        "technologies": ["React", "TypeScript", "Node.js", "Tailwind"],
+        "link": "https://csbisournouse.vercel.app"
+      },
+      {
+        "id": 3,
+        "title": "Metro Travels",
+        "description": "موقع حجز رحلات مع توصيات مخصصة.",
+        "category": "تطوير الويب",
+        "image": "/portfolio/metro.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://metrotravels.vercel.app/destinations"
+      },
+      {
+        "id": 4,
+        "title": "Asunicaco",
+        "description": "صفحة هبوط لوكالة تصميم وتطوير مبتكرة.",
+        "category": "تطوير الويب",
+        "image": "/portfolio/1.PNG",
+        "technologies": ["Codegniter", "Php", "Bootstrap"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 5,
+        "title": "Jexweb",
+        "description": "صفحة هبوط لوكالة تصميم وتطوير مبتكرة.",
+        "category": "تطوير الويب",
+        "image": "/portfolio/jexweb.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 6,
+        "title": "Congodmp",
+        "description": "منصة SAAS لوكالة صحية ومبتكرة.",
+        "category": "تطوير الويب",
+        "image": "/portfolio/congodmp.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 7,
+        "title": "CCPS",
+        "description": "موقع لمنظمة غير ربحية.",
+        "category": "تطوير الويب",
+        "image": "/portfolio/ccps.png",
+        "technologies": ["React", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 8,
+        "title": "Pexelsinovation",
+        "description": "صفحة هبوط لوكالة تصميم وتطوير مبتكرة.",
+        "category": "تطوير الويب",
+        "image": "/portfolio/pexels.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      }
+    ]
+  },
+
+  "Testimonials": {
+    "badge": "آراء العملاء",
+    "title": {
+      "main": "عملاؤنا",
+      "highlight": "يثقون بنا"
+    },
+    "description": "شاهد كيف نساعد عملاءنا على تحويل طموحاتهم إلى نجاح ملموس.",
+    "testimonials": [
+      {
+        "quote": "قامت وكالة Nordev بتحويل حضورنا الرقمي بالكامل. اهتمامهم بالتفاصيل استثنائي. زاد موقعنا الجديد التحويلات بنسبة 150٪.",
+        "author": "Sarah Johnson",
+        "role": "المديرة التنفيذية، TechStart Inc.",
+        "project": "موقع تجارة إلكترونية"
+      },
+      {
+        "quote": "كان العمل مع Nordev تجربة مغيرة. قدموا تطبيق جوال فاق توقعاتنا. كان الدعم ممتازًا طوال العملية.",
+        "author": "Michael Chen",
+        "role": "المؤسس، FitLife App",
+        "project": "تطبيق جوال"
+      },
+      {
+        "quote": "إبداع الفريق واحترافيتهم جعل العملية سلسة للغاية. يفهمون تمامًا ما يلزم لإنشاء منتجات رقمية رائعة.",
+        "author": "Emily Rodriguez",
+        "role": "مديرة التسويق، GreenEco",
+        "project": "منصة SaaS"
+      }
+    ],
+    "trustedBy": "موثوق من قبل أكثر من 20 شركة",
+    "slogan": "\"أفضل شريك رقمي في جمهورية الكونغو الديمقراطية\""
+  },
+
+  "FinalCTA": {
+    "status": "متاح لمشاريع جديدة",
+    "title": {
+      "main": "جاهز لتحويل",
+      "highlight": "رؤيتك إلى واقع؟"
+    },
+    "description": "لنبتكر شيئًا استثنائيًا معًا يدفع عملك إلى آفاق جديدة.",
+    "button": {
+      "call": "احجز مكالمة"
+    },
+    "contact": {
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف"
+    }
+  },
+
+  "Pricing": {
+    "header": {
+      "label": "الأسعار",
+      "title": {
+        "main": "خطط واضحة و",
+        "highlight": "شفافة"
+      },
+      "description": "اختر الخطة التي تناسب احتياجاتك. لا رسوم مخفية، فقط أداء متميز."
+    },
+
+    "plans": {
+      "Basique": {
+        "title": "أساسية",
+        "description": "مثالية لإطلاق تواجدك على الإنترنت.",
+        "features": [
+          "موقع عرض من 1-3 صفحات",
+          "صفحة هبوط",
+          "تصميم متجاوب",
+          "استضافة لمدة سنة",
+          "تحسين محركات البحث",
+          "دعم عبر البريد الإلكتروني"
+        ]
+      },
+      "Standard": {
+        "title": "قياسية",
+        "description": "الحل المثالي لتعزيز أعمالك.",
+        "features": [
+          "موقع يصل إلى 6 صفحات",
+          "تصميم مخصص",
+          "تحسين SEO متقدم",
+          "نموذج الاتصال",
+          "استضافة لمدة سنة",
+          "دمج CMS"
+        ]
+      },
+      "Premium": {
+        "title": "متقدمة",
+        "description": "أقصى مستويات الأداء الرقمي.",
+        "features": [
+          "موقع تجارة إلكترونية كامل",
+          "إدارة منتجات غير محدودة",
+          "مدفوعات آمنة",
+          "دعم فني 3 أشهر",
+          "تدريب شخصي",
+          "تحسين التحويل"
+        ]
+      }
+    },
+    "popular": "موصى به",
+    "perProject": "مشروع",
+    "button": "اختر هذه الخطة",
+    "footer": {
+      "text": "هل تحتاج إلى حل مخصص؟",
+      "link": "اتصل بنا"
+    }
+  },
+
+  "footer": {
+    "brandingAlt": "شعار Nordev Agency",
+    "branding": "شريكك الموثوق للحلول الرقمية المخصصة التي تحول رؤيتك إلى نتائج ملموسة.",
+    "navigation": "التنقل",
+    "contact": "تواصل",
+    "newsletter": "النشرة الإخبارية",
+    "newsletterPlaceholder": "بريدك الإلكتروني",
+    "followUs": "تابعنا",
+    "backToTop": "العودة للأعلى",
+    "copyright": "مصمم للتميز.",
+    "legal": {
+      "privacy": "الخصوصية",
+      "terms": "الشروط",
+      "cookies": "ملفات تعريف الارتباط"
+    },
+    "contactItems": {
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "studio": "الاستوديو"
+    }
+  }
+}
