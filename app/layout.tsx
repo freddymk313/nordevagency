@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { NextIntlClientProvider } from "next-intl";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -28,12 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body
-        className={`${poppins.variable} ${inter.variable} antialiased`}
-      >
-        <Header />
-        {children}
-        <Footer />
+      <body className={`${poppins.variable} ${inter.variable} antialiased`}>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
       <Analytics />
     </html>
