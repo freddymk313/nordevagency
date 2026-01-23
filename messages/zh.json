@@ -1,0 +1,269 @@
+{
+  "Hero": {
+    "titleLine1": "我们将您的",
+    "titleLine2": "数字",
+    "titleHighlight": "创意变为现实",
+    "description": "在 <strong>Nordev Agency</strong>，我们设计网站和移动应用，将您的愿景转化为 <strong>强大且切实可行的解决方案</strong>。",
+    "ctaPrimary": "预约通话",
+    "ctaSecondary": "查看我们的作品"
+  },
+
+  "Header": {
+    "nav": {
+      "about": "关于我们",
+      "portfolio": "作品集",
+      "testimonials": "客户评价",
+      "pricing": "价格",
+      "contact": "联系"
+    },
+    "cta": "查看价格",
+    "availability": "周一至周五可用",
+    "hours": "上午9点 - 下午6点"
+  },
+
+  "About": {
+    "badge": "我们的DNA",
+    "title": {
+      "line1": "卓越",
+      "line2": "每一个项目"
+    },
+    "intro": "在 <strong>Nordev Agency</strong>，我们设计量身定制的体验，将您的愿景转化为强大的增长驱动力。",
+    "difference": {
+      "title": "我们的优势",
+      "description": "我们融合设计工艺、技术专长与商业策略，持续超越客户期望。",
+      "items": [
+        {
+          "title": "先进的技术专长",
+          "desc": "掌握现代技术，实现最佳性能。"
+        },
+        {
+          "title": "战略合作伙伴",
+          "desc": "我们不仅开发，更致力于您的成功。"
+        }
+      ]
+    },
+    "stats": {
+      "projects": "已完成项目",
+      "satisfaction": "客户满意度"
+    },
+    "testimonial": {
+      "quote": "Nordev 将我们复杂的愿景转化为简单而高效的界面。",
+      "author": "Pierre Martin",
+      "role": "首席执行官, TechVision"
+    }
+  },
+
+  "Portfolio": {
+    "badge": "我们的作品",
+    "title": {
+      "main": "作品集",
+      "highlight": "卓越之作"
+    },
+    "description": "看看我们如何将复杂的创意转化为直观且高性能的界面。",
+    "button": "查看项目",
+    "categories": [
+      "全部",
+      "网页开发"
+    ],
+    "projects": [
+      {
+        "id": 1,
+        "title": "Funda 在线",
+        "description": "具有互动课程和进度跟踪的在线学习平台。",
+        "category": "网页开发",
+        "image": "/portfolio/funda.png",
+        "technologies": ["Next.js", "TypeScript", "Sanity", "Tailwind"],
+        "link": "https://funda-online.com"
+      },
+      {
+        "id": 2,
+        "title": "CS Bisournouse",
+        "description": "Bisournouse 小学和中学的学校网站，带入学管理功能。",
+        "category": "网页开发",
+        "image": "/portfolio/csbis.png",
+        "technologies": ["React", "TypeScript", "Node.js", "Tailwind"],
+        "link": "https://csbisournouse.vercel.app"
+      },
+      {
+        "id": 3,
+        "title": "Metro Travels",
+        "description": "提供个性化推荐的旅游预订网站。",
+        "category": "网页开发",
+        "image": "/portfolio/metro.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://metrotravels.vercel.app/destinations"
+      },
+      {
+        "id": 4,
+        "title": "Asunicaco",
+        "description": "创新设计与开发机构的着陆页。",
+        "category": "网页开发",
+        "image": "/portfolio/1.PNG",
+        "technologies": ["Codegniter", "Php", "Bootstrap"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 5,
+        "title": "Jexweb",
+        "description": "创新设计与开发机构的着陆页。",
+        "category": "网页开发",
+        "image": "/portfolio/jexweb.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 6,
+        "title": "Congodmp",
+        "description": "健康与创新发展机构的SAAS平台。",
+        "category": "网页开发",
+        "image": "/portfolio/congodmp.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 7,
+        "title": "CCPS",
+        "description": "非营利NGO的网站。",
+        "category": "网页开发",
+        "image": "/portfolio/ccps.png",
+        "technologies": ["React", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 8,
+        "title": "Pexelsinovation",
+        "description": "创新设计与开发机构的着陆页。",
+        "category": "网页开发",
+        "image": "/portfolio/pexels.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://pexelsinovation.vercel.app"
+      }
+    ]
+  },
+
+  "Testimonials": {
+    "badge": "客户评价",
+    "title": {
+      "main": "我们的客户",
+      "highlight": "信任我们"
+    },
+    "description": "看看我们如何帮助客户将雄心转化为可衡量的成功。",
+    "testimonials": [
+      {
+        "quote": "Nordev Agency 完全改变了我们的数字形象。他们对细节的关注非常出色。新网站的转化率提升了150%。",
+        "author": "Sarah Johnson",
+        "role": "首席执行官, TechStart Inc.",
+        "project": "电子商务网站"
+      },
+      {
+        "quote": "与 Nordev 合作是一次颠覆性的体验。他们交付的移动应用超出了我们的预期，整个过程的支持也非常出色。",
+        "author": "Michael Chen",
+        "role": "创始人, FitLife App",
+        "project": "移动应用"
+      },
+      {
+        "quote": "团队的创意和专业让整个过程顺畅无比。他们真正理解如何打造出色的数字产品。",
+        "author": "Emily Rodriguez",
+        "role": "市场总监, GreenEco",
+        "project": "SaaS 平台"
+      }
+    ],
+    "trustedBy": "受到20+家公司信赖",
+    "slogan": "\"刚果（金）最佳数字合作伙伴\""
+  },
+
+  "FinalCTA": {
+    "status": "可接受新项目",
+    "title": {
+      "main": "准备将",
+      "highlight": "您的愿景变为现实吗？"
+    },
+    "description": "让我们一起创造非凡的作品，推动您的业务迈向新高度。",
+    "button": {
+      "call": "预约通话"
+    },
+    "contact": {
+      "email": "电子邮件",
+      "phone": "电话"
+    }
+  },
+
+  "Pricing": {
+    "header": {
+      "label": "价格",
+      "title": {
+        "main": "清晰且",
+        "highlight": "透明的方案"
+      },
+      "description": "选择适合您的方案。没有隐藏费用，只有高效表现。"
+    },
+
+    "plans": {
+      "Basique": {
+        "title": "基础",
+        "description": "完美适合启动您的在线业务。",
+        "features": [
+          "1-3 页展示网站",
+          "着陆页",
+          "响应式设计",
+          "包含一年主机",
+          "SEO优化",
+          "电子邮件支持"
+        ]
+      },
+      "Standard": {
+        "title": "标准",
+        "description": "提升业务的理想方案。",
+        "features": [
+          "最多6页的网站",
+          "自定义设计",
+          "高级SEO优化",
+          "联系表单",
+          "包含一年主机",
+          "CMS集成"
+        ]
+      },
+      "Premium": {
+        "title": "高级",
+        "description": "数字表现的巅峰。",
+        "features": [
+          "完整电子商务网站",
+          "无限产品管理",
+          "安全支付",
+          "三个月技术支持",
+          "个性化培训",
+          "转化率优化"
+        ]
+      }
+    },
+    "popular": "推荐方案",
+    "perProject": "项目",
+    "button": "选择此方案",
+    "footer": {
+      "text": "需要定制解决方案？",
+      "link": "联系我们"
+    }
+  },
+
+  "footer": {
+    "brandingAlt": "Nordev Agency 标志",
+    "branding": "您值得信赖的定制数字解决方案合作伙伴，将您的愿景转化为切实成果。",
+    "navigation": "导航",
+    "contact": "联系",
+    "newsletter": "订阅新闻",
+    "newsletterPlaceholder": "您的电子邮件",
+    "followUs": "关注我们",
+    "backToTop": "回到顶部",
+    "copyright": "为卓越而设计。",
+    "legal": {
+      "privacy": "隐私政策",
+      "terms": "条款",
+      "cookies": "Cookie政策"
+    },
+    "contactItems": {
+      "email": "电子邮件",
+      "phone": "电话",
+      "studio": "工作室"
+    }
+  }
+}
