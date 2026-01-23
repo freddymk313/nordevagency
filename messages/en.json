@@ -19,5 +19,37 @@
     "cta": "View pricing",
     "availability": "Available Monday to Friday",
     "hours": "9am - 6pm"
+  },
+
+  "About": {
+    "badge": "Our DNA",
+    "title": {
+      "line1": "Excellence in",
+      "line2": "Every Project"
+    },
+    "intro": "At <strong>Nordev Agency</strong>, we design tailor-made experiences that turn your vision into a powerful growth driver.",
+    "difference": {
+      "title": "What Sets Us Apart",
+      "description": "We blend design craftsmanship, technical mastery and business strategy to consistently exceed expectations.",
+      "items": [
+        {
+          "title": "Advanced Technical Expertise",
+          "desc": "Mastery of modern technologies to deliver optimal performance."
+        },
+        {
+          "title": "Strategic Partner",
+          "desc": "We commit to your success beyond development."
+        }
+      ]
+    },
+    "stats": {
+      "projects": "Projects Delivered",
+      "satisfaction": "Client Satisfaction"
+    },
+    "testimonial": {
+      "quote": "Nordev transformed our complex vision into a simple and incredibly effective interface.",
+      "author": "Pierre Martin",
+      "role": "CEO, TechVision"
+    }
   }
 }
