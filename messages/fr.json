@@ -139,5 +139,37 @@
         "link": "https://pexelsinovation.vercel.app"
       }
     ]
+  },
+
+  "Testimonials": {
+    "badge": "Témoignages",
+    "title": {
+      "main": "Ils nous font",
+      "highlight": "confiance"
+    },
+    "description": "Découvrez comment nous aidons nos clients à transformer leurs ambitions en succès mesurables.",
+    "testimonials": [
+      {
+        "quote": "Nordev Agency a complètement transformé notre présence digitale. Leur attention aux détails est exceptionnelle. Notre nouveau site a augmenté les conversions de 150%.",
+        "author": "Sarah Johnson",
+        "role": "CEO, TechStart Inc.",
+        "project": "Site E-commerce"
+      },
+      {
+        "quote": "Travailler avec Nordev a été un tournant. Ils ont livré une application mobile qui a dépassé nos attentes. Le support a été exceptionnel tout au long du processus.",
+        "author": "Michael Chen",
+        "role": "Fondateur, FitLife App",
+        "project": "Application Mobile"
+      },
+      {
+        "quote": "La créativité et le professionnalisme de l'équipe ont rendu le processus fluide. Ils comprennent vraiment ce qu'il faut pour créer des produits digitaux d'exception.",
+        "author": "Emily Rodriguez",
+        "role": "Directrice Marketing, GreenEco",
+        "project": "Plateforme SaaS"
+      }
+    ],
+    "trustedBy": "FIABLES PAR 20+ ENTREPRISES",
+    "slogan": "\"Le meilleur partenaire digital en RDC\""
   }
+
 }
