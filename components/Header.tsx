@@ -14,7 +14,7 @@ export default function Header() {
     { key: "portfolio", href: "#portfolio" },
     { key: "testimonials", href: "#temoignages" },
     { key: "pricing", href: "#pricing" },
-    { key: "contact", href: "#contact" }
+    { key: "contact", href: "#contact" },
   ];
 
   useEffect(() => {
@@ -98,7 +98,7 @@ export default function Header() {
 
             {/* Menu Burger - Mobile */}
             <button
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <div className="w-6 h-6 flex flex-col justify-center space-y-1">
@@ -139,7 +139,9 @@ export default function Header() {
               <Link
                 key={link.key}
                 href={link.href}
+                // className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
                 className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition-colors py-3 border-b border-gray-200"
+                // className="text-gray-700 text-base hover:text-gray-900 transition-colors =font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t(`nav.${link.key}`)}
@@ -148,7 +150,7 @@ export default function Header() {
           </div>
 
           {/* Bouton Mobile */}
-          <div className="pt-8 border-t border-gray-200">
+          <div className="pt-8 border-gray-200">
             <button className="bg-[#111111] text-sm text-white pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-4 group">
               {t("cta")}
               <span className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-black group-hover:bg-gray-200 transition-colors">
@@ -171,12 +173,8 @@ export default function Header() {
 
           {/* Infos Mobile */}
           <div className="mt-8 text-center">
-            <p className="text-gray-600 mb-2 text-base">
-              {t("availability")}
-            </p>
-            <p className="text-gray-800 text-base font-medium">
-              {t("hours")}
-            </p>
+            <p className="text-gray-600 mb-2 text-base">{t("availability")}</p>
+            <p className="text-gray-800 text-base font-medium">{t("hours")}</p>
           </div>
         </div>
       </div>
