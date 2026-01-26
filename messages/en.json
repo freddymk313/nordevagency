@@ -109,7 +109,7 @@
         "category": "Web Development",
         "image": "/portfolio/jexweb.png",
         "technologies": ["Next.js", "TypeScript", "Tailwind"],
-        "link": "https://pexelsinovation.vercel.app"
+        "link": "https://jexweb.vercel.app"
       },
       {
         "id": 6,
@@ -118,7 +118,7 @@
         "category": "Web Development",
         "image": "/portfolio/congodmp.png",
         "technologies": ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"],
-        "link": "https://pexelsinovation.vercel.app"
+        "link": "https://congodmp.vercel.app"
       },
       {
         "id": 7,
@@ -127,7 +127,7 @@
         "category": "Web Development",
         "image": "/portfolio/ccps.png",
         "technologies": ["React", "TypeScript", "Tailwind"],
-        "link": "https://pexelsinovation.vercel.app"
+        "link": "https://ccps.vercel.app"
       },
       {
         "id": 8,
