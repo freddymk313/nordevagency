@@ -29,7 +29,7 @@ const Hero = () => {
               {t("titleLine2")}{" "}
               <span className="text-gray-900 relative">
                 {t("titleHighlight")}
-                <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gray-800/10 rounded-full" />
+                {/* <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gray-800/10 rounded-full" /> */}
               </span>
             </span>
           </h1>
