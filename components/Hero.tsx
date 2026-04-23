@@ -97,7 +97,7 @@ export default function Hero() {
               className="*animate-pulse-glow-green font-display flex items-center gap-4 justify-center rounded-full bg-green-accent pl-6 py-2 md:py-2.5 pr-3.5 text-sm font-bold text-black transition-transform *hover:scale-105 active:scale-95"
               >
                 <span className="">Start Your Project</span>
-                <span className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-black group-hover:bg-gray-100 transition-colors">
+                <span className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-black group-hover:bg-gray-100 transition-colors">
                   <svg
                     className="w-5 h-5 group-hover:translate-x-0.5 transition-transform"
                     fill="none"
