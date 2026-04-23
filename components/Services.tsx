@@ -1,18 +1,39 @@
-"use client"
+"use client";
+
 import { motion } from "framer-motion";
-import {
-  Palette, Zap, Smartphone, Search, Gauge, RefreshCw,
-  type LucideIcon,
-} from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
-const services: { icon: LucideIcon; title: string; desc: string }[] = [
-  { icon: Palette, title: "Custom Web Design", desc: "Unique, conversion-focused designs tailored to your brand." },
-  { icon: Zap, title: "Web Development", desc: "Fast, scalable sites built with modern technology." },
-  { icon: Smartphone, title: "Mobile-First Design", desc: "Flawless on every screen, every device." },
-  { icon: Search, title: "SEO Optimization", desc: "Get found by the clients who need you most." },
-  { icon: Gauge, title: "Performance & Speed", desc: "Sub-2s load times, optimized for conversions." },
-  { icon: RefreshCw, title: "Redesign & Refresh", desc: "We take your existing site from forgettable to unforgettable." },
+const services = [
+  {
+    icon: "web",
+    title: "Custom Web Design",
+    desc: "Unique, conversion-focused designs tailored to your brand.",
+  },
+  {
+    icon: "code",
+    title: "Web Development",
+    desc: "Fast, scalable sites built with modern technology.",
+  },
+  {
+    icon: "smartphone",
+    title: "Mobile-First Design",
+    desc: "Flawless on every screen, every device.",
+  },
+  {
+    icon: "search",
+    title: "SEO Optimization",
+    desc: "Get found by the clients who need you most.",
+  },
+  {
+    icon: "speed",
+    title: "Performance & Speed",
+    desc: "Sub-2s load times, optimized for conversions.",
+  },
+  {
+    icon: "refresh",
+    title: "Redesign & Refresh",
+    desc: "We take your existing site from forgettable to unforgettable.",
+  },
 ];
 
 export default function Services() {
@@ -21,7 +42,12 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Services"
-          title={<>Everything you need to <span className="text-green-accent">dominate online.</span></>}
+          title={
+            <>
+              Everything you need to{" "}
+              <span className="text-green-accent">dominate online.</span>
+            </>
+          }
           subtitle="We handle every pixel, every line of code, every word."
         />
 
@@ -41,12 +67,22 @@ export default function Services() {
                 className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
                 style={{ background: "var(--green-accent)" }}
               />
+
               <div className="relative">
+                {/* ICON */}
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-green-accent/10 text-green-accent">
-                  <s.icon className="h-6 w-6" />
+                  <span className="material-symbols-outlined text-[24px]">
+                    {s.icon}
+                  </span>
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+
+                <h3 className="font-display text-xl font-bold text-foreground">
+                  {s.title}
+                </h3>
+
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {s.desc}
+                </p>
               </div>
             </motion.div>
           ))}

@@ -10,6 +10,7 @@ import Pricing from "@/components/Pricing"
 import TrustedBy from "@/components/TrustedBy"
 import { Comparison } from "@/components/Comparison"
 import Services from "@/components/Services"
+import Process from "@/components/Process"
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       <TrustedBy />
       <Comparison />
       <Services />
-      
+      <Process />
+      <Portfolio />
       <Testimonials />
       <FinalCTA />
       <Pricing />

@@ -1,217 +1,167 @@
-"use client";
+"use client"
+import { useState } from "react";
+import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
+import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import SectionHeading from "./SectionHeading";
+// import { SectionHeading } from "./SectionHeading";
 
-import { ChevronLeft, ChevronRight, ExternalLink, Globe } from "lucide-react";
-import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
+type Project = {
+  name: string;
   category: string;
-  image: string;
-  technologies: string[];
-  link: string;
-}
+  gradient: string;
+};
 
-const Portfolio = () => {
-  const t = useTranslations("Portfolio");
+const projects: Project[] = [
+  { name: "E-commerce Boutique", category: "Fashion Brand · Shopify", gradient: "from-rose-500 via-pink-600 to-fuchsia-700" },
+  { name: "SaaS Dashboard", category: "Tech Startup · React", gradient: "from-emerald-400 via-teal-500 to-cyan-600" },
+  { name: "Restaurant Site", category: "Food & Bev · WordPress", gradient: "from-amber-400 via-orange-500 to-red-600" },
+  { name: "Portfolio Site", category: "Creative Agency · Next.js", gradient: "from-violet-500 via-purple-600 to-indigo-700" },
+  { name: "Real Estate Platform", category: "Property · Next.js", gradient: "from-sky-400 via-blue-500 to-indigo-600" },
+  { name: "Consulting Firm", category: "B2B Services · Webflow", gradient: "from-lime-400 via-green-500 to-emerald-600" },
+];
 
-  const projects: Project[] = t.raw("projects") as unknown as Project[];
-  const categories: string[] = t.raw("categories") as unknown as string[];
+export default function Portfolio() {
+  const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-  const [activeCategory, setActiveCategory] = useState(categories[0]);
-  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const filteredProjects =
-    activeCategory === categories[0]
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
-
-  const currentProject = filteredProjects[currentProjectIndex];
-
-  const nextProject = () => {
-    setCurrentProjectIndex((prev) =>
-      prev === filteredProjects.length - 1 ? 0 : prev + 1
-    );
+  const next = () => {
+    setDirection(1);
+    setIndex((i) => (i + 1) % projects.length);
+  };
+  const prev = () => {
+    setDirection(-1);
+    setIndex((i) => (i - 1 + projects.length) % projects.length);
   };
 
-  const prevProject = () => {
-    setCurrentProjectIndex((prev) =>
-      prev === 0 ? filteredProjects.length - 1 : prev - 1
-    );
-  };
-
-  useEffect(() => {
-    if (isHovered) return;
-    const interval = setInterval(nextProject, 5000);
-    return () => clearInterval(interval);
-  }, [filteredProjects, isHovered]);
+  // Show top 3 cards as a stack
+  const visible = [0, 1, 2].map((offset) => projects[(index + offset) % projects.length]);
 
   return (
-    <section id="portfolio" className="py-12 md:py-32 bg-white overflow-hidden">
-      <div className="container mx-auto px-5 md:px-6">
-        {/* En-tête */}
-        <div className="text-center mb-10 md:mb-20">
-          <span className="inline-block px-4 py-1.5 mb-4 md:mb-6 text-[10px] md:text-[12px] font-bold tracking-widest text-gray-400 uppercase bg-gray-50 rounded-full">
-            {t("badge")}
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
-            {t("title.main")} <span className="text-gray-400">{t("title.highlight")}</span>
-          </h2>
-          <p
-            className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-2"
-            dangerouslySetInnerHTML={{ __html: t("description") }}
-          />
+    <section id="portfolio" className="relative py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <SectionHeading
+          eyebrow="Portfolio"
+          title={<>Work we're <span className="text-brand">proud of.</span></>}
+          subtitle="Swipe to explore. Tap to see more."
+        />
+
+        <div className="relative mx-auto mt-16 flex h-[560px] w-full max-w-md items-center justify-center sm:h-[620px]">
+          <AnimatePresence initial={false} custom={direction}>
+            {visible.map((p, i) => (
+              <Card
+                key={`${p.name}-${index}-${i}`}
+                project={p}
+                stackIndex={i}
+                isTop={i === 0}
+                onSwipe={(dir) => {
+                  if (dir > 0) next();
+                  else prev();
+                }}
+              />
+            ))}
+          </AnimatePresence>
         </div>
 
-        {/* Filtres */}
-        <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-16">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => {
-                setActiveCategory(category);
-                setCurrentProjectIndex(0);
-              }}
-              className={`px-5 py-2 md:px-6 md:py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 ${
-                activeCategory === category
-                  ? "bg-black text-white shadow-lg scale-105"
-                  : "bg-gray-50 text-gray-500 hover:bg-gray-100"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        {/* Carousel */}
-        <div className="max-w-6xl mx-auto relative">
-          <div
-            className="group relative"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+        <div className="mt-10 flex items-center justify-center gap-4">
+          <button
+            onClick={prev}
+            className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-surface px-5 text-sm font-medium text-foreground transition-colors hover:border-brand hover:text-brand"
           >
-            <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
-              {/* Visuel */}
-              <div className="lg:col-span-7 relative">
-                <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-gray-50">
-                  <div className="bg-gray-100/80 backdrop-blur-md px-3 py-2 md:px-4 md:py-3 border-b border-gray-200 flex items-center gap-2">
-                    <div className="flex gap-1.2 md:gap-1.5">
-                      <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-red-400" />
-                      <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-400" />
-                      <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-400" />
-                    </div>
-                    <div className="mx-auto bg-white rounded-md px-2 py-0.5 md:px-3 md:py-1 text-[9px] md:text-[10px] text-gray-400 flex items-center gap-2 w-2/3 md:w-1/2 truncate">
-                      <Globe className="w-2.5 h-2.5 md:w-3 md:h-3 shrink-0" />
-                      <span className="truncate">{currentProject.link}</span>
-                    </div>
-                  </div>
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={currentProject.image}
-                      alt={currentProject.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Infos */}
-              <div className="lg:col-span-5 flex flex-col justify-center">
-                <div className="flex items-center gap-2 mb-3 md:mb-4">
-                  <span className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    {currentProject.category}
-                  </span>
-                </div>
-
-                <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6 tracking-tight">
-                  {currentProject.title}
-                </h3>
-
-                <p className="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg font-medium">
-                  {currentProject.description}
-                </p>
-
-                <div className="mb-8 md:mb-10 flex flex-wrap gap-1.5 md:gap-2">
-                  {currentProject.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="text-[9px] md:text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 bg-gray-50 text-gray-500 rounded-md border border-gray-100"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href={currentProject.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-fit"
-                >
-                  <button className="bg-[#111111] text-sm text-white pl-6 md:pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg flex items-center justify-between group/btn w-full sm:w-fit gap-4 md:gap-6">
-                    {t("button")}
-                    <span className="bg-white w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center text-black group-hover/btn:bg-gray-100 transition-colors">
-                      <ExternalLink className="w-4 h-4 md:w-5 md:h-5 group-hover/btn:scale-110 transition-transform" />
-                    </span>
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-between mt-8 md:mt-16">
-            <div className="flex gap-3 md:gap-4 items-center w-full sm:w-auto justify-between">
-              <button
-                onClick={prevProject}
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
-              >
-                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
-              </button>
-
-              <div className="sm:hidden flex gap-2">
-                {filteredProjects.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentProjectIndex(index)}
-                    className={`transition-all duration-500 rounded-full ${
-                      index === currentProjectIndex
-                        ? "w-8 md:w-10 h-1.5 md:h-2 bg-black"
-                        : "w-1.5 md:w-2 h-1.5 md:h-2 bg-gray-200"
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={nextProject}
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
-              >
-                <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
-              </button>
-            </div>
-
-            <div className="hidden sm:flex gap-2">
-              {filteredProjects.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentProjectIndex(index)}
-                  className={`transition-all duration-500 rounded-full ${
-                    index === currentProjectIndex
-                      ? "w-8 md:w-10 h-1.5 md:h-2 bg-black"
-                      : "w-1.5 md:w-2 h-1.5 md:h-2 bg-gray-200"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+            <ArrowLeft className="h-4 w-4" /> Previous
+          </button>
+          <span className="font-display text-sm tabular-nums text-muted-foreground">
+            <span className="text-foreground">{String(index + 1).padStart(2, "0")}</span> / {String(projects.length).padStart(2, "0")} projects
+          </span>
+          <button
+            onClick={next}
+            className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-surface px-5 text-sm font-medium text-foreground transition-colors hover:border-brand hover:text-brand"
+          >
+            Next <ArrowRight className="h-4 w-4" />
+          </button>
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default Portfolio;
+function Card({
+  project,
+  stackIndex,
+  isTop,
+  onSwipe,
+}: {
+  project: Project;
+  stackIndex: number;
+  isTop: boolean;
+  onSwipe: (dir: number) => void;
+}) {
+  const x = useMotionValue(0);
+  const rotate = useTransform(x, [-300, 0, 300], [-18, 0, 18]);
+  const opacity = useTransform(x, [-300, -150, 0, 150, 300], [0, 1, 1, 1, 0]);
+
+  const baseScale = 1 - stackIndex * 0.05;
+  const baseY = stackIndex * 18;
+
+  return (
+    <motion.div
+      className="absolute h-full w-full"
+      style={{
+        zIndex: 10 - stackIndex,
+        x: isTop ? x : 0,
+        rotate: isTop ? rotate : 0,
+        opacity: isTop ? opacity : 1,
+      }}
+      initial={{ scale: baseScale - 0.05, y: baseY + 10, opacity: 0 }}
+      animate={{ scale: baseScale, y: baseY, opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ type: "spring", stiffness: 260, damping: 30 }}
+      drag={isTop ? "x" : false}
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.7}
+      onDragEnd={(_, info) => {
+        if (Math.abs(info.offset.x) > 120 || Math.abs(info.velocity.x) > 500) {
+          onSwipe(info.offset.x > 0 ? 1 : -1);
+        }
+      }}
+      whileTap={isTop ? { cursor: "grabbing" } : undefined}
+    >
+      <div className="relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-border bg-surface-elevated shadow-2xl">
+        <div className={`relative flex-1 bg-gradient-to-br ${project.gradient}`}>
+          <div className="absolute inset-0 bg-black/20" />
+          <div
+            aria-hidden
+            className="absolute inset-0 opacity-30 mix-blend-overlay"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 30% 20%, white 0%, transparent 40%), radial-gradient(circle at 70% 80%, white 0%, transparent 40%)",
+            }}
+          />
+          {/* mock UI shapes */}
+          <div className="absolute inset-x-8 top-10 space-y-3">
+            <div className="h-3 w-24 rounded-full bg-white/40" />
+            <div className="h-8 w-3/4 rounded-md bg-white/60" />
+            <div className="h-8 w-2/3 rounded-md bg-white/40" />
+          </div>
+          <div className="absolute inset-x-8 bottom-28 grid grid-cols-3 gap-2">
+            <div className="h-16 rounded-lg bg-white/30" />
+            <div className="h-16 rounded-lg bg-white/30" />
+            <div className="h-16 rounded-lg bg-white/30" />
+          </div>
+        </div>
+        <div className="flex items-center justify-between gap-4 border-t border-border bg-background/95 p-5 backdrop-blur">
+          <div>
+            <div className="text-[11px] uppercase tracking-widest text-brand">{project.category}</div>
+            <h3 className="mt-1 font-display text-lg font-bold">{project.name}</h3>
+          </div>
+          <a
+            href="#"
+            onClick={(e) => e.preventDefault()}
+            className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand hover:text-brand"
+          >
+            View <ExternalLink className="h-3 w-3" />
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
