@@ -5,7 +5,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
-// import { SectionHeading } from "./SectionHeading";
 
 const services: { icon: LucideIcon; title: string; desc: string }[] = [
   { icon: Palette, title: "Custom Web Design", desc: "Unique, conversion-focused designs tailored to your brand." },
@@ -18,17 +17,12 @@ const services: { icon: LucideIcon; title: string; desc: string }[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 sm:py-32">
+    <section id="services" className="relative py-24 sm:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        {/* <SectionHeading
-          eyebrow="Services"
-          title={<>Everything you need to <span className="text-brand">dominate online.</span></>}
-          subtitle="We handle every pixel, every line of code, every word."
-        /> */}
         <SectionHeading
-          eyebrow="From ignored to world-class"
-          title={<>Your website is your best salesperson. <span className="text-muted-foreground">Is yours doing its job?</span></>}
-          subtitle="Most agency websites lose visitors in the first 5 seconds. We fix that."
+          eyebrow="Services"
+          title={<>Everything you need to <span className="text-green-accent">dominate online.</span></>}
+          subtitle="We handle every pixel, every line of code, every word."
         />
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -40,18 +34,18 @@ export default function Services() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: i * 0.06, duration: 0.55 }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-surface-elevated p-7 transition-colors duration-300 hover:border-brand/60 hover:shadow-glow-soft"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-7 transition-colors duration-300 hover:border-green-accent/60"
             >
               <div
                 aria-hidden
                 className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
-                style={{ background: "var(--brand)" }}
+                style={{ background: "var(--green-accent)" }}
               />
               <div className="relative">
-                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand ring-1 ring-brand/20">
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-green-accent/10 text-green-accent ring-1 ring-green-accent/20">
                   <s.icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-display text-xl font-bold">{s.title}</h3>
+                <h3 className="font-display text-xl font-bold text-foreground">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
               </div>
             </motion.div>
