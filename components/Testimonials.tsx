@@ -1,110 +1,89 @@
-"use client";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Quote, Star } from "lucide-react";
+import { SectionHeading } from "./SectionHeading";
 
-import { Quote, Star, CheckCircle2, Users } from "lucide-react";
-import { useTranslations } from "next-intl";
+const testimonials = [
+  {
+    quote: "Nordev transformed our online presence completely. Within 2 weeks we had a site we were proud to share. Leads tripled in the first month.",
+    name: "Thomas M.",
+    role: "Founder @ StartupX",
+  },
+  {
+    quote: "The team is fast, communicative, and truly understands how to convert visitors. Best investment we made this year.",
+    name: "Sophie L.",
+    role: "Director @ BrandCo",
+  },
+  {
+    quote: "I gave them my vision, they delivered something beyond what I imagined. The site speaks for itself.",
+    name: "Alex R.",
+    role: "CEO @ NovaTech",
+  },
+];
 
-interface Testimonial {
-  quote: string;
-  author: string;
-  role: string;
-  project: string;
-}
+export function Testimonials() {
+  const [active, setActive] = useState(0);
 
-const Testimonials = () => {
-  const t = useTranslations("Testimonials");
-
-  const testimonials: Testimonial[] = t.raw("testimonials") as unknown as Testimonial[];
+  useEffect(() => {
+    const id = setInterval(() => setActive((a) => (a + 1) % testimonials.length), 6000);
+    return () => clearInterval(id);
+  }, []);
 
   return (
-    <section id="temoignages" className="py-12 md:py-32 bg-[#FBFBFB] relative overflow-hidden">
-      {/* Sphères décoratives */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gray-200/30 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gray-100/50 rounded-full blur-[80px] -translate-x-1/4 translate-y-1/4" />
+    <section id="testimonials" className="relative py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <SectionHeading
+          eyebrow="Testimonials"
+          title={<>Our clients don't leave. <span className="text-brand">They send referrals.</span></>}
+        />
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header de section */}
-        <div className="text-center mb-10 md:mb-20">
-          <span className="inline-block px-4 py-1.5 mb-4 md:mb-6 text-[10px] md:text-[12px] font-bold tracking-[0.2em] text-gray-400 uppercase bg-gray-100 rounded-full">
-            {t("badge")}
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6 tracking-tight">
-            {t("title.main")} <span className="text-gray-400">{t("title.highlight")}</span>
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-medium">
-            {t("description")}
-          </p>
-        </div>
-
-        {/* Grille des témoignages */}
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="group bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.06)] hover:-translate-y-2 transition-all duration-500 relative flex flex-col justify-between"
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {testimonials.map((t, i) => (
+            <motion.div
+              key={t.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              animate={{
+                borderColor: active === i ? "oklch(0.78 0.22 152 / 0.6)" : "oklch(0.23 0 0)",
+                boxShadow: active === i ? "0 10px 40px -10px oklch(0.78 0.22 152 / 0.25)" : "none",
+              }}
+              className="relative flex flex-col rounded-2xl border bg-surface-elevated p-7"
             >
-              <div>
-                {/* Header du témoignage : étoiles + projet */}
-                <div className="flex justify-between items-start mb-6 md:mb-8">
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-3.5 h-3.5 md:w-4 md:h-4 fill-black text-black"
-                      />
-                    ))}
-                  </div>
-                  <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400 bg-gray-50 px-3 py-1 rounded-full">
-                    {testimonial.project}
-                  </span>
-                </div>
-
-                {/* Icône Quote */}
-                <div className="mb-6 opacity-10 group-hover:opacity-100 group-hover:text-black transition-all duration-500">
-                  <Quote className="w-6 h-6 md:w-8 md:h-8 rotate-180" />
-                </div>
-
-                {/* Citation */}
-                <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-10 font-medium">
-                  "{testimonial.quote}"
-                </p>
-              </div>
-
-              {/* Auteur */}
-              <div className="flex items-center gap-3 md:gap-4 pt-5 md:pt-6 border-t border-gray-50">
-                <div className="relative">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gray-100 flex items-center justify-center border-2 border-white shadow-sm group-hover:bg-black group-hover:text-white transition-all duration-500">
-                    <Users className="w-5 h-5 md:w-5.5 md:h-5.5" />
-                  </div>
-                  <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 md:w-5 md:h-5 bg-black rounded-full border-2 border-white flex items-center justify-center">
-                    <CheckCircle2 className="w-2.5 h-2.5 text-white" />
-                  </div>
-                </div>
+              <Quote className="h-8 w-8 text-brand" />
+              <p className="mt-5 flex-1 text-base leading-relaxed text-foreground">
+                "{t.quote}"
+              </p>
+              <div className="mt-6 flex items-center justify-between border-t border-border pt-5">
                 <div>
-                  <div className="font-bold text-sm md:text-base text-gray-900 leading-tight">
-                    {testimonial.author}
-                  </div>
-                  <div className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wider mt-1">
-                    {testimonial.role}
-                  </div>
+                  <div className="font-display text-base font-bold">{t.name}</div>
+                  <div className="text-xs text-muted-foreground">{t.role}</div>
+                </div>
+                <div className="flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, s) => (
+                    <Star key={s} className="h-4 w-4 fill-brand text-brand" />
+                  ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Bandeau Social Proof */}
-        <div className="mt-16 md:mt-20 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-          <span className="font-black text-xl md:text-2xl tracking-tighter">
-            {t("trustedBy")}
-          </span>
-          <div className="h-px w-12 bg-gray-300 hidden md:block" />
-          <span className="font-bold text-base md:text-lg italic tracking-tight">
-            {t("slogan")}
-          </span>
+        <div className="mt-8 flex justify-center gap-2">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              aria-label={`Show testimonial ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all ${
+                active === i ? "w-8 bg-brand" : "w-2 bg-border"
+              }`}
+            />
+          ))}
         </div>
       </div>
+      <AnimatePresence />
     </section>
   );
-};
-
-export default Testimonials;
+}
