@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="grain relative flex min-h-screen items-center overflow-hidden bg-background pt-28"
+      className="grain relative flex min-h-screen items-center overflow-hidden bg-background pt-28 md:pt-32"
     >
       {/* Lueur radiale animée utilisant ton dégradé CSS */}
       <motion.div
@@ -46,7 +46,7 @@ export default function Hero() {
           variants={lineParent}
           initial="hidden"
           animate="show"
-          className="font-display text-[clamp(2.75rem,8vw,6rem)] font-extrabold leading-[1.02] tracking-tight"
+          className="font-display text-[clamp(2.75rem,8vw,6rem)] font-semibold leading-[1.02] tracking-tight"
         >
           <motion.div variants={lineChild} className="text-muted-foreground">
             We build websites
@@ -57,12 +57,12 @@ export default function Hero() {
           <motion.div variants={lineChild} className="relative inline-block text-foreground">
             into clients.
             {/* Soulignement avec ton vert accentué */}
-            <motion.span
+            {/* <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 1.1, duration: 0.8, ease: "easeOut" }}
               className="absolute -bottom-2 left-0 right-0 h-1.5 origin-left rounded-full bg-green-accent"
-            />
+            /> */}
           </motion.div>
         </motion.div>
 
@@ -92,7 +92,7 @@ export default function Hero() {
           
           <a
             href="#portfolio"
-            className="inline-flex items-center justify-center rounded-lg border border-border bg-transparent px-7 py-3.5 text-base font-semibold text-foreground transition-colors hover:bg-secondary"
+            className="inline-flex items-center justify-center rounded-full border border-border bg-transparent px-7 py-3.5 text-base font-semibold text-foreground transition-colors hover:bg-secondary"
           >
             See Our Work
           </a>
