@@ -8,6 +8,7 @@ import Footer from "@/components/Footer"
 import { WhatsappBtn } from "@/components/WhatsappBtn"
 import Pricing from "@/components/Pricing"
 import TrustedBy from "@/components/TrustedBy"
+import { Comparison } from "@/components/Comparison"
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       {/* <Header /> */}
       <Hero />
       <TrustedBy />
-      <About />
+      <Comparison />
       <Portfolio />
       <Testimonials />
       <FinalCTA />
