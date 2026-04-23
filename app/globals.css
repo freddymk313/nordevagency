@@ -13,6 +13,7 @@
   --primary-foreground: oklch(0 0 0);
   --secondary: oklch(0.18 0 0);
   --muted: oklch(0.18 0 0);
+  /* bg-[#FBFBFB] */
   --muted-foreground: oklch(0.67 0 0);
   --border-hero: oklch(0.23 0 0);
   --border: oklch(0.90 0 0);
