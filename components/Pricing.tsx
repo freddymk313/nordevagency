@@ -15,7 +15,7 @@ const tiers = [
     name: "Growth",
     price: "$1,499",
     features: ["Up to 5 pages", "Mobile responsive", "Full SEO setup", "14-day delivery"],
-    cta: "Most Popular 🔥",
+    cta: "Most Popular",
     highlighted: true,
   },
   {
@@ -33,11 +33,11 @@ export default function Pricing() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Pricing"
-          title={<>Simple, <span className="text-green-accent">transparent pricing.</span></>}
+          title={<>Simple, <span className="text-muted-foreground">transparent pricing.</span></>}
           subtitle="No surprises. No hidden fees. Just results."
         />
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3 lg:items-center">
+        <div className="mt-16 grid gap-6 lg:grid-cols-3 lg:items-stretch">
           {tiers.map((t, i) => (
             <motion.div
               key={t.name}
@@ -45,34 +45,42 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className={`relative flex flex-col rounded-2xl border p-8 transition-all duration-500 ${
+              className={`relative flex flex-col rounded-[2rem] border p-8 transition-all duration-500 ${
                 t.highlighted
-                  ? "border-green-accent bg-card shadow-[0_0_40px_-15px_var(--green-accent)] lg:scale-[1.04] z-10"
+                  ? "border-green-accent bg-card shadow-[0_20px_50px_-20px_rgba(0,0,0,0.1)] lg:scale-[1.05] z-10"
                   : "border-border bg-card/50"
               }`}
             >
               {t.highlighted && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-accent px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-background">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-accent px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-background">
                   Most Popular
                 </div>
               )}
-              <h3 className="font-display text-xl font-bold text-foreground">{t.name}</h3>
-              <div className="mt-4 flex items-baseline gap-1">
-                <span className="font-display text-5xl font-extrabold text-foreground">{t.price}</span>
+              
+              <div className="mb-8">
+                <h3 className="font-display text-xl font-bold text-foreground">{t.name}</h3>
+                <div className="mt-4 flex items-baseline gap-1">
+                  <span className="font-display text-5xl font-extrabold tracking-tight text-foreground">{t.price}</span>
+                  {t.price !== "Custom" && <span className="text-muted-foreground text-sm">/project</span>}
+                </div>
               </div>
-              <ul className="mt-7 space-y-3 border-t border-border pt-7">
+
+              <ul className="flex-1 space-y-4 border-t border-border/50 pt-8">
                 {t.features.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-accent" />
-                    <span className="text-muted-foreground">{f}</span>
+                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-accent/10">
+                      <Check className="h-3 w-3 text-green-accent stroke-[3px]" />
+                    </div>
+                    <span className="text-muted-foreground leading-relaxed">{f}</span>
                   </li>
                 ))}
               </ul>
+
               <a
                 href="#contact"
-                className={`mt-8 inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition-all hover:scale-[1.02] ${
+                className={`mt-10 inline-flex items-center justify-center rounded-full px-6 py-4 text-sm font-bold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
                   t.highlighted
-                    ? "bg-green-accent text-background shadow-lg"
+                    ? "bg-green-accent text-background shadow-[0_10px_20px_-10px_var(--green-accent)] hover:shadow-[0_15px_30px_-10px_var(--green-accent)]"
                     : "border border-border bg-transparent text-foreground hover:border-green-accent hover:text-green-accent"
                 }`}
               >
