@@ -61,7 +61,7 @@ function Card({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
-      className={`relative overflow-hidden rounded-2xl border p-8 transition-colors ${
+      className={`relative overflow-hidden rounded-4xl border p-8 transition-colors ${
         isGood
           ? "border-green-accent/20 bg-surface-elevated/50" // Utilise ton vert et ta surface
           : "border-destructive/10 bg-surface/30" // Utilise ton rouge destructif
@@ -74,7 +74,7 @@ function Card({
 
       <div className="relative z-10 mb-8 flex items-center gap-4">
         <div
-          className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm ${
+          className={`flex h-10 w-10 items-center justify-center rounded-full *shadow-sm ${
             isGood 
               ? "bg-green-accent text-black" 
               : "bg-destructive/20 text-destructive"

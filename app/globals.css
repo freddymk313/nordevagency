@@ -1,15 +1,12 @@
 @import "tailwindcss";
 
-/* 1. TES VARIABLES DE BASE (Exactement comme demandées) */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0 0 0);
+  --background: oklch(0 0 0); /* Remis en noir si tu veux garder le look dark */
+  --foreground: oklch(1 0 0);
   
-  /* Ta couleur Verte (occasionnelle) */
   --green-accent: oklch(0.78 0.22 152);
   --green-accent-deep: oklch(0.45 0.14 152);
   
-  /* Palette Neutre / Base */
   --card: oklch(0.16 0 0);
   --card-foreground: oklch(1 0 0);
   --primary: oklch(1 0 0); 
@@ -18,86 +15,64 @@
   --muted: oklch(0.18 0 0);
   --muted-foreground: oklch(0.67 0 0);
   --border: oklch(0.23 0 0);
-  --destructive: oklch(0.6 0.22 27);
-
+  
+  /* Ta couleur destructive ajoutée */
+  --destructive: oklch(0.6 0.22 27); 
+  
   --radius: 0.75rem;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Syne', 'Inter', ui-sans-serif, system-ui, sans-serif;
 }
 
-/* 2. LE MAPPING TAILWIND (Indispensable pour que bg-primary, text-muted, etc. fonctionnent) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-  
   --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-  
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  
   --color-border: var(--border);
+  --color-destructive: var(--destructive);
   
-  /* Ajout du vert spécifique */
   --color-green-accent: var(--green-accent);
   --color-green-accent-deep: var(--green-accent-deep);
-  --color-destructive: var(--destructive);
   
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
-  
   --radius-lg: var(--radius);
 
-  /* Animation personnalisée pour ton vert */
-  /* @keyframes pulse-glow-green {
+  /* Mapping des animations pour Tailwind */
+  --animate-marquee: marquee 35s linear infinite;
+  --animate-pulse-glow-green: pulse-glow-green 2.4s ease-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes pulse-glow-green {
     0%, 100% { box-shadow: 0 0 0 0 oklch(0.78 0.22 152 / 0.5); }
     50% { box-shadow: 0 0 0 16px oklch(0.78 0.22 152 / 0); }
-  } */
-   @keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-}
-
-/* 3. CLASSES D'ANIMATIONS UTILITAIRES */
-@layer utilities {
-  .animate-pulse-glow-green {
-    animation: pulse-glow-green 2.4s ease-out infinite;
-  }
-  
-  /* Ton animation de ligne pour la Navbar */
-  .underline-grow {
-    @apply absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-green-accent transition-transform duration-300 group-hover:scale-x-100;
   }
 }
 
-/* 4. APPLICATION DES STYLES DE BASE */
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
+  * { border-color: var(--color-border); }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  
-  h1, h2, h3, h4, .font-display {
-    font-family: var(--font-display);
-  }
+  h1, h2, h3, h4, .font-display { font-family: var(--font-display); }
 }
 
-/* optionnel mais recommandé pour effet fade sur les côtés */
-.mask-fade-x {
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+@layer utilities {
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
 }
