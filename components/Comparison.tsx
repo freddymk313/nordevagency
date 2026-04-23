@@ -23,7 +23,7 @@ export function Comparison() {
   return (
     <section className="relative py-24 sm:py-32 bg-background">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <div className="mb-4 md:mb-6 inline-flex items-center *gap-2 rounded-full border border-green-accent bg-background px-4 py-1.5 font-bold uppercase tracking-[0.2em] text-green-accent">
             <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-green-accent block">
               From ignored to world-class
@@ -40,7 +40,7 @@ export function Comparison() {
             Most agency websites lose visitors in the first 5 seconds. We fix
             that.
           </p>
-        </div>
+        </div> */}
 
         {/* <SectionHeading
           eyebrow="From ignored to world-class"
@@ -55,7 +55,13 @@ export function Comparison() {
           subtitle="Most agency websites lose visitors in the first 5 seconds. We fix that."
         /> */}
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <SectionHeading
+          eyebrow="From ignored to world-class"
+          title={<>Your website is your best salesperson. <span className="text-muted-foreground">Is yours doing its job?</span></>}
+          subtitle="Most agency websites lose visitors in the first 5 seconds. We fix that."
+        />
+
+        <div className="grid gap-6 md:grid-cols-2 mt-16">
           <Card variant="bad" title="Without Nordev" items={without} />
           <Card variant="good" title="With Nordev" items={withN} />
         </div>
