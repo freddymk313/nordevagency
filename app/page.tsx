@@ -9,6 +9,7 @@ import { WhatsappBtn } from "@/components/WhatsappBtn"
 import Pricing from "@/components/Pricing"
 import TrustedBy from "@/components/TrustedBy"
 import { Comparison } from "@/components/Comparison"
+import Services from "@/components/Services"
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
       <Hero />
       <TrustedBy />
       <Comparison />
-      <Portfolio />
+      <Services />
+      
       <Testimonials />
       <FinalCTA />
       <Pricing />
