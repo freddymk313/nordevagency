@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
   { href: "#services", label: "Services" },
@@ -31,32 +32,48 @@ export default function Navbar() {
       className="fixed inset-x-0 top-0 z-50"
     >
       <div
-        className={`relative backdrop-blur-md transition-all duration-300 ${
+        className={`relative *backdrop-blur-md transition-all duration-300 ${
           scrolled 
-            ? "bg-background/80 border-b border-border py-2" 
+            ? "bg-background *border-b *border-border py-4" 
             : "bg-transparent py-4"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo - Utilise la font Syne définie dans ton CSS */}
-          <a href="#top" className="flex items-center gap-2">
-             <span className="font-display text-xl font-bold tracking-tight text-foreground">
-               NORDEV<span className="text-green-accent">.</span>
-             </span>
-          </a>
+          <Link href="/">
+              <div className="flex items-center space-x-3">
+                <div className="lg:hidden">
+                  <Image
+                    src="/logo/logo-1.jpg"
+                    height={48}
+                    width={48}
+                    alt="Nordev Agency logo"
+                    quality={100}
+                  />
+                </div>
+                <div className="hidden lg:block">
+                  <Image
+                    src="/logo/logo-2.jpg"
+                    height={230}
+                    width={230}
+                    alt="Nordev Agency logo"
+                  />
+                </div>
+              </div>
+            </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden items-center gap-8 md:flex">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
-                className="group relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="group relative *text-sm font-medium text-foreground transition-colors hover:text-green-accent"
               >
                 {l.label}
                 {/* Ligne d'accentuation utilisant ton vert */}
-                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-green-accent transition-transform duration-300 group-hover:scale-x-100" />
-              </a>
+                {/* <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-green-accent transition-transform duration-300 group-hover:scale-x-100" /> */}
+              </Link>
             ))}
           </nav>
 
