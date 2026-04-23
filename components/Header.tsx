@@ -29,12 +29,12 @@ export default function Navbar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed inset-x-0 top-0 z-50"
+      className="*fixed inset-x-0 top-0 z-50"
     >
       <div
         className={`relative *backdrop-blur-md transition-all duration-300 ${
           scrolled 
-            ? "bg-background *border-b *border-border py-4" 
+            ? "bg-background border-none py-4" 
             : "bg-transparent py-4"
         }`}
       >
@@ -121,12 +121,12 @@ export default function Navbar() {
         </div>
 
         {/* Ligne de progression subtile au scroll */}
-        <motion.div
+        {/* <motion.div
           className="absolute inset-x-0 bottom-0 h-px origin-left bg-gradient-to-r from-transparent via-green-accent to-transparent"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: scrolled ? 1 : 0 }}
           transition={{ duration: 0.5 }}
-        />
+        /> */}
       </div>
 
       {/* Mobile Menu */}
@@ -137,7 +137,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="overflow-hidden border-t border-border bg-background/95 backdrop-blur-xl md:hidden"
+            className="overflow-hidden bg-background/95 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-1 px-4 py-6">
               {links.map((l) => (
