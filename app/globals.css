@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: oklch(0 0 0); /* Remis en noir si tu veux garder le look dark */
-  --foreground: oklch(1 0 0);
+  --background: oklch(1 0 0);
+  --foreground:  oklch(0 0 0);
   
   --green-accent: oklch(0.78 0.22 152);
   --green-accent-deep: oklch(0.45 0.14 152);

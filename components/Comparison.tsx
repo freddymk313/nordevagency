@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
+import SectionHeading from "./SectionHeading";
 
 const without = [
   "Generic template sites",
@@ -23,17 +24,36 @@ export function Comparison() {
     <section className="relative py-24 sm:py-32 bg-background">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center mb-16">
-          <span className="font-sans text-xs uppercase tracking-[0.3em] text-green-accent mb-4 block">
-            From ignored to world-class
-          </span>
+          <div className="mb-4 md:mb-6 inline-flex items-center *gap-2 rounded-full border border-green-accent bg-background px-4 py-1.5 font-bold uppercase tracking-[0.2em] text-green-accent">
+            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-green-accent block">
+              From ignored to world-class
+            </span>
+          </div>
+          
           <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
             Your website is your best salesperson. <br />
-            <span className="text-muted-foreground">Is yours doing its job?</span>
+            <span className="text-muted-foreground">
+              Is yours doing its job?
+            </span>
           </h2>
           <p className="font-sans text-muted-foreground text-lg max-w-2xl mx-auto">
-            Most agency websites lose visitors in the first 5 seconds. We fix that.
+            Most agency websites lose visitors in the first 5 seconds. We fix
+            that.
           </p>
         </div>
+
+        {/* <SectionHeading
+          eyebrow="From ignored to world-class"
+          title={
+            <>
+              Your website is your best salesperson.{" "}
+              <span className="text-muted-foreground">
+                Is yours doing its job?
+              </span>
+            </>
+          }
+          subtitle="Most agency websites lose visitors in the first 5 seconds. We fix that."
+        /> */}
 
         <div className="grid gap-6 md:grid-cols-2">
           <Card variant="bad" title="Without Nordev" items={without} />
@@ -54,7 +74,7 @@ function Card({
   items: string[];
 }) {
   const isGood = variant === "good";
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -75,14 +95,20 @@ function Card({
       <div className="relative z-10 mb-8 flex items-center gap-4">
         <div
           className={`flex h-10 w-10 items-center justify-center rounded-full *shadow-sm ${
-            isGood 
-              ? "bg-green-accent text-black" 
+            isGood
+              ? "bg-green-accent text-black"
               : "bg-destructive/20 text-destructive"
           }`}
         >
-          {isGood ? <Check className="h-6 w-6 stroke-[3px]" /> : <X className="h-6 w-6 stroke-[3px]" />}
+          {isGood ? (
+            <Check className="h-6 w-6 stroke-[3px]" />
+          ) : (
+            <X className="h-6 w-6 stroke-[3px]" />
+          )}
         </div>
-        <h3 className="font-display text-2xl font-bold tracking-tight">{title}</h3>
+        <h3 className="font-display text-2xl font-bold tracking-tight">
+          {title}
+        </h3>
       </div>
 
       <ul className="relative z-10 space-y-5">

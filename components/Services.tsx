@@ -20,10 +20,15 @@ export default function Services() {
   return (
     <section id="services" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <SectionHeading
+        {/* <SectionHeading
           eyebrow="Services"
           title={<>Everything you need to <span className="text-brand">dominate online.</span></>}
           subtitle="We handle every pixel, every line of code, every word."
+        /> */}
+        <SectionHeading
+          eyebrow="From ignored to world-class"
+          title={<>Your website is your best salesperson. <span className="text-muted-foreground">Is yours doing its job?</span></>}
+          subtitle="Most agency websites lose visitors in the first 5 seconds. We fix that."
         />
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
