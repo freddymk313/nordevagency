@@ -1,36 +1,44 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { 
+  Monitor, 
+  Code2, 
+  Smartphone, 
+  Search, 
+  Zap, 
+  RotateCcw 
+} from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const services = [
   {
-    icon: "web",
+    icon: <Monitor className="h-6 w-6" />,
     title: "Custom Web Design",
-    desc: "Unique, conversion-focused designs tailored to your brand.",
+    desc: "Unique, conversion-focused designs tailored to your brand identity.",
   },
   {
-    icon: "code",
+    icon: <Code2 className="h-6 w-6" />,
     title: "Web Development",
-    desc: "Fast, scalable sites built with modern technology.",
+    desc: "Fast, scalable sites built with Next.js and modern technology.",
   },
   {
-    icon: "smartphone",
+    icon: <Smartphone className="h-6 w-6" />,
     title: "Mobile-First Design",
-    desc: "Flawless on every screen, every device.",
+    desc: "Flawless experience on every screen, from iPhone to Desktop.",
   },
   {
-    icon: "search",
+    icon: <Search className="h-6 w-6" />,
     title: "SEO Optimization",
-    desc: "Get found by the clients who need you most.",
+    desc: "Get found by the clients who need your services the most.",
   },
   {
-    icon: "speed",
+    icon: <Zap className="h-6 w-6" />,
     title: "Performance & Speed",
-    desc: "Sub-2s load times, optimized for conversions.",
+    desc: "Sub-2s load times, optimized to maximize your conversion rate.",
   },
   {
-    icon: "refresh",
+    icon: <RotateCcw className="h-6 w-6" />,
     title: "Redesign & Refresh",
     desc: "We take your existing site from forgettable to unforgettable.",
   },
@@ -45,13 +53,13 @@ export default function Services() {
           title={
             <>
               Everything you need to{" "}
-              <span className="text-green-accent">dominate online.</span>
+              <span className="text-muted-foreground">dominate online.</span>
             </>
           }
           subtitle="We handle every pixel, every line of code, every word."
         />
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -59,28 +67,26 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: i * 0.06, duration: 0.55 }}
-              whileHover={{ y: -6, scale: 1.02 }}
-              className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 transition-colors duration-300 hover:border-green-accent/60"
+              whileHover={{ y: -5 }}
+              className="group relative overflow-hidden rounded-[2rem] border border-border bg-card p-8 transition-all duration-300 hover:border-green-accent/40 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.05)]"
             >
+              {/* Glow subtil au survol */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
-                style={{ background: "var(--green-accent)" }}
+                className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-green-accent/5 blur-3xl transition-opacity duration-500 opacity-0 group-hover:opacity-100"
               />
 
               <div className="relative">
-                {/* ICON */}
-                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-green-accent/10 text-green-accent">
-                  <span className="material-symbols-outlined text-[24px]">
-                    {s.icon}
-                  </span>
+                {/* Icône avec ton vert occasionnel */}
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-green-accent/10 text-green-accent transition-colors duration-300 group-hover:bg-green-accent group-hover:text-background">
+                  {s.icon}
                 </div>
 
-                <h3 className="font-display text-xl font-bold text-foreground">
+                <h3 className="font-display text-xl font-bold tracking-tight text-foreground">
                   {s.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {s.desc}
                 </p>
               </div>

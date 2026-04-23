@@ -15,7 +15,7 @@ export default function Process() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="How we work"
-          title={<>Your dream website, in <span className="text-green-accent">4 simple steps.</span></>}
+          title={<>Your dream website, in <span className="text-muted-foreground">4 simple steps.</span></>}
           subtitle="A clear, stress-free process from first call to final launch."
         />
 
