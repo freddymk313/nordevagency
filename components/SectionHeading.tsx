@@ -24,7 +24,7 @@ export default function SectionHeading({
       {eyebrow && (
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green-accent bg-background px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-green-accent">
           {/* Petit point indicateur utilisant ton vert accentué */}
-          <span className="h-1.5 w-1.5 rounded-full bg-green-accent shadow-[0_0_8px_var(--color-green-accent)]" />
+          {/* <span className="h-1.5 w-1.5 rounded-full bg-green-accent shadow-[0_0_8px_var(--color-green-accent)]" /> */}
           {eyebrow}
         </div>
       )}
