@@ -7,12 +7,14 @@ import FinalCTA from "@/components/FinalCTA"
 import Footer from "@/components/Footer"
 import { WhatsappBtn } from "@/components/WhatsappBtn"
 import Pricing from "@/components/Pricing"
+import TrustedBy from "@/components/TrustedBy"
 
 export default function Home() {
   return (
     <>
       {/* <Header /> */}
       <Hero />
+      <TrustedBy />
       <About />
       <Portfolio />
       <Testimonials />

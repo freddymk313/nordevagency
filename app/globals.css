@@ -51,10 +51,18 @@
   --radius-lg: var(--radius);
 
   /* Animation personnalisée pour ton vert */
-  @keyframes pulse-glow-green {
+  /* @keyframes pulse-glow-green {
     0%, 100% { box-shadow: 0 0 0 0 oklch(0.78 0.22 152 / 0.5); }
     50% { box-shadow: 0 0 0 16px oklch(0.78 0.22 152 / 0); }
+  } */
+   @keyframes marquee {
+  0% {
+    transform: translateX(0%);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 }
 
 /* 3. CLASSES D'ANIMATIONS UTILITAIRES */
@@ -84,4 +92,10 @@
   h1, h2, h3, h4, .font-display {
     font-family: var(--font-display);
   }
+}
+
+/* optionnel mais recommandé pour effet fade sur les côtés */
+.mask-fade-x {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }

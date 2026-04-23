@@ -1,113 +1,45 @@
 "use client";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
 
-const TrustedBy = () => {
-  const companies = [
-    {
-      name: "CS Bisounours",
-      logo: "/trusted/csbisounours.jpg",
-      mobile: 40,
-      desktop: 60,
-      width: 60,
-      height: 60,
-    },
-    {
-      name: "Jexweb",
-      logo: "/trusted/jexweb.png",
-      mobile: 70,
-      desktop: 110,
-      width: 110,
-      height: 100,
-    },
-    {
-      name: "Asunicaco",
-      logo: "/trusted/asunicaco.png",
-      mobile: 40,
-      desktop: 60,
-      width: 60,
-      height: 60,
-    },
-    {
-      name: "Funda Online",
-      logo: "/trusted/funda.png",
-      mobile: 40,
-      desktop: 60,
-      width: 60,
-      height: 60,
-    },
-    {
-      name: "Metro Travels",
-      logo: "/trusted/metro.png",
-      mobile: 55,
-      desktop: 80,
-      width: 70,
-      height: 60,
-    },
-    {
-      name: "CCPS",
-      logo: "/trusted/ccps.png",
-      mobile: 35,
-      desktop: 46,
-      width: 46,
-      height: 50,
-    },
-    {
-      name: "Pexelsinovation",
-      logo: "/trusted/pexels.png",
-      mobile: 40,
-      desktop: 60,
-      width: 60,
-      height: 60,
-    },
-    // {
-    //   name: "Urban Design",
-    //   logo: "/trusted/urban.png",
-    //   mobile: 60,
-    //   desktop: 250,
-    //   width: 120, height: 1500
-    // },
-  ];
+const companies = [
+  { name: "CS Bisounours", logo: "/trusted/csbisounours.jpg", desktop: 60 },
+  { name: "Jexweb", logo: "/trusted/jexweb.png", desktop: 110 },
+  { name: "Asunicaco", logo: "/trusted/asunicaco.png", desktop: 60 },
+  { name: "Funda Online", logo: "/trusted/funda.png", desktop: 60 },
+  { name: "Metro Travels", logo: "/trusted/metro.png", desktop: 80 },
+  { name: "CCPS", logo: "/trusted/ccps.png", desktop: 46 },
+  { name: "Pexelsinovation", logo: "/trusted/pexels.png", desktop: 60 },
+];
+
+export default function TrustedBy() {
+  // duplication x2 → nécessaire pour un loop parfait
+  const loop = [...companies, ...companies];
 
   return (
-    <>
-      <section className="md:hidden pb-10 overflow-hidden">
-        <Marquee speed={50} gradient={true} gradientWidth={80}>
-          {companies.map((c) => (
-            <div key={c.name} className="flex-shrink-0 mx-4 md:mx-8"> 
-              <Image
-                src={c.logo}
-                alt={c.name}
-                width={c.desktop}
-                height={c.desktop}
-                style={{
-                  width: `${c.mobile}px`, // taille mobile
-                  height: "auto",
-                }}
-                className={`md:!w-[${c.desktop}px] grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300`}
-              />
-            </div>
-          ))}
-        </Marquee>
-      </section>
+    <section
+      id="trust"
+      className="relative bg-background py-10 overflow-hidden"
+    >
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="relative overflow-hidden mask-fade-x">
+          <div className="flex w-max animate-marquee items-center gap-16 hover:[animation-play-state:paused]">
+            {loop.map((company, i) => (
+              <div
+                key={`${company.name}-${i}`}
+                className="flex shrink-0 items-center justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                style={{ width: `${company.desktop}px` }}
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="h-auto w-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
-      <section className="hidden md:block pb-10 overflow-hidden">
-        <Marquee speed={50} gradient={true} gradientWidth={80}>
-          {companies.map((c) => (
-            <div key={c.name} className="flex-shrink-0 mx-8">
-              <Image
-                src={c.logo}
-                alt={c.name}
-                width={c.width}
-                height={c.height}
-                className="grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-          ))}
-        </Marquee>
-      </section>
-    </>
+      <div className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-green-accent/10 to-transparent" />
+    </section>
   );
-};
-
-export default TrustedBy;
+}
