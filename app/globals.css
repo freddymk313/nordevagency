@@ -7,14 +7,14 @@
   --green-accent: oklch(0.78 0.22 152);
   --green-accent-deep: oklch(0.45 0.14 152);
   
-  --card: oklch(0.16 0 0);
-  --card-foreground: oklch(1 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0 0);
   --primary: oklch(1 0 0); 
   --primary-foreground: oklch(0 0 0);
   --secondary: oklch(0.18 0 0);
   --muted: oklch(0.18 0 0);
   --muted-foreground: oklch(0.67 0 0);
-  --border: oklch(0.23 0 0);
+  --border: oklch(0.90 0 0);
   
   /* Ta couleur destructive ajoutée */
   --destructive: oklch(0.6 0.22 27); 
