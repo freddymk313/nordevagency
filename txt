@@ -1,0 +1,26 @@
+act as a professional prompt engenering in web design prompting for lovable in genereting a 10000$ landing page design in a single prompt 
+
+voici la landing page de mon agenece de creation de site web je veux la redesigner pour la rendre ultra beau et plus convertisante de mes visiteurs en clients
+
+voici mon site web actuel : http://nordevagency.vercel.app/ 
+tu peux verifier et voir par toi meme 
+
+je fournie une maquette d'inspiration pour le design, et la hero section dois etre beau comme celle de la maquette, mais ma landing page dois etre en blank.
+
+la pallete de couleur tu peux la recuperer directement sur mon site web et je aussi fournie le logo, si tu trouve que tu peux ajouter une couleur pour rendre ma landing page beau et moderne tu peux le faire
+
+pour le copywrithing je veux que tu t'inspire de cette landing page parceque je trouve que leur copywrithing est bien fait : https://www.softriver.co/     Tu peux le visiter aussi 
+
+tu n'est pas obliger de mettre tous le section de softriver juste les plus importante qui vont m'aider abien convertir le visiteur en client pour mon agence
+
+et aussi la section portfolio je veux que ca soit swippable soit gauche ou droite comme tinder, 
+et la version mobile de la landing page doit aussi etre bien fait respecter le bonne marge et grandeur 
+
+et encore la landing page doit etre bien animer avec framer-motion
+
+le lien de la template est la aussi : https://dribbble.com/shots/26414267-B2B-SaaS-Landing-Page-Design-for-HackerRank
+
+ces image et logo seront fournit a lovable aussi
+
+Tu devra aussi fournir tous les liens et ressource dans le prompt a donner a lovable
+

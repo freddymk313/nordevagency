@@ -137,6 +137,33 @@
         "image": "/portfolio/pexels.png",
         "technologies": ["Next.js", "TypeScript", "Tailwind"],
         "link": "https://pexelsinovation.vercel.app"
+      },
+      {
+        "id": 9,
+        "title": "Mizitikilili",
+        "description": "Landing page for an musique instrument agency.",
+        "category": "Web Development",
+        "image": "/portfolio/imani.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://mizitikilili.vercel.app"
+      },
+      {
+        "id": 10,
+        "title": "Nordev",
+        "description": "Landing page for an construction company",
+        "category": "Web Development",
+        "image": "/portfolio/nordev.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://nordev-inc.lovable.app/"
+      },
+      {
+        "id": 11,
+        "title": "La Bonne fourchette",
+        "description": "Landing page for a restaurant",
+        "category": "Web Development",
+        "image": "/portfolio/la-bonne-fourchette.png",
+        "technologies": ["Next.js", "TypeScript", "Tailwind"],
+        "link": "https://la-bonne-fourchette.vercel.app"
       }
     ]
   },
