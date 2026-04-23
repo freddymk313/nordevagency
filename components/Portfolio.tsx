@@ -1,6 +1,11 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
@@ -15,17 +20,111 @@ type Project = {
 };
 
 const projects: Project[] = [
-  { id: 1, title: "Funda Online", description: "Online learning platform with interactive courses and progress tracking.", category: "Web Development", image: "/portfolio/funda.png", technologies: ["Next.js", "TypeScript", "Sanity", "Tailwind"], link: "https://funda-online.com" },
-  { id: 2, title: "CS Bisournouse", description: "Website for primary and secondary school of Bisournouse with enrollment management.", category: "Web Development", image: "/portfolio/csbis.png", technologies: ["React", "TypeScript", "Node.js", "Tailwind"], link: "https://csbisournouse.vercel.app" },
-  { id: 3, title: "Metro Travels", description: "Travel booking site with personalized recommendations.", category: "Web Development", image: "/portfolio/metro.png", technologies: ["Next.js", "TypeScript", "Tailwind"], link: "https://metrotravels.vercel.app/destinations" },
-  { id: 4, title: "Asunicaco", description: "Landing page for an innovative design and development agency.", category: "Web Development", image: "/portfolio/1.PNG", technologies: ["Codegniter", "Php", "Bootstrap"], link: "https://pexelsinovation.vercel.app" },
-  { id: 5, title: "Jexweb", description: "Landing page for an innovative design and development agency.", category: "Web Development", image: "/portfolio/jexweb.png", technologies: ["Next.js", "TypeScript", "Tailwind"], link: "https://jexweb.vercel.app" },
-  { id: 6, title: "Congodmp", description: "SAAS platform for a health and innovative development agency.", category: "Web Development", image: "/portfolio/congodmp.png", technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"], link: "https://congodmp.vercel.app" },
-  { id: 7, title: "CCPS", description: "Website for a non-profit NGO.", category: "Web Development", image: "/portfolio/ccps.png", technologies: ["React", "TypeScript", "Tailwind"], link: "https://ccps.vercel.app" },
-  { id: 8, title: "Pexelsinovation", description: "Landing page for an innovative design and development agency.", category: "Web Development", image: "/portfolio/pexels.png", technologies: ["Next.js", "TypeScript", "Tailwind"], link: "https://pexelsinovation.vercel.app" },
-  { id: 9, title: "Mizitikilili", description: "Landing page for an musique instrument agency.", category: "Web Development", image: "/portfolio/imani.png", technologies: ["Next.js", "TypeScript", "Tailwind"], link: "https://mizitikilili.vercel.app" },
-  { id: 10, title: "Nordev", description: "Landing page for an construction company", category: "Web Development", image: "/portfolio/nordev.png", technologies: ["Next.js", "TypeScript", "Tailwind"], link: "https://nordev-inc.lovable.app/" },
-  { id: 11, title: "La Bonne fourchette", description: "Landing page for a restaurant", category: "Web Development", image: "/portfolio/la-bonne-fourchette.png", technologies: ["Next.js", "TypeScript", "Tailwind"], link: "https://la-bonne-fourchette.vercel.app" }
+  {
+    id: 1,
+    title: "Funda Online",
+    description:
+      "Online learning platform with interactive courses and progress tracking.",
+    category: "Web Development",
+    image: "/portfolio/funda.png",
+    technologies: ["Next.js", "TypeScript", "Sanity", "Tailwind"],
+    link: "https://funda-online.com",
+  },
+  {
+    id: 2,
+    title: "CS Bisournouse",
+    description:
+      "Website for primary and secondary school of Bisournouse with enrollment management.",
+    category: "Web Development",
+    image: "/portfolio/csbis.png",
+    technologies: ["React", "TypeScript", "Node.js", "Tailwind"],
+    link: "https://csbisournouse.vercel.app",
+  },
+  {
+    id: 3,
+    title: "Metro Travels",
+    description: "Travel booking site with personalized recommendations.",
+    category: "Web Development",
+    image: "/portfolio/metro.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://metrotravels.vercel.app/destinations",
+  },
+  {
+    id: 4,
+    title: "Asunicaco",
+    description:
+      "Landing page for an innovative design and development agency.",
+    category: "Web Development",
+    image: "/portfolio/1.PNG",
+    technologies: ["Codegniter", "Php", "Bootstrap"],
+    link: "https://pexelsinovation.vercel.app",
+  },
+  {
+    id: 5,
+    title: "Jexweb",
+    description:
+      "Landing page for an innovative design and development agency.",
+    category: "Web Development",
+    image: "/portfolio/jexweb.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://jexweb.vercel.app",
+  },
+  {
+    id: 6,
+    title: "Congodmp",
+    description:
+      "SAAS platform for a health and innovative development agency.",
+    category: "Web Development",
+    image: "/portfolio/congodmp.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"],
+    link: "https://congodmp.vercel.app",
+  },
+  {
+    id: 7,
+    title: "CCPS",
+    description: "Website for a non-profit NGO.",
+    category: "Web Development",
+    image: "/portfolio/ccps.png",
+    technologies: ["React", "TypeScript", "Tailwind"],
+    link: "https://ccps.vercel.app",
+  },
+  {
+    id: 8,
+    title: "Pexelsinovation",
+    description:
+      "Landing page for an innovative design and development agency.",
+    category: "Web Development",
+    image: "/portfolio/pexels.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://pexelsinovation.vercel.app",
+  },
+  {
+    id: 9,
+    title: "Mizitikilili",
+    description: "Landing page for an musique instrument agency.",
+    category: "Web Development",
+    image: "/portfolio/mizitikilili.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://mizitikilili.vercel.app",
+  },
+  {
+    id: 10,
+    title: "Nordev",
+    description: "Landing page for an construction company",
+    category: "Web Development",
+    image: "/portfolio/nordev.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://nordev-inc.lovable.app/",
+  },
+  {
+    id: 11,
+    title: "La Bonne fourchette",
+    description: "Landing page for a restaurant",
+    category: "Web Development",
+    image: "/portfolio/la-bonne-fourchette.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://la-bonne-fourchette.vercel.app",
+  },
 ];
 
 export default function Portfolio() {
@@ -41,18 +140,25 @@ export default function Portfolio() {
     setIndex((i) => (i - 1 + projects.length) % projects.length);
   };
 
-  const visible = [0, 1, 2].map((offset) => projects[(index + offset) % projects.length]);
+  const visible = [0, 1, 2].map(
+    (offset) => projects[(index + offset) % projects.length],
+  );
 
   return (
     <section id="portfolio" className="relative py-24 sm:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Portfolio"
-          title={<>Work we're <span className="text-green-accent">proud of.</span></>}
+          title={
+            <>
+              Work we're <span className="text-green-accent">proud of.</span>
+            </>
+          }
           subtitle="Swipe to explore. Click to see the live site."
         />
 
-        <div className="relative mx-auto mt-16 flex h-[500px] w-full max-w-md items-center justify-center sm:h-[580px]">
+        {/* <div className="relative mx-auto mt-16 flex h-[500px] w-full max-w-md items-center justify-center sm:h-[580px]"> */}
+          <div className="relative mx-auto mt-16 w-full max-w-md">
           <AnimatePresence initial={false} custom={direction}>
             {visible.map((p, i) => (
               <Card
@@ -77,7 +183,10 @@ export default function Portfolio() {
             <ArrowLeft className="h-4 w-4" /> Previous
           </button>
           <span className="font-display text-sm tabular-nums text-muted-foreground">
-            <span className="text-foreground">{String(index + 1).padStart(2, "0")}</span> / {String(projects.length).padStart(2, "0")}
+            <span className="text-foreground">
+              {String(index + 1).padStart(2, "0")}
+            </span>{" "}
+            / {String(projects.length).padStart(2, "0")}
           </span>
           <button
             onClick={next}
@@ -91,7 +200,17 @@ export default function Portfolio() {
   );
 }
 
-function Card({ project, stackIndex, isTop, onSwipe }: { project: Project; stackIndex: number; isTop: boolean; onSwipe: (dir: number) => void; }) {
+function Card({
+  project,
+  stackIndex,
+  isTop,
+  onSwipe,
+}: {
+  project: Project;
+  stackIndex: number;
+  isTop: boolean;
+  onSwipe: (dir: number) => void;
+}) {
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-300, 0, 300], [-18, 0, 18]);
   const opacity = useTransform(x, [-300, -150, 0, 150, 300], [0, 1, 1, 1, 0]);
@@ -124,13 +243,21 @@ function Card({ project, stackIndex, isTop, onSwipe }: { project: Project; stack
     >
       <div className="relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-2xl">
         {/* Zone Image : Capture MacBook Air */}
-        <div className="relative flex-1 overflow-hidden bg-muted">
+        {/* <div className="relative flex-1 overflow-hidden bg-muted">
           <img 
             src={project.image} 
             alt={project.title} 
             className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/5" />
+        </div> */}
+        <div className="relative flex-1 bg-muted flex items-center justify-center overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/5 pointer-events-none" />
         </div>
 
         {/* Barre d'info utilisant tes variables de thème */}
