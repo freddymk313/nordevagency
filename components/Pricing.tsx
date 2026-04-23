@@ -1,178 +1,87 @@
 "use client";
+import { motion } from "framer-motion";
+import { Check } from "lucide-react";
+import SectionHeading from "./SectionHeading";
 
-import { CheckCircle2, Zap, ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
-
-const plans = [
+const tiers = [
   {
-    title: "Basique",
-    price: "110$",
-    description: "Parfait pour lancer votre présence en ligne.",
-    features: [
-      "Site vitrine 1 à 3 pages",
-      "Landing page",
-      "Design responsive",
-      "Hébergement offert 1 an",
-      "Optimisation SEO",
-      "Assistance par email",
-    ],
-    highlight: false,
-    popular: false,
-    link: "#",
+    name: "Starter",
+    price: "$799",
+    features: ["1-page landing page", "Mobile responsive", "SEO basics", "7-day delivery"],
+    cta: "Get Started",
+    highlighted: false,
   },
   {
-    title: "Standard",
-    price: "210$",
-    description: "La solution idéale pour booster votre activité.",
-    features: [
-      "Site web jusqu'à 6 pages",
-      "Design personnalisé",
-      "Optimisation SEO avancée",
-      "Formulaire de contact",
-      "Hébergement offert 1 an",
-      "Intégration CMS",
-    ],
-    highlight: true,
-    popular: true,
-    link: "#",
+    name: "Growth",
+    price: "$1,499",
+    features: ["Up to 5 pages", "Mobile responsive", "Full SEO setup", "14-day delivery"],
+    cta: "Most Popular 🔥",
+    highlighted: true,
   },
   {
-    title: "Premium",
-    price: "330$",
-    description: "Le summum de la performance digitale.",
-    features: [
-      "Site E-commerce complet",
-      "Gestion des produits illimitée",
-      "Paiements sécurisés",
-      "Support technique 3 mois",
-      "Formation personnalisée",
-      "Optimisation conversion",
-    ],
-    highlight: false,
-    popular: false,
-    link: "#",
+    name: "Premium",
+    price: "Custom",
+    features: ["Full custom project", "All features", "Dedicated support", "Priority delivery"],
+    cta: "Contact Us",
+    highlighted: false,
   },
 ];
 
-const Pricing = () => {
-  const t = useTranslations("Pricing");
-
+export default function Pricing() {
   return (
-    <section
-      className="relative py-12 md:py-32 bg-[#FBFBFB] overflow-hidden"
-      id="pricing"
-    >
-      {/* Background décoratif */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40 -z-10" />
+    <section id="pricing" className="relative py-24 sm:py-32 bg-background">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <SectionHeading
+          eyebrow="Pricing"
+          title={<>Simple, <span className="text-green-accent">transparent pricing.</span></>}
+          subtitle="No surprises. No hidden fees. Just results."
+        />
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-10 md:mb-20">
-          <span className="inline-block px-4 py-1.5 mb-4 md:mb-6 text-[10px] md:text-[12px] font-bold tracking-widest text-gray-400 uppercase bg-gray-100 rounded-full">
-            {t("header.label")}
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 tracking-tight">
-            {t("header.title.main")} <span className="text-gray-400">{t("header.title.highlight")}</span>
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            {t("header.description")}
-          </p>
-        </div>
-
-        {/* Pricing plans */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 space-y-6 md:space-y-0 gap-6 md:gap-8 items-stretch max-w-7xl mx-auto">
-          {plans.map((plan, index) => (
-            <div key={index} className="relative group">
-              {plan.popular && (
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-black text-white px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-2 z-20 shadow-xl">
-                  <Zap className="w-3 h-3 text-yellow-400 fill-yellow-400" />
-                  {t("popular")}
+        <div className="mt-16 grid gap-6 lg:grid-cols-3 lg:items-center">
+          {tiers.map((t, i) => (
+            <motion.div
+              key={t.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className={`relative flex flex-col rounded-2xl border p-8 transition-all duration-500 ${
+                t.highlighted
+                  ? "border-green-accent bg-card shadow-[0_0_40px_-15px_var(--green-accent)] lg:scale-[1.04] z-10"
+                  : "border-border bg-card/50"
+              }`}
+            >
+              {t.highlighted && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-accent px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-background">
+                  Most Popular
                 </div>
               )}
-
-              <div
-                className={`h-full flex flex-col p-7 md:p-10 rounded-[2.5rem] transition-all duration-500 border ${
-                  plan.highlight
-                    ? "bg-white border-black shadow-[0_20px_50px_rgba(0,0,0,0.1)] scale-105 z-10"
-                    : "bg-white/50 border-gray-100 hover:border-gray-300 backdrop-blur-sm"
+              <h3 className="font-display text-xl font-bold text-foreground">{t.name}</h3>
+              <div className="mt-4 flex items-baseline gap-1">
+                <span className="font-display text-5xl font-extrabold text-foreground">{t.price}</span>
+              </div>
+              <ul className="mt-7 space-y-3 border-t border-border pt-7">
+                {t.features.map((f) => (
+                  <li key={f} className="flex items-start gap-3 text-sm">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-accent" />
+                    <span className="text-muted-foreground">{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#contact"
+                className={`mt-8 inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition-all hover:scale-[1.02] ${
+                  t.highlighted
+                    ? "bg-green-accent text-background shadow-lg"
+                    : "border border-border bg-transparent text-foreground hover:border-green-accent hover:text-green-accent"
                 }`}
               >
-                {/* Header du plan */}
-                <div className="mb-6 md:mb-8">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
-                    {t(`plans.${plan.title}.title`)}
-                  </h3>
-                  <p className="text-gray-500 text-xs md:text-sm mb-6">
-                    {t(`plans.${plan.title}.description`)}
-                  </p>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl md:text-5xl font-black tracking-tighter">
-                      {plan.price}
-                    </span>
-                    <span className="text-gray-400 font-medium text-xs md:text-sm">
-                      / {t("perProject")}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Liste des features */}
-                <ul className="space-y-3 md:space-y-4 mb-8 md:mb-10 grow">
-                  {plan.features.map((feature, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-3 text-sm text-gray-600 font-medium"
-                    >
-                      <CheckCircle2
-                        className={`w-4 h-4 md:w-5 md:h-5 shrink-0 ${plan.highlight ? "text-black" : "text-gray-300"}`}
-                      />
-                      {t(`plans.${plan.title}.features.${i}`)}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Bouton */}
-                <a href={plan.link} className="block mt-auto">
-                  <button
-                    className={`w-full text-sm font-bold pl-6 pr-2 py-2 rounded-full transition-all duration-300 flex items-center justify-between group/btn ${
-                      plan.highlight
-                        ? "bg-[#111111] text-white hover:bg-black shadow-lg"
-                        : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                    }`}
-                  >
-                    <span>{t("button")}</span>
-                    <span
-                      className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                        plan.highlight
-                          ? "bg-white text-black"
-                          : "bg-white text-gray-900"
-                      }`}
-                    >
-                      <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-0.5 transition-transform" />
-                    </span>
-                  </button>
-                </a>
-              </div>
-            </div>
+                {t.cta}
+              </a>
+            </motion.div>
           ))}
-        </div>
-
-        {/* Footer info */}
-        <div className="text-center mt-12 md:mt-16">
-          <p className="text-gray-500 text-xs md:text-sm font-medium">
-            {t("footer.text")}{" "}
-            <a
-              href="https://wa.me/243991040032"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black border-b border-black hover:opacity-60 transition-opacity pb-0.5"
-            >
-              {t("footer.link")}
-            </a>
-          </p>
         </div>
       </div>
     </section>
   );
-};
-
-export default Pricing;
+}

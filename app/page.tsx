@@ -11,6 +11,7 @@ import TrustedBy from "@/components/TrustedBy"
 import { Comparison } from "@/components/Comparison"
 import Services from "@/components/Services"
 import Process from "@/components/Process"
+import Metrics from "@/components/Metrics"
 
 export default function Home() {
   return (
@@ -23,8 +24,10 @@ export default function Home() {
       <Process />
       <Portfolio />
       <Testimonials />
-      <FinalCTA />
+      <Metrics />
       <Pricing />
+
+      <FinalCTA />
       {/* <Footer /> */}
       <WhatsappBtn />
     </>

@@ -1,7 +1,8 @@
+"use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote, Star } from "lucide-react";
-import { SectionHeading } from "./SectionHeading";
+import SectionHeading from "./SectionHeading";
 
 const testimonials = [
   {
@@ -21,7 +22,7 @@ const testimonials = [
   },
 ];
 
-export function Testimonials() {
+export default function Testimonials() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -30,11 +31,11 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="relative py-24 sm:py-32">
+    <section id="testimonials" className="relative py-24 sm:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Testimonials"
-          title={<>Our clients don't leave. <span className="text-brand">They send referrals.</span></>}
+          title={<>Our clients don't leave. <span className="text-green-accent">They send referrals.</span></>}
         />
 
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
@@ -46,23 +47,23 @@ export function Testimonials() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
               animate={{
-                borderColor: active === i ? "oklch(0.78 0.22 152 / 0.6)" : "oklch(0.23 0 0)",
-                boxShadow: active === i ? "0 10px 40px -10px oklch(0.78 0.22 152 / 0.25)" : "none",
+                borderColor: active === i ? "var(--green-accent)" : "var(--border)",
+                boxShadow: active === i ? "0 10px 40px -10px var(--green-accent)" : "none",
               }}
-              className="relative flex flex-col rounded-2xl border bg-surface-elevated p-7"
+              className="relative flex flex-col rounded-2xl border bg-card p-7 transition-colors duration-500"
             >
-              <Quote className="h-8 w-8 text-brand" />
+              <Quote className="h-8 w-8 text-green-accent" />
               <p className="mt-5 flex-1 text-base leading-relaxed text-foreground">
                 "{t.quote}"
               </p>
               <div className="mt-6 flex items-center justify-between border-t border-border pt-5">
                 <div>
-                  <div className="font-display text-base font-bold">{t.name}</div>
+                  <div className="font-display text-base font-bold text-foreground">{t.name}</div>
                   <div className="text-xs text-muted-foreground">{t.role}</div>
                 </div>
                 <div className="flex gap-0.5">
                   {Array.from({ length: 5 }).map((_, s) => (
-                    <Star key={s} className="h-4 w-4 fill-brand text-brand" />
+                    <Star key={s} className="h-4 w-4 fill-green-accent text-green-accent" />
                   ))}
                 </div>
               </div>
@@ -76,8 +77,8 @@ export function Testimonials() {
               key={i}
               onClick={() => setActive(i)}
               aria-label={`Show testimonial ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all ${
-                active === i ? "w-8 bg-brand" : "w-2 bg-border"
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                active === i ? "w-8 bg-green-accent" : "w-2 bg-border"
               }`}
             />
           ))}
