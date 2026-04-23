@@ -5,7 +5,6 @@ import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { NextIntlClientProvider } from "next-intl";
-
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
