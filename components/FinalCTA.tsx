@@ -1,86 +1,52 @@
-"use client";
+"use client"
+import { motion } from "framer-motion";
+import { Zap } from "lucide-react";
 
-import { ArrowRight, Calendar, Mail, Phone } from "lucide-react";
-import { useTranslations } from "next-intl";
-
-const FinalCTA = () => {
-  const t = useTranslations("FinalCTA");
-
+export default function FinalCTA() {
   return (
-    <section id="contact" className="py-12 md:py-32 bg-white relative overflow-hidden">
-      {/* Background décoratif */}
-      <div className="absolute inset-0 z-0 opacity-[0.4]" 
-           style={{ backgroundImage: `radial-gradient(#e5e7eb 1px, transparent 1px)`, backgroundSize: '24px 24px' }}>
-      </div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_transparent_0%,_white_70%)] z-0"></div>
+    <section id="contact" className="relative overflow-hidden py-28 sm:py-40 bg-background">
+      {/* Effet de lueur en arrière-plan utilisant tes variables CSS */}
+      <motion.div
+        aria-hidden
+        animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.1, 1] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        style={{ 
+          background: "radial-gradient(circle, var(--green-accent) 0%, transparent 70%)",
+          filter: "blur(120px)",
+          opacity: 0.15
+        }}
+      />
 
-      <div className="container mx-auto px-5 md:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-100 mb-6 md:mb-8">
-            <span className="text-[10px] md:text-[12px] font-bold text-green-700 uppercase tracking-wider">
-              {t("status")}
-            </span>
-          </div>
-
-          {/* Titre principal */}
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-[1.1] tracking-tight">
-            {t("title.main")} <br />
-            <span className="text-gray-400">{t("title.highlight")}</span>
-          </h2>
-          
-          {/* Description */}
-          <p className="text-base md:text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            {t.rich("description")}
-          </p>
-          
-          {/* Bouton principal */}
-          <div className="flex justify-center mb-12 md:mb-20">
-            <button className="bg-[#111111] text-sm text-white pl-6 md:pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center gap-4 md:gap-6 group">
-              <div className="flex items-center gap-2.5">
-                <Calendar className="w-4 h-4 text-white" />
-                <span>{t("button.call")}</span>
-              </div>
-              <span className="bg-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-black group-hover:bg-gray-100 transition-colors">
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-0.5 transition-transform" />
-              </span>
-            </button>
-          </div>
-          
-          {/* Grille de contact */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-w-2xl mx-auto">
-            <a 
-              href="mailto:nordevagency@gmail.com"
-              className="group flex items-center gap-4 p-4 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-black transition-all duration-300 shadow-sm"
-            >
-              <div className="w-10 h-10 rounded-xl bg-black text-white flex items-center justify-center shrink-0">
-                <Mail className="w-5 h-5" />
-              </div>
-              <div className="text-left">
-                <div className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">{t("contact.email")}</div>
-                <div className="text-xs md:text-sm font-bold text-gray-900 truncate">nordevagency@gmail.com</div>
-              </div>
-            </a>
-
-            <a 
-              href="tel:+243900611443"
-              className="group flex items-center gap-4 p-4 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-black transition-all duration-300 shadow-sm"
-            >
-              <div className="w-10 h-10 rounded-xl bg-black text-white flex items-center justify-center shrink-0">
-                <Phone className="w-5 h-5" />
-              </div>
-              <div className="text-left">
-                <div className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">{t("contact.phone")}</div>
-                <div className="text-xs md:text-sm font-bold text-gray-900">+243 900 611 443</div>
-              </div>
-            </a>
-          </div>
-
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7 }}
+        className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6"
+      >
+        <div className="inline-flex items-center gap-2 rounded-full border border-green-accent/30 bg-green-accent/5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-wider text-green-accent">
+          <Zap className="h-3.5 w-3.5 fill-green-accent" />
+          Only 3 spots available this month
         </div>
-      </div>
+        
+        <h2 className="mt-6 font-display text-balance text-5xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+          Ready to build something <span className="text-green-accent">remarkable?</span>
+        </h2>
+        
+        <p className="mx-auto mt-6 max-w-xl text-balance text-base text-muted-foreground sm:text-lg">
+          Join 50+ businesses who chose Nordev to grow their online presence.
+        </p>
+
+        <motion.a
+          href="#"
+          className="mt-10 inline-flex items-center justify-center rounded-full bg-green-accent px-10 py-5 font-display text-base font-bold text-background transition-shadow hover:shadow-[0_0_30px_-5px_var(--green-accent)] sm:text-lg"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          Book Your Free Strategy Call
+        </motion.a>
+      </motion.div>
     </section>
   );
-};
-
-export default FinalCTA;
+}
