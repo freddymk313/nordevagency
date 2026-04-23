@@ -34,7 +34,7 @@ export default function Services() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: i * 0.06, duration: 0.55 }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-7 transition-colors duration-300 hover:border-green-accent/60"
+              className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 transition-colors duration-300 hover:border-green-accent/60"
             >
               <div
                 aria-hidden
@@ -42,7 +42,7 @@ export default function Services() {
                 style={{ background: "var(--green-accent)" }}
               />
               <div className="relative">
-                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-green-accent/10 text-green-accent ring-1 ring-green-accent/20">
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-green-accent/10 text-green-accent">
                   <s.icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-display text-xl font-bold text-foreground">{s.title}</h3>
