@@ -18,11 +18,17 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = "cent
           {eyebrow}
         </div>
       )}
-      <h2 className="font-display text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+      <h2 
+      // className="font-display text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+      className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6"
+      >
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-6 text-balance font-sans text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p 
+        // className="mt-6 text-balance font-sans text-base leading-relaxed text-muted-foreground sm:text-lg"
+        className="font-sans text-muted-foreground text-lg max-w-2xl mx-auto"
+        >
           {subtitle}
         </p>
       )}
