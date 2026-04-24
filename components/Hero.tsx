@@ -1,85 +1,130 @@
 "use client";
+import { motion, type Variants } from "framer-motion";
+import { ArrowDown, ArrowRight, Star } from "lucide-react";
 
-import Link from "next/link";
-import TrustedBy from "./TrustedBy";
-import { useTranslations } from "next-intl";
-
-const Hero = () => {
-  const t = useTranslations("Hero");
-
-  return (
-    <section
-      id="home"
-      className="min-h-[60vh] md:min-h-screen flex items-center justify-center relative overflow-hidden pt-12 md:pt-16"
-    >
-      {/* Background elements */}
-      <div className="absolute top-1/4 -right-10 w-80 h-80 bg-gray-800/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -left-10 w-96 h-96 bg-gray-800/3 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gray-800/2 rounded-full blur-3xl" />
-
-      {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(42,42,42,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(42,42,42,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto text-center animate-fade-in">
-          {/* TITLE */}
-          <h1 className="text-[28px] sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 leading-tight">
-            {t("titleLine1")}
-            <span className="block mt-4">
-              {t("titleLine2")}{" "}
-              <span className="text-gray-900 relative">
-                {t("titleHighlight")}
-                {/* <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gray-800/10 rounded-full" /> */}
-              </span>
-            </span>
-          </h1>
-
-          {/* DESCRIPTION */}
-          <p className="text-[16px] sm:text-lg md:text-xl lg:text-2xl text-gray-800 mb-6 md:mb-12 max-w-3xl mx-auto leading-relaxed">
-            {t.rich("description", {
-              strong: (chunks) => (
-                <span className="font-semibold text-black">{chunks}</span>
-              ),
-            })}
-          </p>
-
-          {/* CTA BUTTONS */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            {/* Primary CTA */}
-            <Link href="#contact">
-              <button className="bg-[#111111] text-sm text-white pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-4 group">
-                {t("ctaPrimary")}
-                <span className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-black group-hover:bg-gray-100 transition-colors">
-                  <svg
-                    className="w-5 h-5 group-hover:translate-x-0.5 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </Link>
-
-            {/* Secondary CTA */}
-            <Link href="#portfolio">
-              <button className="border-2 h-[56px] text-sm border-[#111111] text-gray-800 px-8 rounded-full hover:bg-gray-50 transition-all duration-300 font-semibold hover:shadow-lg transform hover:-translate-y-1">
-                {t("ctaSecondary")}
-              </button>
-            </Link>
-          </div>
-
-          <TrustedBy />
-        </div>
-      </div>
-    </section>
-  );
+const lineParent: Variants = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+  },
 };
 
-export default Hero;
+const lineChild: Variants = {
+  hidden: { y: 28, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
+export default function Hero() {
+  return (
+    <section
+      id="top"
+      className="grain relative flex min-h-screen items-center overflow-hidden bg-background pt-28"
+    >
+      {/* Lueur radiale animée utilisant ton dégradé CSS */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        animate={{ opacity: [0.4, 0.7, 0.4] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        style={{ background: "var(--gradient-radial-glow)" }}
+      />
+
+      {/* Grille subtile adaptée à ta couleur de bordure */}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.15]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, var(--color-border) 1px, transparent 1px), linear-gradient(to bottom, var(--color-border) 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 text-center sm:px-6">
+        <motion.div
+          variants={lineParent}
+          initial="hidden"
+          animate="show"
+          className="font-display text-[clamp(2.75rem,8vw,6rem)] font-extrabold leading-[1.02] tracking-tight"
+        >
+          <motion.div variants={lineChild} className="text-muted-foreground">
+            We build websites
+          </motion.div>
+          <motion.div variants={lineChild} className="text-muted-foreground">
+            that turn visitors
+          </motion.div>
+          <motion.div variants={lineChild} className="relative inline-block text-foreground">
+            into clients.
+            {/* Soulignement avec ton vert accentué */}
+            <motion.span
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 1.1, duration: 0.8, ease: "easeOut" }}
+              className="absolute -bottom-2 left-0 right-0 h-1.5 origin-left rounded-full bg-green-accent"
+            />
+          </motion.div>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0, duration: 0.6 }}
+          className="mx-auto mt-8 max-w-xl text-balance font-sans text-base text-muted-foreground sm:text-lg"
+        >
+          Custom-built web experiences for ambitious businesses. Fast delivery, zero compromise.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
+          className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
+        >
+          {/* Bouton principal avec ton Vert et son animation de Glow */}
+          <a
+            href="#contact"
+            className="group animate-pulse-glow-green font-display inline-flex items-center justify-center gap-2 rounded-lg bg-green-accent px-7 py-3.5 text-base font-bold text-black transition-transform hover:scale-105"
+          >
+            Start Your Project
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </a>
+          
+          <a
+            href="#portfolio"
+            className="inline-flex items-center justify-center rounded-lg border border-border bg-transparent px-7 py-3.5 text-base font-semibold text-foreground transition-colors hover:bg-secondary"
+          >
+            See Our Work
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.6 }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs text-muted-foreground sm:text-sm"
+        >
+          <span className="inline-flex items-center gap-1.5">
+            {/* Étoile utilisant ton vert */}
+            <Star className="h-3.5 w-3.5 fill-green-accent text-green-accent" />
+            Trusted by 50+ businesses worldwide
+          </span>
+          <span className="hidden opacity-25 sm:inline">|</span>
+          <span>Delivered in under 14 days</span>
+        </motion.div>
+      </div>
+
+      {/* Flèche de scroll utilisant ta couleur de texte secondaire */}
+      <motion.a
+        href="#trust"
+        aria-label="Scroll down"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1, 0.5] }}
+        transition={{ delay: 2, duration: 2, repeat: Infinity }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground"
+      >
+        <ArrowDown className="h-5 w-5" />
+      </motion.a>
+    </section>
+  );
+}
