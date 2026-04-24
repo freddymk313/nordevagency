@@ -86,7 +86,7 @@ export default function Navbar() {
               Book a Call
             </a>
           </div> */}
-          <Link href="#contact">
+          <Link href="#contact" className="hidden md:flex">
               <button 
               // className="bg- text-sm text-white pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1  group"
               className="animate-pulse-glow-green font-display flex items-center gap-4 justify-center rounded-full bg-green-accent pl-6 py-2 md:py-2.5 pr-3.5 text-sm font-bold text-black transition-transform hover:scale-105 active:scale-95"
@@ -112,11 +112,11 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-foreground md:hidden"
+            className="inline-flex h-10 w-10 p-2 items-center bg-muted justify-center rounded-full text-foreground md:hidden"
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
           >
-            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {open ? <X className="h-8 w-8" /> : <Menu className="h-8 w-9" />}
           </button>
         </div>
 
