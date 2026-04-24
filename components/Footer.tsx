@@ -150,7 +150,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 py-10 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-gray-600 text-[11px] font-bold uppercase *tracking-[0.2em]">
-            © {new Date().getFullYear()} Nordev Agency. <span className="opacity-50">Crafted in Lubumbashi.</span>
+            © {new Date().getFullYear()} Nordev Agency. <span className="opacity-50">Crafted.</span>
           </p>
 
           {/* <button 
