@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section id="contact" className="relative overflow-hidden py-28 sm:py-40 bg-background">
+    <section id="contact" className="relative overflow-hidden py-28 sm:py-40 bg-muted">
       {/* Effet de lueur radiale utilisant ton vert accentué */}
       <motion.div
         aria-hidden
@@ -13,7 +13,7 @@ export default function FinalCTA() {
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{ 
-          background: "radial-gradient(circle, var(--green-accent) 0%, transparent 70%)",
+          // background: "radial-gradient(circle, var(--green-accent) 0%, transparent 70%)",
           filter: "blur(120px)",
           opacity: 0.1
         }}
@@ -28,12 +28,12 @@ export default function FinalCTA() {
       >
         {/* Badge de rareté cohérent avec tes autres sections */}
         <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-green-accent">
-          <Zap className="h-3.5 w-3.5 fill-green-accent" />
+          {/* <Zap className="h-3.5 w-3.5 fill-green-accent" /> */}
           Only 3 spots available this month
         </div>
 
         <h2 className="mt-8 font-display text-balance text-5xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-          Ready to build something <span className="text-green-accent">remarkable?</span>
+          Ready to build something <span className="text-muted-foreground">remarkable?</span>
         </h2>
 
         <p className="mx-auto mt-6 max-w-xl text-balance font-sans text-base text-muted-foreground sm:text-lg">

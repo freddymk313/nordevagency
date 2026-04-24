@@ -78,9 +78,9 @@ export default function Pricing() {
 
               <a
                 href="#contact"
-                className={`mt-10 inline-flex items-center justify-center rounded-full px-6 py-4 text-sm font-bold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
+                className={`mt-10 inline-flex items-center justify-center rounded-full px-6 py-4 text-sm font-bold transition-all duration-300 *hover:scale-[1.02] active:scale-[0.98] ${
                   t.highlighted
-                    ? "bg-green-accent text-background shadow-[0_10px_20px_-10px_var(--green-accent)] hover:shadow-[0_15px_30px_-10px_var(--green-accent)]"
+                    ? "bg-green-accent text-background *shadow-[0_10px_20px_-10px_var(--green-accent)] *hover:shadow-[0_15px_30px_-10px_var(--green-accent)]"
                     : "border border-border bg-transparent text-foreground hover:border-green-accent hover:text-green-accent"
                 }`}
               >
