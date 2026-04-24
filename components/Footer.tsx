@@ -10,6 +10,7 @@ import {
   Github,
   Send,
   ArrowUp,
+  ChevronRight,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,6 +21,7 @@ const footerLinks = [
   { name: "Services", href: "#services" },
   { name: "Process", href: "#process" },
   { name: "Portfolio", href: "#portfolio" },
+  { name: "Testimonials", href: "#testimonials" },
   { name: "Pricing", href: "#pricing" },
 ];
 
@@ -50,7 +52,7 @@ const Footer = () => {
                 height={50}
                 width={180}
                 alt="Nordev Agency"
-                className="h-10 w-auto object-contain"
+                className="h-17 w-auto object-contain"
               />
             </Link>
             <p className="text-gray-500 font-sans text-sm leading-relaxed max-w-xs">
@@ -60,7 +62,7 @@ const Footer = () => {
 
           {/* Colonne 2: Navigation */}
           <div>
-            <h3 className="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
+            <h3 className="text-white text-sm font-bold uppercase mb-8">
               Navigation
             </h3>
             <ul className="space-y-4">
@@ -71,6 +73,7 @@ const Footer = () => {
                     className="text-gray-500 hover:text-green-accent transition-all duration-300 group flex items-center gap-3 text-sm font-medium"
                   >
                     <div className="w-0 h-px bg-green-accent group-hover:w-4 transition-all duration-300" />
+                    {/* <ChevronRight className="w-3 h-3 *bg-green-accent group-hover:w-4 transition-all duration-300" /> */}
                     <span>{link.name}</span>
                   </Link>
                 </li>
@@ -80,7 +83,7 @@ const Footer = () => {
 
           {/* Colonne 3: Contact */}
           <div>
-            <h3 className="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
+            <h3 className="text-white text-sm font-bold uppercase mb-8">
               Get in Touch
             </h3>
             <ul className="space-y-5">
@@ -91,7 +94,7 @@ const Footer = () => {
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={item.href || "#"} className="group flex items-center gap-4">
-                    <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center group-hover:bg-green-accent group-hover:text-black transition-all duration-500">
+                    <div className="w-10 h-10 bg-muted/20 border border-white/10 rounded-xl text-white flex items-center justify-center group-hover:bg-green-accent group-hover:text-black transition-all duration-500">
                       <item.icon className="w-4 h-4" />
                     </div>
                     <div>
@@ -106,7 +109,7 @@ const Footer = () => {
 
           {/* Colonne 4: Newsletter */}
           <div>
-            <h3 className="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
+            <h3 className="text-white text-sm font-bold uppercase mb-8">
               Weekly Insights
             </h3>
             <div className="space-y-6">
@@ -125,23 +128,13 @@ const Footer = () => {
                   <Link
                     key={index}
                     href="#"
-                    className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all duration-500"
+                    className="w-10 h-10 bg-white/5 border border-white/10 text-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all duration-500"
                   >
                     <Icon className="w-4 h-4" />
                   </Link>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-white/5 py-10 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em]">
-            © {new Date().getFullYear()} Nordev Agency. <span className="opacity-50 italic">Crafted in Lubumbashi.</span>
-          </p>
-
-          <button 
+              <button 
             onClick={scrollToTop}
             className={`group flex items-center gap-4 transition-all duration-700 ${showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
           >
@@ -150,10 +143,29 @@ const Footer = () => {
               <ArrowUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
             </div>
           </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-white/5 py-10 flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="text-gray-600 text-[11px] font-bold uppercase *tracking-[0.2em]">
+            © {new Date().getFullYear()} Nordev Agency. <span className="opacity-50">Crafted in Lubumbashi.</span>
+          </p>
+
+          {/* <button 
+            onClick={scrollToTop}
+            className={`group flex items-center gap-4 transition-all duration-700 ${showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
+          >
+            <span className="text-[10px] font-black text-white uppercase tracking-[0.3em]">Back to top</span>
+            <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white group-hover:bg-green-accent group-hover:text-black group-hover:border-green-accent transition-all duration-500">
+              <ArrowUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
+            </div>
+          </button> */}
 
           <div className="flex gap-6">
             {["Privacy", "Terms"].map((legal) => (
-              <Link key={legal} href="#" className="text-[10px] font-bold text-gray-600 hover:text-white uppercase tracking-widest transition-colors">
+              <Link key={legal} href="#" className="text-[11px] font-bold text-gray-600 hover:text-white uppercase transition-colors">
                 {legal}
               </Link>
             ))}
