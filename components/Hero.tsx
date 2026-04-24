@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="grain relative flex min-h-screen items-center overflow-hidden bg-background pt-26"
+      className="grain relative flex min-h-screen items-center overflow-hidden bg-background md:pt-26"
     >
       {/* Lueur radiale animée utilisant ton dégradé CSS */}
       <motion.div
