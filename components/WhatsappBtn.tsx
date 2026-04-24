@@ -4,17 +4,17 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export const WhatsappBtn = () => {
   return (
-    <div className="fixed bottom-6 right-6 z-[999] group">
+    <div className="fixed bottom-6 right-6 z-999 group">
       
       {/* Tooltip Premium : Utilise ton style de badge habituel */}
-      <div className="hidden md:flex absolute right-full mr-5 top-1/2 -translate-y-1/2 px-4 py-2 bg-card border border-border text-foreground text-[10px] font-bold uppercase tracking-[0.2em] rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0 whitespace-nowrap shadow-2xl pointer-events-none">
+      <div className="hidden md:flex absolute right-full mr-5 top-1/2 -translate-y-1/2 px-4 py-2 bg-card border border-border text-foreground text-[10px] font-bold uppercase *tracking-[0.2em] rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0 whitespace-nowrap shadow-2xl pointer-events-none">
         Besoin d'aide ? <span className="text-green-accent ml-2">Contactez-nous</span>
         {/* Petite flèche */}
         <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-card border-r border-t border-border rotate-45" />
       </div>
 
       {/* Anneau de pulsation : Discret en utilisant ton vert accentué */}
-      <div className="absolute inset-0 rounded-full bg-green-accent/20 hidden md:block md:animate-ping group-hover:animate-none opacity-0 group-hover:opacity-100 transition-opacity" />
+      {/* <div className="absolute inset-0 rounded-full bg-green-accent/20 hidden md:block md:animate-ping group-hover:animate-none opacity-0 group-hover:opacity-100 transition-opacity" /> */}
 
       {/* Le Bouton Principal : Noir profond pour la cohérence */}
       <a
