@@ -22,6 +22,15 @@ type Project = {
 
 const projects: Project[] = [
   {
+    id: 0,
+    title: "KaziUp",
+    description: "Online learning platform for cv genération and job matching.",
+    category: "Web Development",
+    image: "/portfolio/funda.png",
+    technologies: ["Next.js", "TypeScript", "Chadcn UI", "Tailwind"],
+    link: "https://kazi-up.vercel.app/",
+  },
+  {
     id: 1,
     title: "Funda Online",
     description: "Online learning platform...",
