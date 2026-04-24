@@ -152,8 +152,8 @@ export default function Portfolio() {
           subtitle="Swipe to explore. Click to see the live site."
         />
 
-        {/* <div className="relative mx-auto mt-16 w-full max-w-md aspect-[16/11]"> */}
-        <div className="relative mx-auto mt-16 flex h-[350px] w-full max-w-md items-center justify-center *sm:h-[580px]">
+        {/* <div className="relative mx-auto mt-16 w-full max-w-md aspect-16/11"> */}
+        <div className="relative mx-auto mt-16 flex h-72.75 md:h-87.5 w-full max-w-md items-center justify-center">
           <AnimatePresence initial={false} custom={direction}>
             {visible.map((p, i) => (
               <Card
