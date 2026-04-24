@@ -6,14 +6,14 @@ import SectionHeading from "./SectionHeading";
 const tiers = [
   {
     name: "Starter",
-    price: "$799",
+    price: "$150",
     features: ["1-page landing page", "Mobile responsive", "SEO basics", "7-day delivery"],
     cta: "Get Started",
     highlighted: false,
   },
   {
     name: "Growth",
-    price: "$1,499",
+    price: "$500",
     features: ["Up to 5 pages", "Mobile responsive", "Full SEO setup", "14-day delivery"],
     cta: "Most Popular",
     highlighted: true,
