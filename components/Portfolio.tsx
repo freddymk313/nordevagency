@@ -9,6 +9,7 @@ import {
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import Link from "next/link";
+import Image from "next/image";
 
 type Project = {
   id: number;
@@ -26,7 +27,7 @@ const projects: Project[] = [
     title: "KaziUp",
     description: "Online learning platform for cv genération and job matching.",
     category: "Web Development",
-    image: "/portfolio/funda.png",
+    image: "/portfolio/kazi-up.png",
     technologies: ["Next.js", "TypeScript", "Chadcn UI", "Tailwind"],
     link: "https://kazi-up.vercel.app/",
   },
@@ -35,75 +36,22 @@ const projects: Project[] = [
     title: "Funda Online",
     description: "Online learning platform...",
     category: "Web Development",
-    image: "/portfolio/funda.png",
+    image: "/portfolio/funda-online.png",
     technologies: ["Next.js", "TypeScript", "Sanity", "Tailwind"],
-    link: "https://funda-online.com",
+    link: "https://funda-online.vercel.app/",
   },
   {
     id: 2,
-    title: "CS Bisournouse",
-    description: "Website for school...",
+    title: "Unco Chi",
+    description: "Website for construction company...",
     category: "Web Development",
-    image: "/portfolio/csbis.png",
+    image: "/portfolio/unco.png",
     technologies: ["React", "TypeScript", "Node.js", "Tailwind"],
-    link: "https://csbisournouse.vercel.app",
+    link: "https://unco-chi.vercel.app/",
   },
+
   {
     id: 3,
-    title: "Metro Travels",
-    description: "Travel booking site...",
-    category: "Web Development",
-    image: "/portfolio/metro.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind"],
-    link: "https://metrotravels.vercel.app/destinations",
-  },
-  {
-    id: 4,
-    title: "Asunicaco",
-    description: "Landing page...",
-    category: "Web Development",
-    image: "/portfolio/1.PNG",
-    technologies: ["Codegniter", "Php", "Bootstrap"],
-    link: "https://pexelsinovation.vercel.app",
-  },
-  {
-    id: 5,
-    title: "Jexweb",
-    description: "Landing page...",
-    category: "Web Development",
-    image: "/portfolio/jexweb.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind"],
-    link: "https://jexweb.vercel.app",
-  },
-  {
-    id: 6,
-    title: "Congodmp",
-    description: "SAAS platform...",
-    category: "Web Development",
-    image: "/portfolio/congodmp.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"],
-    link: "https://congodmp.vercel.app",
-  },
-  {
-    id: 7,
-    title: "CCPS",
-    description: "Website for NGO...",
-    category: "Web Development",
-    image: "/portfolio/ccps.png",
-    technologies: ["React", "TypeScript", "Tailwind"],
-    link: "https://ccps.vercel.app",
-  },
-  {
-    id: 8,
-    title: "Pexelsinovation",
-    description: "Landing page...",
-    category: "Web Development",
-    image: "/portfolio/pexels.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind"],
-    link: "https://pexelsinovation.vercel.app",
-  },
-  {
-    id: 9,
     title: "Mizitikilili",
     description: "Landing page...",
     category: "Web Development",
@@ -112,7 +60,7 @@ const projects: Project[] = [
     link: "https://mizitikilili.vercel.app",
   },
   {
-    id: 10,
+    id: 4,
     title: "Nordev",
     description: "Landing page...",
     category: "Web Development",
@@ -120,8 +68,74 @@ const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind"],
     link: "https://nordev-inc.lovable.app/",
   },
+
+  {
+    id: 5,
+    title: "CS Bisournouse",
+    description: "Website for school...",
+    category: "Web Development",
+    image: "/portfolio/csbis.png",
+    technologies: ["React", "TypeScript", "Node.js", "Tailwind"],
+    link: "https://csbisournouse.vercel.app",
+  },
+
+  {
+    id: 6,
+    title: "Metro Travels",
+    description: "Travel booking site...",
+    category: "Web Development",
+    image: "/portfolio/metro.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://metrotravels.vercel.app/destinations",
+  },
+  {
+    id: 7,
+    title: "Asunicaco",
+    description: "Landing page...",
+    category: "Web Development",
+    image: "/portfolio/asunicaco.png",
+    technologies: ["Codegniter", "Php", "Bootstrap"],
+    link: "https://www.asunicaco.cd/",
+  },
+  {
+    id: 8,
+    title: "Jexweb",
+    description: "Landing page...",
+    category: "Web Development",
+    image: "/portfolio/jexweb.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://jexweb.vercel.app",
+  },
+  {
+    id: 9,
+    title: "Congodmp",
+    description: "SAAS platform...",
+    category: "Web Development",
+    image: "/portfolio/congodmp.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn UI"],
+    link: "https://congodmp.vercel.app",
+  },
+  {
+    id: 10,
+    title: "CCPS",
+    description: "Website for NGO...",
+    category: "Web Development",
+    image: "/portfolio/ccps.png",
+    technologies: ["React", "TypeScript", "Tailwind"],
+    link: "https://ccps.vercel.app",
+  },
   {
     id: 11,
+    title: "Pexelsinovation",
+    description: "Landing page...",
+    category: "Web Development",
+    image: "/portfolio/pexels.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://pexelsinovation.vercel.app",
+  },
+
+  {
+    id: 12,
     title: "La Bonne fourchette",
     description: "Landing page...",
     category: "Web Development",
@@ -155,7 +169,8 @@ export default function Portfolio() {
           eyebrow="Portfolio"
           title={
             <>
-              Work we're <span className="text-muted-foreground">proud of.</span>
+              Work we're{" "}
+              <span className="text-muted-foreground">proud of.</span>
             </>
           }
           subtitle="Swipe to explore. Click to see the live site."
@@ -245,7 +260,7 @@ function Card({
       }}
       whileTap={isTop ? { cursor: "grabbing" } : undefined}
     >
-      <div className="group relative flex h-full w-full flex-col overflow-hidden rounded-[2rem] border border-border bg-card shadow-2xl">
+      <div className="group relative flex h-full w-full flex-col overflow-hidden rounded-[2rem] border border-border *bg-card shadow-2xl">
         {/* Zone Image : Remplit tout le haut de la carte */}
         {/* <div className="relative flex-1 overflow-hidden bg-muted">
           <img
@@ -257,10 +272,12 @@ function Card({
         </div> */}
         <div className="relative flex-1 overflow-hidden bg-muted">
           <div className="h-full w-full overflow-y-auto">
-            <img
+            <Image
               src={project.image}
               alt={project.title}
               className="w-full object-contain"
+              width={500}
+              height={300}
             />
           </div>
 
