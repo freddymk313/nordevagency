@@ -38,7 +38,8 @@ export default function Hero() {
           backgroundImage:
             "linear-gradient(to right, var(--color-border-hero) 1px, transparent 1px), linear-gradient(to bottom, var(--color-border-hero) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
-          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+          maskImage:
+            "radial-gradient(ellipse at center, black 30%, transparent 75%)",
         }}
       />
 
@@ -55,7 +56,10 @@ export default function Hero() {
           <motion.div variants={lineChild} className="text-muted-foreground">
             that turn visitors
           </motion.div>
-          <motion.div variants={lineChild} className="relative inline-block text-foreground">
+          <motion.div
+            variants={lineChild}
+            className="relative inline-block text-foreground"
+          >
             into clients.
             {/* Soulignement avec ton vert accentué */}
             {/* <motion.span
@@ -73,7 +77,8 @@ export default function Hero() {
           transition={{ delay: 1.0, duration: 0.6 }}
           className="mx-auto mt-8 max-w-xl text-balance font-sans text-base text-muted-foreground sm:text-lg"
         >
-          Custom-built web experiences for ambitious businesses. Fast delivery, zero compromise.
+          Custom-built web experiences for ambitious businesses. Fast delivery,
+          zero compromise.
         </motion.p>
 
         <motion.div
@@ -91,30 +96,34 @@ export default function Hero() {
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a> */}
 
-           <Link href="#contact">
-              <button 
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeANskah7oNVZDwlBytWpwfHUOH3zgCQFAW4iUqfUwqcgn7dQ/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
               // className="bg- text-sm text-white pl-8 pr-2 py-2 rounded-full hover:bg-black transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1  group"
               className="*animate-pulse-glow-green font-display flex items-center gap-4 justify-center rounded-full bg-green-accent pl-6 py-2 md:py-2.5 pr-3.5 text-sm font-bold text-black transition-transform *hover:scale-105 active:scale-95"
-              >
-                <span className="">Start Your Project</span>
-                <span className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-black group-hover:bg-gray-100 transition-colors">
-                  <svg
-                    className="w-5 h-5 group-hover:translate-x-0.5 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </Link>
-          
+            >
+              <span className="">Start Your Project</span>
+              <span className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-black group-hover:bg-gray-100 transition-colors">
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-0.5 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </span>
+            </button>
+          </Link>
+
           <Link
             href="#portfolio"
             className="inline-flex items-center justify-center rounded-full border border-border bg-transparent px-7 py-4 text-base font-semibold text-foreground transition-colors hover:bg-background"
