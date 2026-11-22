@@ -1,47 +1,39 @@
-import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { NextIntlClientProvider } from "next-intl";
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // Regular, Medium, SemiBold, Bold
-});
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
-  title: "Nordev Agency",
-  description: "Votre agence de développement web sur mesure",
+  title: "Nordev Agency · Digitalisation et automatisation pour entreprises africaines",
+  description: "Vos devis, factures et suivis prêts en quelques minutes. Diagnostic gratuit sous 72 h, solutions à partir de 35 $/mois.",
+  openGraph: {
+    title: "Nordev Agency · Digitalisation et automatisation pour entreprises africaines",
+    description: "Vos devis, factures et suivis prêts en quelques minutes. Diagnostic gratuit sous 72 h, solutions à partir de 35 $/mois.",
+    type: "website",
+  },
+  icons: {
+    icon: "/logo/logo-2.jpg",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: "#F7F7F5",
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={`${poppins.variable} ${inter.variable} antialiased`}>
-        <NextIntlClientProvider>
-          <Header />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
+      <body className={inter.variable}>
+        {children}
+        <Analytics />
       </body>
-      <Analytics />
     </html>
   );
 }
